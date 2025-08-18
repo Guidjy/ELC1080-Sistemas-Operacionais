@@ -7,7 +7,7 @@ CFLAGS = -Wall -Werror -g -finput-charset=UTF-8 -fexec-charset=UTF-8
 LDLIBS = -lcurses
 
 # arquivos objeto compilados (.o) que compõem o simulador (main) e o montador
-OBJS_MAIN = cpu.o es.o memoria.o relogio.o console.o terminal.o tela_curses.o \
+OBJS_MAIN = cpu.o es.o memoria.o relogio.o console.o terminal.o num_rand.o tela_curses.o \
 		instrucao.o err.o programa.o controle.o main.o
 OBJS_MONTADOR = instrucao.o err.o montador.o
 OBJS = ${OBJS_MAIN} ${OBJS_MONTADOR}

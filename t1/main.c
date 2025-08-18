@@ -10,11 +10,13 @@
 #include "relogio.h"
 #include "console.h"
 #include "terminal.h"
+#include "num_rand.h"
 #include "es.h"
 #include "dispositivos.h"
 
 #include <stdlib.h>
 #include <stdio.h>
+#include <time.h>
 
 // constantes
 #define MEM_TAM 2000        // tamanho da memória principal
@@ -25,6 +27,7 @@ typedef struct {
   cpu_t *cpu;
   relogio_t *relogio;
   console_t *console;
+  num_rand_t *num_rand;
   es_t *es;
   controle_t *controle;
 } hardware_t;
@@ -55,6 +58,7 @@ static void cria_hardware(hardware_t *hw)
   // cria dispositivos de E/S
   hw->console = console_cria();
   hw->relogio = relogio_cria();
+  hw->num_rand = num_rand_cria();
 
   // cria o controlador de E/S e registra os dispositivos
   //   por exemplo, o dispositivo 8 do controlador de E/S (e da CPU) será o
@@ -68,6 +72,8 @@ static void cria_hardware(hardware_t *hw)
   // registra os 4 dispositivos do relógio
   es_registra_dispositivo(hw->es, D_RELOGIO_INSTRUCOES, hw->relogio, 0, relogio_leitura, NULL);
   es_registra_dispositivo(hw->es, D_RELOGIO_REAL      , hw->relogio, 1, relogio_leitura, NULL);
+  // registra o dispositivo que fornece um número aleatório
+  es_registra_dispositivo(hw->es, NUM_RAND, hw->num_rand, 0, num_rand_leitura, NULL);
 
   // cria a unidade de execução e inicializa com a memória e o controlador de E/S
   hw->cpu = cpu_cria(hw->mem, hw->es);
@@ -84,6 +90,7 @@ static void destroi_hardware(hardware_t *hw)
   es_destroi(hw->es);
   relogio_destroi(hw->relogio);
   console_destroi(hw->console);
+  num_rand_destroi(hw->num_rand);
   mem_destroi(hw->mem);
 }
 
@@ -111,6 +118,8 @@ static void init_mem(mem_t *mem, char *nome_do_executavel)
 
 int main(int argc, char *argv[])
 {
+  srand(time(0));
+
   hardware_t hw;
   char *nome_do_programa = "ex1.maq";
   if (argc > 1) nome_do_programa = argv[1];

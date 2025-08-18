@@ -31,6 +31,7 @@ typedef enum {
   D_TERM_D_TELA_OK        =  D_TERM_D + TERM_TELA_OK,
   D_RELOGIO_INSTRUCOES,
   D_RELOGIO_REAL,
+  NUM_RAND,
   N_DISPOSITIVOS
 } dispositivo_id_t;
 
