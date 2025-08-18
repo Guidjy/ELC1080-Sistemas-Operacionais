@@ -1,7 +1,10 @@
-CMD: '1'
-CMD: '1'
 CMD: 'c'
-CMD: 'c'
-CMD: 'c'
+CMD: 'eb1'
+CMD: 'eb0'
+CMD: 'eb0'
+CMD: 'eb0'
+CMD: 'eb'
+CMD: '0eb0'
+Comando '0' não reconhecido
 CMD: 'f'
 Fim da execução.
