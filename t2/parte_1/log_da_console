@@ -2,333 +2,572 @@ CMD: 'c'
 SO: recebi IRQ 0 (Reset)
 SO: carga de 'trata_int.maq' em 60-72
 SO: carga de 'init.maq' em 100-270
+despacha estado - corrente - 0, 100, 0, 0
+despacha estado - so       - 0, 100, 0, 0
 SO: recebi IRQ 2 (Chamada de sistema)
+salva estado - corrente - 2, 263, 0, 105
+salva estado - so       - 2, 263, 0, 105
 SO: chamada de sistema 2
+despacha estado - corrente - 2, 263, 0, 105
+despacha estado - so       - 0, 263, 0, 105
 SO: recebi IRQ 2 (Chamada de sistema)
+salva estado - corrente - 2, 263, 0, 110
+salva estado - so       - 2, 263, 0, 110
 SO: chamada de sistema 2
+despacha estado - corrente - 2, 263, 0, 110
+despacha estado - so       - 0, 263, 0, 110
 SO: recebi IRQ 3 (E/S: relógio)
+salva estado - corrente - 105, 249, 0, 168
+salva estado - so       - 105, 249, 0, 168
 SO: interrupção do relógio (não tratada)
+despacha estado - corrente - 105, 249, 0, 168
+despacha estado - so       - 105, 249, 0, 168
 SO: recebi IRQ 2 (Chamada de sistema)
+salva estado - corrente - 2, 263, 0, 105
+salva estado - so       - 2, 263, 0, 105
 SO: chamada de sistema 2
+despacha estado - corrente - 2, 263, 0, 105
+despacha estado - so       - 0, 263, 0, 105
 SO: recebi IRQ 2 (Chamada de sistema)
+salva estado - corrente - 2, 263, 0, 116
+salva estado - so       - 2, 263, 0, 116
 SO: chamada de sistema 2
+despacha estado - corrente - 2, 263, 0, 116
+despacha estado - so       - 0, 263, 0, 116
 SO: recebi IRQ 3 (E/S: relógio)
+salva estado - corrente - 170, 260, 0, 32
+salva estado - so       - 170, 260, 0, 32
 SO: interrupção do relógio (não tratada)
+despacha estado - corrente - 170, 260, 0, 32
+despacha estado - so       - 170, 260, 0, 32
 SO: recebi IRQ 2 (Chamada de sistema)
+salva estado - corrente - 2, 263, 0, 32
+salva estado - so       - 2, 263, 0, 32
 SO: chamada de sistema 2
+despacha estado - corrente - 2, 263, 0, 32
+despacha estado - so       - 0, 263, 0, 32
 SO: recebi IRQ 2 (Chamada de sistema)
+salva estado - corrente - 2, 263, 0, 105
+salva estado - so       - 2, 263, 0, 105
 SO: chamada de sistema 2
+despacha estado - corrente - 2, 263, 0, 105
+despacha estado - so       - 0, 263, 0, 105
 SO: recebi IRQ 2 (Chamada de sistema)
+salva estado - corrente - 2, 263, 0, 110
+salva estado - so       - 2, 263, 0, 110
 SO: chamada de sistema 2
+despacha estado - corrente - 2, 263, 0, 110
+despacha estado - so       - 0, 263, 0, 110
 SO: recebi IRQ 3 (E/S: relógio)
+salva estado - corrente - 2, 263, 0, 110
+salva estado - so       - 2, 263, 0, 110
 SO: interrupção do relógio (não tratada)
+despacha estado - corrente - 2, 263, 0, 110
+despacha estado - so       - 2, 263, 0, 110
 SO: recebi IRQ 2 (Chamada de sistema)
+salva estado - corrente - 2, 263, 0, 105
+salva estado - so       - 2, 263, 0, 105
 SO: chamada de sistema 2
+despacha estado - corrente - 2, 263, 0, 105
+despacha estado - so       - 0, 263, 0, 105
 SO: recebi IRQ 2 (Chamada de sistema)
+salva estado - corrente - 2, 263, 0, 99
+salva estado - so       - 2, 263, 0, 99
 SO: chamada de sistema 2
+despacha estado - corrente - 2, 263, 0, 99
+despacha estado - so       - 0, 263, 0, 99
 SO: recebi IRQ 3 (E/S: relógio)
+salva estado - corrente - 2, 267, 0, 174
+salva estado - so       - 2, 267, 0, 174
 SO: interrupção do relógio (não tratada)
+despacha estado - corrente - 2, 267, 0, 174
+despacha estado - so       - 2, 267, 0, 174
 SO: recebi IRQ 2 (Chamada de sistema)
+salva estado - corrente - 2, 263, 0, 105
+salva estado - so       - 2, 263, 0, 105
 SO: chamada de sistema 2
+despacha estado - corrente - 2, 263, 0, 105
+despacha estado - so       - 0, 263, 0, 105
 SO: recebi IRQ 2 (Chamada de sistema)
+salva estado - corrente - 2, 263, 0, 97
+salva estado - so       - 2, 263, 0, 97
 SO: chamada de sistema 2
+despacha estado - corrente - 2, 263, 0, 97
+despacha estado - so       - 0, 263, 0, 97
 SO: recebi IRQ 3 (E/S: relógio)
+salva estado - corrente - 2, 245, 0, 177
+salva estado - so       - 2, 245, 0, 177
 SO: interrupção do relógio (não tratada)
+despacha estado - corrente - 2, 245, 0, 177
+despacha estado - so       - 2, 245, 0, 177
 SO: recebi IRQ 2 (Chamada de sistema)
+salva estado - corrente - 2, 263, 0, 108
+salva estado - so       - 2, 263, 0, 108
 SO: chamada de sistema 2
+despacha estado - corrente - 2, 263, 0, 108
+despacha estado - so       - 0, 263, 0, 108
 SO: recebi IRQ 2 (Chamada de sistema)
+salva estado - corrente - 2, 263, 0, 105
+salva estado - so       - 2, 263, 0, 105
 SO: chamada de sistema 2
+despacha estado - corrente - 2, 263, 0, 105
+despacha estado - so       - 0, 263, 0, 105
 SO: recebi IRQ 3 (E/S: relógio)
+salva estado - corrente - 122, 257, 0, 179
+salva estado - so       - 122, 257, 0, 179
 SO: interrupção do relógio (não tratada)
+despacha estado - corrente - 122, 257, 0, 179
+despacha estado - so       - 122, 257, 0, 179
 SO: recebi IRQ 2 (Chamada de sistema)
+salva estado - corrente - 2, 263, 0, 122
+salva estado - so       - 2, 263, 0, 122
 SO: chamada de sistema 2
+despacha estado - corrente - 2, 263, 0, 122
+despacha estado - so       - 0, 263, 0, 122
 SO: recebi IRQ 2 (Chamada de sistema)
+salva estado - corrente - 2, 263, 0, 97
+salva estado - so       - 2, 263, 0, 97
 SO: chamada de sistema 2
+despacha estado - corrente - 2, 263, 0, 97
+despacha estado - so       - 0, 263, 0, 97
 SO: recebi IRQ 3 (E/S: relógio)
+salva estado - corrente - 2, 262, 0, 110
+salva estado - so       - 2, 262, 0, 110
 SO: interrupção do relógio (não tratada)
+despacha estado - corrente - 2, 262, 0, 110
+despacha estado - so       - 2, 262, 0, 110
 SO: recebi IRQ 2 (Chamada de sistema)
+salva estado - corrente - 2, 263, 0, 110
+salva estado - so       - 2, 263, 0, 110
 SO: chamada de sistema 2
+despacha estado - corrente - 2, 263, 0, 110
+despacha estado - so       - 0, 263, 0, 110
 SO: recebi IRQ 2 (Chamada de sistema)
+salva estado - corrente - 2, 263, 0, 100
+salva estado - so       - 2, 263, 0, 100
 SO: chamada de sistema 2
+despacha estado - corrente - 2, 263, 0, 100
+despacha estado - so       - 0, 263, 0, 100
 SO: recebi IRQ 2 (Chamada de sistema)
+salva estado - corrente - 2, 263, 0, 111
+salva estado - so       - 2, 263, 0, 111
 SO: chamada de sistema 2
+despacha estado - corrente - 2, 263, 0, 111
+despacha estado - so       - 0, 263, 0, 111
 SO: recebi IRQ 3 (E/S: relógio)
+salva estado - corrente - 2, 263, 0, 111
+salva estado - so       - 2, 263, 0, 111
 SO: interrupção do relógio (não tratada)
+despacha estado - corrente - 2, 263, 0, 111
+despacha estado - so       - 2, 263, 0, 111
 SO: recebi IRQ 2 (Chamada de sistema)
+salva estado - corrente - 2, 263, 0, 46
+salva estado - so       - 2, 263, 0, 46
 SO: chamada de sistema 2
+despacha estado - corrente - 2, 263, 0, 46
+despacha estado - so       - 0, 263, 0, 46
 SO: recebi IRQ 2 (Chamada de sistema)
+salva estado - corrente - 2, 263, 0, 46
+salva estado - so       - 2, 263, 0, 46
 SO: chamada de sistema 2
+despacha estado - corrente - 2, 263, 0, 46
+despacha estado - so       - 0, 263, 0, 46
 SO: recebi IRQ 3 (E/S: relógio)
+salva estado - corrente - 2, 267, 0, 185
+salva estado - so       - 2, 267, 0, 185
 SO: interrupção do relógio (não tratada)
+despacha estado - corrente - 2, 267, 0, 185
+despacha estado - so       - 2, 267, 0, 185
 SO: recebi IRQ 2 (Chamada de sistema)
+salva estado - corrente - 2, 263, 0, 46
+salva estado - so       - 2, 263, 0, 46
 SO: chamada de sistema 2
+despacha estado - corrente - 2, 263, 0, 46
+despacha estado - so       - 0, 263, 0, 46
 SO: recebi IRQ 2 (Chamada de sistema)
+salva estado - corrente - 2, 263, 0, 10
+salva estado - so       - 2, 263, 0, 10
 SO: chamada de sistema 2
+despacha estado - corrente - 2, 263, 0, 10
+despacha estado - so       - 0, 263, 0, 10
 SO: recebi IRQ 3 (E/S: relógio)
+salva estado - corrente - 2, 108, 0, 187
+salva estado - so       - 2, 108, 0, 187
 SO: interrupção do relógio (não tratada)
+despacha estado - corrente - 2, 108, 0, 187
+despacha estado - so       - 2, 108, 0, 187
 SO: recebi IRQ 2 (Chamada de sistema)
+salva estado - corrente - 7, 114, 0, 188
+salva estado - so       - 7, 114, 0, 188
 SO: chamada de sistema 7
 SO: carga de 'p1.maq' em 7000-7241
+despacha estado - corrente - 7, 114, 0, 188
+despacha estado - so       - 7, 7000, 0, 188
 SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+salva estado - corrente - 7, 122, 0, 195
+salva estado - so       - 7, 122, 0, 195
+SO: chamada de sistema 7
+SO: carga de 'p2.maq' em 8000-8243
+despacha estado - corrente - 7, 122, 0, 195
+despacha estado - so       - 7, 8000, 0, 195
 SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+salva estado - corrente - 7, 130, 0, 202
+salva estado - so       - 7, 130, 0, 202
+SO: chamada de sistema 7
+SO: carga de 'p3.maq' em 9000-9241
+despacha estado - corrente - 7, 130, 0, 202
+despacha estado - so       - 7, 9000, 0, 202
+SO: recebi IRQ 2 (Chamada de sistema)
+salva estado - corrente - 9, 138, 0, 7
+salva estado - so       - 9, 138, 0, 7
+SO: chamada de sistema 9
+SO: SO_ESPERA_PROC não implementada
+despacha estado - corrente - 9, 138, 0, 7
+despacha estado - so       - -1, 138, 0, 7
 SO: recebi IRQ 3 (E/S: relógio)
+salva estado - corrente - 9, 138, 0, 7
+salva estado - so       - 9, 138, 0, 7
 SO: interrupção do relógio (não tratada)
+despacha estado - corrente - 9, 138, 0, 7
+despacha estado - so       - 9, 138, 0, 7
 SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+salva estado - corrente - 9, 144, 0, 7
+salva estado - so       - 9, 144, 0, 7
+SO: chamada de sistema 9
+SO: SO_ESPERA_PROC não implementada
+despacha estado - corrente - 9, 144, 0, 7
+despacha estado - so       - -1, 144, 0, 7
 SO: recebi IRQ 2 (Chamada de sistema)
+salva estado - corrente - 9, 150, 0, 7
+salva estado - so       - 9, 150, 0, 7
+SO: chamada de sistema 9
+SO: SO_ESPERA_PROC não implementada
+despacha estado - corrente - 9, 150, 0, 7
+despacha estado - so       - -1, 150, 0, 7
+SO: recebi IRQ 2 (Chamada de sistema)
+salva estado - corrente - 2, 263, 0, 105
+salva estado - so       - 2, 263, 0, 105
 SO: chamada de sistema 2
+despacha estado - corrente - 2, 263, 0, 105
+despacha estado - so       - 0, 263, 0, 105
 SO: recebi IRQ 3 (E/S: relógio)
+salva estado - corrente - 2, 267, 0, 212
+salva estado - so       - 2, 267, 0, 212
 SO: interrupção do relógio (não tratada)
+despacha estado - corrente - 2, 267, 0, 212
+despacha estado - so       - 2, 267, 0, 212
 SO: recebi IRQ 2 (Chamada de sistema)
+salva estado - corrente - 2, 263, 0, 110
+salva estado - so       - 2, 263, 0, 110
 SO: chamada de sistema 2
+despacha estado - corrente - 2, 263, 0, 110
+despacha estado - so       - 0, 263, 0, 110
 SO: recebi IRQ 2 (Chamada de sistema)
+salva estado - corrente - 2, 263, 0, 105
+salva estado - so       - 2, 263, 0, 105
 SO: chamada de sistema 2
+despacha estado - corrente - 2, 263, 0, 105
+despacha estado - so       - 0, 263, 0, 105
 SO: recebi IRQ 3 (E/S: relógio)
+salva estado - corrente - 2, 245, 0, 215
+salva estado - so       - 2, 245, 0, 215
 SO: interrupção do relógio (não tratada)
+despacha estado - corrente - 2, 245, 0, 215
+despacha estado - so       - 2, 245, 0, 215
 SO: recebi IRQ 2 (Chamada de sistema)
+salva estado - corrente - 2, 263, 0, 116
+salva estado - so       - 2, 263, 0, 116
 SO: chamada de sistema 2
+despacha estado - corrente - 2, 263, 0, 116
+despacha estado - so       - 0, 263, 0, 116
 SO: recebi IRQ 2 (Chamada de sistema)
+salva estado - corrente - 2, 263, 0, 32
+salva estado - so       - 2, 263, 0, 32
 SO: chamada de sistema 2
+despacha estado - corrente - 2, 263, 0, 32
+despacha estado - so       - 0, 263, 0, 32
 SO: recebi IRQ 3 (E/S: relógio)
+salva estado - corrente - 116, 257, 0, 217
+salva estado - so       - 116, 257, 0, 217
 SO: interrupção do relógio (não tratada)
+despacha estado - corrente - 116, 257, 0, 217
+despacha estado - so       - 116, 257, 0, 217
 SO: recebi IRQ 2 (Chamada de sistema)
+salva estado - corrente - 2, 263, 0, 116
+salva estado - so       - 2, 263, 0, 116
 SO: chamada de sistema 2
+despacha estado - corrente - 2, 263, 0, 116
+despacha estado - so       - 0, 263, 0, 116
 SO: recebi IRQ 2 (Chamada de sistema)
+salva estado - corrente - 2, 263, 0, 101
+salva estado - so       - 2, 263, 0, 101
 SO: chamada de sistema 2
+despacha estado - corrente - 2, 263, 0, 101
+despacha estado - so       - 0, 263, 0, 101
 SO: recebi IRQ 3 (E/S: relógio)
+salva estado - corrente - 2, 262, 0, 114
+salva estado - so       - 2, 262, 0, 114
 SO: interrupção do relógio (não tratada)
+despacha estado - corrente - 2, 262, 0, 114
+despacha estado - so       - 2, 262, 0, 114
 SO: recebi IRQ 2 (Chamada de sistema)
+salva estado - corrente - 2, 263, 0, 114
+salva estado - so       - 2, 263, 0, 114
 SO: chamada de sistema 2
+despacha estado - corrente - 2, 263, 0, 114
+despacha estado - so       - 0, 263, 0, 114
 SO: recebi IRQ 2 (Chamada de sistema)
+salva estado - corrente - 2, 263, 0, 109
+salva estado - so       - 2, 263, 0, 109
 SO: chamada de sistema 2
+despacha estado - corrente - 2, 263, 0, 109
+despacha estado - so       - 0, 263, 0, 109
 SO: recebi IRQ 2 (Chamada de sistema)
+salva estado - corrente - 2, 263, 0, 105
+salva estado - so       - 2, 263, 0, 105
 SO: chamada de sistema 2
+despacha estado - corrente - 2, 263, 0, 105
+despacha estado - so       - 0, 263, 0, 105
 SO: recebi IRQ 3 (E/S: relógio)
+salva estado - corrente - 2, 263, 0, 105
+salva estado - so       - 2, 263, 0, 105
 SO: interrupção do relógio (não tratada)
+despacha estado - corrente - 2, 263, 0, 105
+despacha estado - so       - 2, 263, 0, 105
 SO: recebi IRQ 2 (Chamada de sistema)
+salva estado - corrente - 2, 263, 0, 110
+salva estado - so       - 2, 263, 0, 110
 SO: chamada de sistema 2
+despacha estado - corrente - 2, 263, 0, 110
+despacha estado - so       - 0, 263, 0, 110
 SO: recebi IRQ 2 (Chamada de sistema)
+salva estado - corrente - 2, 263, 0, 97
+salva estado - so       - 2, 263, 0, 97
 SO: chamada de sistema 2
+despacha estado - corrente - 2, 263, 0, 97
+despacha estado - so       - 0, 263, 0, 97
 SO: recebi IRQ 3 (E/S: relógio)
+salva estado - corrente - 2, 267, 0, 223
+salva estado - so       - 2, 267, 0, 223
 SO: interrupção do relógio (não tratada)
+despacha estado - corrente - 2, 267, 0, 223
+despacha estado - so       - 2, 267, 0, 223
 SO: recebi IRQ 2 (Chamada de sistema)
+salva estado - corrente - 2, 263, 0, 110
+salva estado - so       - 2, 263, 0, 110
 SO: chamada de sistema 2
+despacha estado - corrente - 2, 263, 0, 110
+despacha estado - so       - 0, 263, 0, 110
 SO: recebi IRQ 2 (Chamada de sistema)
+salva estado - corrente - 2, 263, 0, 100
+salva estado - so       - 2, 263, 0, 100
 SO: chamada de sistema 2
+despacha estado - corrente - 2, 263, 0, 100
+despacha estado - so       - 0, 263, 0, 100
 SO: recebi IRQ 3 (E/S: relógio)
+salva estado - corrente - 2, 245, 0, 226
+salva estado - so       - 2, 245, 0, 226
 SO: interrupção do relógio (não tratada)
+despacha estado - corrente - 2, 245, 0, 226
+despacha estado - so       - 2, 245, 0, 226
 SO: recebi IRQ 2 (Chamada de sistema)
+salva estado - corrente - 2, 263, 0, 111
+salva estado - so       - 2, 263, 0, 111
 SO: chamada de sistema 2
+despacha estado - corrente - 2, 263, 0, 111
+despacha estado - so       - 0, 263, 0, 111
 SO: recebi IRQ 2 (Chamada de sistema)
+salva estado - corrente - 2, 263, 0, 46
+salva estado - so       - 2, 263, 0, 46
 SO: chamada de sistema 2
+despacha estado - corrente - 2, 263, 0, 46
+despacha estado - so       - 0, 263, 0, 46
 SO: recebi IRQ 3 (E/S: relógio)
+salva estado - corrente - 46, 257, 0, 228
+salva estado - so       - 46, 257, 0, 228
 SO: interrupção do relógio (não tratada)
+despacha estado - corrente - 46, 257, 0, 228
+despacha estado - so       - 46, 257, 0, 228
 SO: recebi IRQ 2 (Chamada de sistema)
+salva estado - corrente - 2, 263, 0, 46
+salva estado - so       - 2, 263, 0, 46
 SO: chamada de sistema 2
+despacha estado - corrente - 2, 263, 0, 46
+despacha estado - so       - 0, 263, 0, 46
 SO: recebi IRQ 2 (Chamada de sistema)
+salva estado - corrente - 2, 263, 0, 46
+salva estado - so       - 2, 263, 0, 46
 SO: chamada de sistema 2
+despacha estado - corrente - 2, 263, 0, 46
+despacha estado - so       - 0, 263, 0, 46
 SO: recebi IRQ 3 (E/S: relógio)
+salva estado - corrente - 8, 159, 0, 0
+salva estado - so       - 8, 159, 0, 0
 SO: interrupção do relógio (não tratada)
+despacha estado - corrente - 8, 159, 0, 0
+despacha estado - so       - 8, 159, 0, 0
 SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+salva estado - corrente - 8, 160, 0, 0
+salva estado - so       - 8, 160, 0, 0
+SO: chamada de sistema 8
+SO: SO_MATA_PROC não implementada
+despacha estado - corrente - 8, 160, 0, 0
+despacha estado - so       - -1, 160, 0, 0
 SO: recebi IRQ 2 (Chamada de sistema)
+salva estado - corrente - 2, 263, 0, 110
+salva estado - so       - 2, 263, 0, 110
 SO: chamada de sistema 2
+despacha estado - corrente - 2, 263, 0, 110
+despacha estado - so       - 0, 263, 0, 110
 SO: recebi IRQ 2 (Chamada de sistema)
+salva estado - corrente - 2, 263, 0, 97
+salva estado - so       - 2, 263, 0, 97
 SO: chamada de sistema 2
+despacha estado - corrente - 2, 263, 0, 97
+despacha estado - so       - 0, 263, 0, 97
 SO: recebi IRQ 3 (E/S: relógio)
+salva estado - corrente - 2, 263, 0, 97
+salva estado - so       - 2, 263, 0, 97
 SO: interrupção do relógio (não tratada)
+despacha estado - corrente - 2, 263, 0, 97
+despacha estado - so       - 2, 263, 0, 97
 SO: recebi IRQ 2 (Chamada de sistema)
+salva estado - corrente - 2, 263, 0, 111
+salva estado - so       - 2, 263, 0, 111
 SO: chamada de sistema 2
+despacha estado - corrente - 2, 263, 0, 111
+despacha estado - so       - 0, 263, 0, 111
 SO: recebi IRQ 2 (Chamada de sistema)
+salva estado - corrente - 2, 263, 0, 32
+salva estado - so       - 2, 263, 0, 32
 SO: chamada de sistema 2
+despacha estado - corrente - 2, 263, 0, 32
+despacha estado - so       - 0, 263, 0, 32
 SO: recebi IRQ 3 (E/S: relógio)
+salva estado - corrente - 2, 267, 0, 234
+salva estado - so       - 2, 267, 0, 234
 SO: interrupção do relógio (não tratada)
+despacha estado - corrente - 2, 267, 0, 234
+despacha estado - so       - 2, 267, 0, 234
 SO: recebi IRQ 2 (Chamada de sistema)
+salva estado - corrente - 2, 263, 0, 109
+salva estado - so       - 2, 263, 0, 109
 SO: chamada de sistema 2
+despacha estado - corrente - 2, 263, 0, 109
+despacha estado - so       - 0, 263, 0, 109
 SO: recebi IRQ 2 (Chamada de sistema)
+salva estado - corrente - 2, 263, 0, 111
+salva estado - so       - 2, 263, 0, 111
 SO: chamada de sistema 2
+despacha estado - corrente - 2, 263, 0, 111
+despacha estado - so       - 0, 263, 0, 111
 SO: recebi IRQ 3 (E/S: relógio)
+salva estado - corrente - 2, 245, 0, 237
+salva estado - so       - 2, 245, 0, 237
 SO: interrupção do relógio (não tratada)
+despacha estado - corrente - 2, 245, 0, 237
+despacha estado - so       - 2, 245, 0, 237
 SO: recebi IRQ 2 (Chamada de sistema)
+salva estado - corrente - 2, 263, 0, 114
+salva estado - so       - 2, 263, 0, 114
 SO: chamada de sistema 2
+despacha estado - corrente - 2, 263, 0, 114
+despacha estado - so       - 0, 263, 0, 114
 SO: recebi IRQ 2 (Chamada de sistema)
+salva estado - corrente - 2, 263, 0, 114
+salva estado - so       - 2, 263, 0, 114
 SO: chamada de sistema 2
+despacha estado - corrente - 2, 263, 0, 114
+despacha estado - so       - 0, 263, 0, 114
 SO: recebi IRQ 3 (E/S: relógio)
+salva estado - corrente - 105, 257, 0, 239
+salva estado - so       - 105, 257, 0, 239
 SO: interrupção do relógio (não tratada)
+despacha estado - corrente - 105, 257, 0, 239
+despacha estado - so       - 105, 257, 0, 239
 SO: recebi IRQ 2 (Chamada de sistema)
+salva estado - corrente - 2, 263, 0, 105
+salva estado - so       - 2, 263, 0, 105
 SO: chamada de sistema 2
+despacha estado - corrente - 2, 263, 0, 105
+despacha estado - so       - 0, 263, 0, 105
 SO: recebi IRQ 2 (Chamada de sistema)
+salva estado - corrente - 2, 263, 0, 33
+salva estado - so       - 2, 263, 0, 33
 SO: chamada de sistema 2
+despacha estado - corrente - 2, 263, 0, 33
+despacha estado - so       - 0, 263, 0, 33
 SO: recebi IRQ 3 (E/S: relógio)
+salva estado - corrente - 2, 262, 0, 32
+salva estado - so       - 2, 262, 0, 32
 SO: interrupção do relógio (não tratada)
+despacha estado - corrente - 2, 262, 0, 32
+despacha estado - so       - 2, 262, 0, 32
 SO: recebi IRQ 2 (Chamada de sistema)
+salva estado - corrente - 2, 263, 0, 32
+salva estado - so       - 2, 263, 0, 32
 SO: chamada de sistema 2
+despacha estado - corrente - 2, 263, 0, 32
+despacha estado - so       - 0, 263, 0, 32
 SO: recebi IRQ 2 (Chamada de sistema)
+salva estado - corrente - 2, 263, 0, 105
+salva estado - so       - 2, 263, 0, 105
 SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+despacha estado - corrente - 2, 263, 0, 105
+despacha estado - so       - 0, 263, 0, 105
 SO: recebi IRQ 3 (E/S: relógio)
+salva estado - corrente - 110, 249, 0, 213
+salva estado - so       - 110, 249, 0, 213
 SO: interrupção do relógio (não tratada)
+despacha estado - corrente - 110, 249, 0, 213
+despacha estado - so       - 110, 249, 0, 213
 SO: recebi IRQ 2 (Chamada de sistema)
+salva estado - corrente - 2, 263, 0, 110
+salva estado - so       - 2, 263, 0, 110
 SO: chamada de sistema 2
+despacha estado - corrente - 2, 263, 0, 110
+despacha estado - so       - 0, 263, 0, 110
 SO: recebi IRQ 2 (Chamada de sistema)
+salva estado - corrente - 2, 263, 0, 105
+salva estado - so       - 2, 263, 0, 105
 SO: chamada de sistema 2
+despacha estado - corrente - 2, 263, 0, 105
+despacha estado - so       - 0, 263, 0, 105
 SO: recebi IRQ 3 (E/S: relógio)
+salva estado - corrente - 215, 260, 0, 116
+salva estado - so       - 215, 260, 0, 116
 SO: interrupção do relógio (não tratada)
+despacha estado - corrente - 215, 260, 0, 116
+despacha estado - so       - 215, 260, 0, 116
 SO: recebi IRQ 2 (Chamada de sistema)
+salva estado - corrente - 2, 263, 0, 116
+salva estado - so       - 2, 263, 0, 116
 SO: chamada de sistema 2
+despacha estado - corrente - 2, 263, 0, 116
+despacha estado - so       - 0, 263, 0, 116
 SO: recebi IRQ 2 (Chamada de sistema)
+salva estado - corrente - 2, 263, 0, 32
+salva estado - so       - 2, 263, 0, 32
 SO: chamada de sistema 2
+despacha estado - corrente - 2, 263, 0, 32
+despacha estado - so       - 0, 263, 0, 32
+SO: recebi IRQ 2 (Chamada de sistema)
+salva estado - corrente - 2, 263, 0, 116
+salva estado - so       - 2, 263, 0, 116
+SO: chamada de sistema 2
+despacha estado - corrente - 2, 263, 0, 116
+despacha estado - so       - 0, 263, 0, 116
 SO: recebi IRQ 3 (E/S: relógio)
+salva estado - corrente - 2, 263, 0, 116
+salva estado - so       - 2, 263, 0, 116
 SO: interrupção do relógio (não tratada)
+despacha estado - corrente - 2, 263, 0, 116
+despacha estado - so       - 2, 263, 0, 116
 SO: recebi IRQ 2 (Chamada de sistema)
+salva estado - corrente - 2, 263, 0, 101
+salva estado - so       - 2, 263, 0, 101
 SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: interrupção do relógio (não tratada)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: interrupção do relógio (não tratada)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: interrupção do relógio (não tratada)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: interrupção do relógio (não tratada)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: interrupção do relógio (não tratada)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: interrupção do relógio (não tratada)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: interrupção do relógio (não tratada)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: interrupção do relógio (não tratada)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: interrupção do relógio (não tratada)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: interrupção do relógio (não tratada)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: interrupção do relógio (não tratada)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: interrupção do relógio (não tratada)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: interrupção do relógio (não tratada)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: interrupção do relógio (não tratada)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: interrupção do relógio (não tratada)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: interrupção do relógio (não tratada)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: interrupção do relógio (não tratada)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: interrupção do relógio (não tratada)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: interrupção do relógio (não tratada)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: interrupção do relógio (não tratada)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: interrupção do relógio (não tratada)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: interrupção do relógio (não tratada)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: interrupção do relógio (não tratada)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: interrupção do relógio (não tratada)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: interrupção do relógio (não tratada)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: interrupção do relógio (não tratada)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: interrupção do relógio (não tratada)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: interrupção do relógio (não tratada)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: interrupção do relógio (não tratada)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: interrupção do relógio (não tratada)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: interrupção do relógio (não tratada)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: interrupção do relógio (não tratada)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: interrupção do relógio (não tratada)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: interrupção do relógio (não tratada)
-CMD: 'p'
+despacha estado - corrente - 2, 263, 0, 101
+despacha estado - so       - 0, 263, 0, 101
 CMD: 'f'
 Fim da execução.

@@ -8,10 +8,22 @@
 
 typedef struct so_t so_t;
 
+typedef struct processo_t processo_t;
+
+
 #include "memoria.h"
 #include "cpu.h"
 #include "es.h"
 #include "console.h" // só para uma gambiarra
+
+
+// funções de processos
+
+// carrega um programa na memória, altera o processo corrente e retorna o endereço de carga
+int processo_cria(so_t *so, char *nome_do_executavel);
+
+
+// funçoes de SO
 
 so_t *so_cria(cpu_t *cpu, mem_t *mem, es_t *es, console_t *console);
 void so_destroi(so_t *self);
@@ -74,5 +86,6 @@ void so_destroi(so_t *self);
 // bloqueia o processo chamador até que o processo com o pid informado termine
 // retorna sem bloquear, com erro, se não existir processo com esse pid
 #define SO_ESPERA_PROC 9
+
 
 #endif // SO_H

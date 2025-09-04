@@ -13,10 +13,10 @@
 #include "irq.h"
 #include "memoria.h"
 #include "programa.h"
-#include "processo.h"
 
 #include <stdlib.h>
 #include <stdbool.h>
+#include <assert.h>
 
 
 // ---------------------------------------------------------------------
@@ -26,6 +26,21 @@
 // intervalo entre interrupções do relógio
 #define INTERVALO_INTERRUPCAO 50   // em instruções executadas
 
+#define N_PROCESSOS 10   // número máximo de processos
+
+#define SEM_PROCESSO -1  // indica que não tem um processo corrente
+
+
+struct processo_t {
+  int pid;
+  int regPC;
+  int regA;
+  int regX;
+  int regERRO;
+  char *executavel;
+};
+
+
 struct so_t {
   cpu_t *cpu;
   mem_t *mem;
@@ -34,7 +49,11 @@ struct so_t {
   bool erro_interno;
 
   int regA, regX, regPC, regERRO; // cópia do estado da CPU
+
   // t2: tabela de processos, processo corrente, pendências, etc
+  processo_t *tabela_de_processos;
+  int n_processos_tabela;
+  processo_t *processo_corrente;  // se pid == SEM_PROCESSO, não tem processo
 };
 
 
@@ -46,6 +65,29 @@ static int so_trata_interrupcao(void *argC, int reg_A);
 static int so_carrega_programa(so_t *self, char *nome_do_executavel);
 // copia para str da memória do processador, até copiar um 0 (retorna true) ou tam bytes
 static bool copia_str_da_mem(int tam, char str[tam], mem_t *mem, int ender);
+
+
+// ---------------------------------------------------------------------
+// Funções de processos
+// ---------------------------------------------------------------------
+
+int processo_cria(so_t *so, char *nome_do_executavel)
+{
+  // insere um novo processo na tabela
+  so->tabela_de_processos[so->n_processos_tabela].pid = so->n_processos_tabela;
+  so->tabela_de_processos[so->n_processos_tabela].executavel = nome_do_executavel;
+
+  // carrega o programa na memória
+  int endereco_inicial = so_carrega_programa(so, nome_do_executavel);
+  // altera o PC para o endereço de carga
+  so->regPC = endereco_inicial;
+  so->processo_corrente->regPC = so->regPC;
+  // processo criado vira o processo corrente
+  so->processo_corrente = &so->tabela_de_processos[so->n_processos_tabela];
+  so->n_processos_tabela++;
+
+  return endereco_inicial;
+}
 
 
 // ---------------------------------------------------------------------
@@ -62,6 +104,15 @@ so_t *so_cria(cpu_t *cpu, mem_t *mem, es_t *es, console_t *console)
   self->es = es;
   self->console = console;
   self->erro_interno = false;
+
+  self->tabela_de_processos = malloc(N_PROCESSOS * sizeof(processo_t));
+  assert(self->tabela_de_processos != NULL);
+  for (int i = 0; i < N_PROCESSOS; i++) 
+  {
+    self->tabela_de_processos[i].pid = SEM_PROCESSO;
+  }
+  self->n_processos_tabela = 0;
+  self->processo_corrente = &self->tabela_de_processos[0];
 
   // quando a CPU executar uma instrução CHAMAC, deve chamar a função
   //   so_trata_interrupcao, com primeiro argumento um ptr para o SO
@@ -127,6 +178,14 @@ static void so_salva_estado_da_cpu(so_t *self)
   //   CPU na memória, nos endereços CPU_END_PC etc. O registrador X foi salvo
   //   pelo tratador de interrupção (ver trata_irq.asm) no endereço 59
   // se não houver processo corrente, não faz nada
+
+  // verifica se há um processo corrente
+  if (self->processo_corrente->pid == SEM_PROCESSO)
+  {
+    return;
+  }
+
+  // pega os valores dos registradores da memória
   if (mem_le(self->mem, CPU_END_A, &self->regA) != ERR_OK
       || mem_le(self->mem, CPU_END_PC, &self->regPC) != ERR_OK
       || mem_le(self->mem, CPU_END_erro, &self->regERRO) != ERR_OK
@@ -134,6 +193,15 @@ static void so_salva_estado_da_cpu(so_t *self)
     console_printf("SO: erro na leitura dos registradores");
     self->erro_interno = true;
   }
+
+  // salva os registradores que compõem o estado da cpu no descritor do processo corrente
+  self->processo_corrente->regA = self->regA;
+  self->processo_corrente->regPC = self->regPC;
+  self->processo_corrente->regERRO = self->regERRO;
+  self->processo_corrente->regX = self->regX;
+
+  console_printf("salva estado - corrente - %d, %d, %d, %d", self->processo_corrente->regA, self->processo_corrente->regPC, self->processo_corrente->regERRO, self->processo_corrente->regX);
+  console_printf("salva estado - so       - %d, %d, %d, %d", self->regA, self->regPC, self->regERRO, self->regX);
 }
 
 static void so_trata_pendencias(so_t *self)
@@ -162,10 +230,20 @@ static int so_despacha(so_t *self)
   //   senão retorna 1
   // o valor retornado será o valor de retorno de CHAMAC, e será colocado no 
   //   registrador A para o tratador de interrupção (ver trata_irq.asm).
-  if (mem_escreve(self->mem, CPU_END_A, self->regA) != ERR_OK
-      || mem_escreve(self->mem, CPU_END_PC, self->regPC) != ERR_OK
-      || mem_escreve(self->mem, CPU_END_erro, self->regERRO) != ERR_OK
-      || mem_escreve(self->mem, 59, self->regX)) {
+
+  // verifica se há processo corrente
+  if (self->processo_corrente->pid == SEM_PROCESSO)
+  {
+    return 1;
+  }
+
+  console_printf("despacha estado - corrente - %d, %d, %d, %d", self->processo_corrente->regA, self->processo_corrente->regPC, self->processo_corrente->regERRO, self->processo_corrente->regX);
+  console_printf("despacha estado - so       - %d, %d, %d, %d", self->regA, self->regPC, self->regERRO, self->regX);
+
+  if (mem_escreve(self->mem, CPU_END_A, self->processo_corrente->regA) != ERR_OK
+      || mem_escreve(self->mem, CPU_END_PC, self->processo_corrente->regPC) != ERR_OK
+      || mem_escreve(self->mem, CPU_END_erro, self->processo_corrente->regERRO) != ERR_OK
+      || mem_escreve(self->mem, 59, self->processo_corrente->regX)) {
     console_printf("SO: erro na escrita dos registradores");
     self->erro_interno = true;
   }
@@ -240,15 +318,12 @@ static void so_trata_reset(so_t *self)
   //   deste código
 
   // coloca o programa init na memória
-  ender = so_carrega_programa(self, "init.maq");
+  ender = processo_cria(self, "init.maq");
   if (ender != 100) {
     console_printf("SO: problema na carga do programa inicial");
     self->erro_interno = true;
     return;
   }
-
-  // altera o PC para o endereço de carga
-  self->regPC = ender; // deveria ser no processo
 }
 
 // interrupção gerada quando a CPU identifica um erro
