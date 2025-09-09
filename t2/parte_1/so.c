@@ -17,6 +17,7 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include <assert.h>
+#include <string.h>
 
 
 // ---------------------------------------------------------------------
@@ -31,12 +32,23 @@
 #define SEM_PROCESSO -1  // indica que não tem um processo corrente
 
 
+enum estado_t {
+  PRONTO,
+  EXECUCAO,
+  ESPERA,
+  BLOQUEADO,
+  FINALIZADO,
+};
+typedef enum estado_t estado_t;
+
+
 struct processo_t {
   int pid;
   int regPC;
   int regA;
   int regX;
   int regERRO;
+  estado_t estado;
   char *executavel;
 };
 
@@ -65,6 +77,19 @@ static int so_trata_interrupcao(void *argC, int reg_A);
 static int so_carrega_programa(so_t *self, char *nome_do_executavel);
 // copia para str da memória do processador, até copiar um 0 (retorna true) ou tam bytes
 static bool copia_str_da_mem(int tam, char str[tam], mem_t *mem, int ender);
+// imprime a tabela de processos
+static void tablea_proc_imprime(so_t *self)
+{
+  for (int i = 0; i < N_PROCESSOS; i++)
+  {
+    int pid = self->tabela_de_processos[i].pid;
+    int regA = self->tabela_de_processos[i].regA;
+    int regPC = self->tabela_de_processos[i].regPC;
+    char *exe = self->tabela_de_processos[i].executavel;
+    int estado = self->tabela_de_processos[i].estado;
+    console_printf("pid: %d || regA: %d || regPC: %d || EXE: %s || estado: %d", pid, regA, regPC, exe, estado);
+  }
+}
 
 
 // ---------------------------------------------------------------------
@@ -78,22 +103,28 @@ int processo_cria(so_t *so, char *nome_do_executavel)
     console_printf("TABELA DE PROCESSOS ESTÁ CHEIA\n");
   }
 
-
   // insere um novo processo na tabela
-  for (int i = 0; i < N_PROCESSOS; i++)
+  int i = 0;
+  while (i < N_PROCESSOS)
   {
     if (so->tabela_de_processos[i].pid == SEM_PROCESSO)
     {
       so->tabela_de_processos[i].pid = i;
-      so->tabela_de_processos[i].executavel = nome_do_executavel;
+      so->tabela_de_processos[i].executavel = malloc(sizeof(nome_do_executavel));
+      strcpy(so->tabela_de_processos[i].executavel, nome_do_executavel);
+      so->tabela_de_processos[i].estado = PRONTO;
+      break;
     }
+    i++;
   }
 
   // carrega o programa na memória
   int endereco_inicial = so_carrega_programa(so, nome_do_executavel);
-  // altera o PC para o endereço de carga
-  so->regPC = endereco_inicial;
-  so->processo_corrente->regPC = so->regPC;
+  so->tabela_de_processos[i].regPC = endereco_inicial;
+
+  // imprime tabela para debugar
+  console_printf("Processo criado\n");
+  tablea_proc_imprime(so);
 
   so->n_processos_tabela++;
   return endereco_inicial;
@@ -111,6 +142,8 @@ void processo_mata(so_t *so)
 
   // mata o processo corrente
   so->n_processos_tabela--;
+  free(so->processo_corrente->executavel);
+  so->processo_corrente->estado = FINALIZADO;
   so->processo_corrente->pid = SEM_PROCESSO;
 }
 
@@ -118,12 +151,16 @@ void processo_mata(so_t *so)
 void processo_troca_corrente(so_t *self)
 {
   // por enquanto, acha o primeiro processo existente na tabela
-  for (int i = 0; i < self->n_processos_tabela; i++)
+  int i = 0;
+  while (i < N_PROCESSOS)
   {
-    if (self->tabela_de_processos[i].pid != SEM_PROCESSO)
+    if (self->tabela_de_processos[i].pid != SEM_PROCESSO && self->tabela_de_processos[i].estado == PRONTO)
     {
       self->processo_corrente = &self->tabela_de_processos[i];
+      self->processo_corrente->estado = EXECUCAO;
+      break;
     }
+    i++;
   }
 }
 
@@ -259,6 +296,16 @@ static void so_escalona(so_t *self)
   // t2: na primeira versão, escolhe um processo pronto caso o processo
   //   corrente não possa continuar executando, senão deixa o mesmo processo.
   //   depois, implementa um escalonador melhor
+
+  // verifica se o processo corrente está em execução
+  if (self->processo_corrente->estado == EXECUCAO) return;
+
+  // bota o primeiro processo PRONTO para executar
+  processo_troca_corrente(self);
+
+  // imprime tabela para debugar
+  console_printf("Processo escalonado\n");
+  tablea_proc_imprime(self);
 }
 
 static int so_despacha(so_t *self)
@@ -275,8 +322,8 @@ static int so_despacha(so_t *self)
     return 1;
   }
 
-  console_printf("despacha estado - corrente - %d, %d, %d, %d", self->processo_corrente->regA, self->processo_corrente->regPC, self->processo_corrente->regERRO, self->processo_corrente->regX);
-  console_printf("despacha estado - so       - %d, %d, %d, %d", self->regA, self->regPC, self->regERRO, self->regX);
+  //console_printf("despacha estado - corrente - %d, %d, %d, %d", self->processo_corrente->regA, self->processo_corrente->regPC, self->processo_corrente->regERRO, self->processo_corrente->regX);
+  //console_printf("despacha estado - so       - %d, %d, %d, %d", self->regA, self->regPC, self->regERRO, self->regX);
 
   if (mem_escreve(self->mem, CPU_END_A, self->processo_corrente->regA) != ERR_OK
       || mem_escreve(self->mem, CPU_END_PC, self->processo_corrente->regPC) != ERR_OK
@@ -358,6 +405,8 @@ static void so_trata_reset(so_t *self)
   // coloca o programa init na memória
   ender = processo_cria(self, "init.maq");
   processo_troca_corrente(self);
+  console_printf("TROCOU PRO INIT");
+  self->processo_corrente->estado = EXECUCAO;
   if (ender != 100) {
     console_printf("SO: problema na carga do programa inicial");
     self->erro_interno = true;
@@ -539,19 +588,19 @@ static void so_chamada_cria_proc(so_t *self)
   int ender_proc;
   // t2: deveria ler o X do descritor do processo criador
   ender_proc = self->processo_corrente->regX;
+  console_printf("proc corrente: %d", self->processo_corrente->pid);
   char nome[100];
   if (copia_str_da_mem(100, nome, self->mem, ender_proc)) {
     int ender_carga = processo_cria(self, nome);
-    processo_troca_corrente(self);
     if (ender_carga > 0) {
       // t2: deveria escrever no PC do descritor do processo criado
-      self->processo_corrente->regPC = ender_carga;
-      self->regPC = ender_carga;
+      // isso está sendo feito em processo_cria
       return;
     } // else?
   }
   // deveria escrever -1 (se erro) ou o PID do processo criado (se OK) no reg A
   //   do processo que pediu a criação
+  self->processo_corrente->regA = -1;
   self->regA = -1;
 }
 
@@ -561,8 +610,10 @@ static void so_chamada_mata_proc(so_t *self)
 {
   // t2: deveria matar um processo
   // ainda sem suporte a processos, retorna erro -1
-  console_printf("SO: SO_MATA_PROC não implementada");
-  self->regA = -1;
+  // console_printf("SO: SO_MATA_PROC não implementada");
+  // self->regA = -1;
+  // self->processo_corrente->regA = -1;
+  processo_mata(self);  // mata o processo corrente
 }
 
 // implementação da chamada se sistema SO_ESPERA_PROC

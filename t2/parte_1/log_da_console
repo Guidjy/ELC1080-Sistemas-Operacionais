@@ -1,233 +1,306 @@
-CMD: 'c'
+CMD: '1'
+CMD: '1'
 SO: recebi IRQ 0 (Reset)
 SO: carga de 'trata_int.maq' em 60-72
 SO: carga de 'init.maq' em 100-270
-despacha estado - corrente - 0, 100, 0, 0
-despacha estado - so       - 0, 100, 0, 0
+Processo criado
+pid: 0 || regA: 0 || regPC: 100 || EXE: init.maq || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || estado: 0
+TROCOU PRO INIT
+CMD: '1'
+CMD: '1'
+CMD: 'c'
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
-despacha estado - corrente - 0, 263, 0, 105
-despacha estado - so       - 0, 263, 0, 105
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
-despacha estado - corrente - 0, 263, 0, 110
-despacha estado - so       - 0, 263, 0, 110
 SO: recebi IRQ 3 (E/S: relógio)
 SO: interrupção do relógio (não tratada)
-despacha estado - corrente - 105, 249, 0, 168
-despacha estado - so       - 105, 249, 0, 168
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
-despacha estado - corrente - 0, 263, 0, 105
-despacha estado - so       - 0, 263, 0, 105
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
-despacha estado - corrente - 0, 263, 0, 116
-despacha estado - so       - 0, 263, 0, 116
 SO: recebi IRQ 3 (E/S: relógio)
 SO: interrupção do relógio (não tratada)
-despacha estado - corrente - 170, 260, 0, 32
-despacha estado - so       - 170, 260, 0, 32
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
-despacha estado - corrente - 0, 263, 0, 32
-despacha estado - so       - 0, 263, 0, 32
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
-despacha estado - corrente - 0, 263, 0, 105
-despacha estado - so       - 0, 263, 0, 105
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
-despacha estado - corrente - 0, 263, 0, 110
-despacha estado - so       - 0, 263, 0, 110
 SO: recebi IRQ 3 (E/S: relógio)
 SO: interrupção do relógio (não tratada)
-despacha estado - corrente - 0, 263, 0, 110
-despacha estado - so       - 0, 263, 0, 110
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
-despacha estado - corrente - 0, 263, 0, 105
-despacha estado - so       - 0, 263, 0, 105
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
-despacha estado - corrente - 0, 263, 0, 99
-despacha estado - so       - 0, 263, 0, 99
 SO: recebi IRQ 3 (E/S: relógio)
 SO: interrupção do relógio (não tratada)
-despacha estado - corrente - 0, 267, 0, 174
-despacha estado - so       - 0, 267, 0, 174
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
-despacha estado - corrente - 0, 263, 0, 105
-despacha estado - so       - 0, 263, 0, 105
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
-despacha estado - corrente - 0, 263, 0, 97
-despacha estado - so       - 0, 263, 0, 97
 SO: recebi IRQ 3 (E/S: relógio)
 SO: interrupção do relógio (não tratada)
-despacha estado - corrente - 0, 245, 0, 177
-despacha estado - so       - 0, 245, 0, 177
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
-despacha estado - corrente - 0, 263, 0, 108
-despacha estado - so       - 0, 263, 0, 108
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
-despacha estado - corrente - 0, 263, 0, 105
-despacha estado - so       - 0, 263, 0, 105
 SO: recebi IRQ 3 (E/S: relógio)
 SO: interrupção do relógio (não tratada)
-despacha estado - corrente - 122, 257, 0, 179
-despacha estado - so       - 122, 257, 0, 179
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
-despacha estado - corrente - 0, 263, 0, 122
-despacha estado - so       - 0, 263, 0, 122
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
-despacha estado - corrente - 0, 263, 0, 97
-despacha estado - so       - 0, 263, 0, 97
 SO: recebi IRQ 3 (E/S: relógio)
 SO: interrupção do relógio (não tratada)
-despacha estado - corrente - 2, 262, 0, 110
-despacha estado - so       - 2, 262, 0, 110
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
-despacha estado - corrente - 0, 263, 0, 110
-despacha estado - so       - 0, 263, 0, 110
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
-despacha estado - corrente - 0, 263, 0, 100
-despacha estado - so       - 0, 263, 0, 100
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
-despacha estado - corrente - 0, 263, 0, 111
-despacha estado - so       - 0, 263, 0, 111
 SO: recebi IRQ 3 (E/S: relógio)
 SO: interrupção do relógio (não tratada)
-despacha estado - corrente - 0, 263, 0, 111
-despacha estado - so       - 0, 263, 0, 111
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
-despacha estado - corrente - 0, 263, 0, 46
-despacha estado - so       - 0, 263, 0, 46
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
-despacha estado - corrente - 0, 263, 0, 46
-despacha estado - so       - 0, 263, 0, 46
 SO: recebi IRQ 3 (E/S: relógio)
 SO: interrupção do relógio (não tratada)
-despacha estado - corrente - 0, 267, 0, 185
-despacha estado - so       - 0, 267, 0, 185
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
-despacha estado - corrente - 0, 263, 0, 46
-despacha estado - so       - 0, 263, 0, 46
+CMD: 'p'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
-despacha estado - corrente - 0, 263, 0, 10
-despacha estado - so       - 0, 263, 0, 10
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
 SO: recebi IRQ 3 (E/S: relógio)
 SO: interrupção do relógio (não tratada)
-despacha estado - corrente - 0, 108, 0, 187
-despacha estado - so       - 0, 108, 0, 187
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 7
+proc corrente: 0
 SO: carga de 'p1.maq' em 7000-7241
-despacha estado - corrente - 0, 7000, 0, 0
-despacha estado - so       - 7, 7000, 0, 188
+Processo criado
+pid: 0 || regA: 7 || regPC: 114 || EXE: init.maq || estado: 1
+pid: 1 || regA: 0 || regPC: 7000 || EXE: p1.maq || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || estado: 0
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
 SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-despacha estado - corrente - 0, 7160, 0, 112
-despacha estado - so       - 0, 7160, 0, 112
+SO: chamada de sistema 7
+proc corrente: 0
+SO: carga de 'p2.maq' em 8000-8243
+Processo criado
+pid: 0 || regA: 7 || regPC: 122 || EXE: init.maq || estado: 1
+pid: 1 || regA: 0 || regPC: 7000 || EXE: p1.maq || estado: 0
+pid: 2 || regA: 0 || regPC: 8000 || EXE: p2.maq || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || estado: 0
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
 SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-despacha estado - corrente - 0, 7160, 0, 49
-despacha estado - so       - 0, 7160, 0, 49
+SO: chamada de sistema 7
+proc corrente: 0
+SO: carga de 'p3.maq' em 9000-9241
+Processo criado
+pid: 0 || regA: 7 || regPC: 130 || EXE: init.maq || estado: 1
+pid: 1 || regA: 0 || regPC: 7000 || EXE: p1.maq || estado: 0
+pid: 2 || regA: 0 || regPC: 8000 || EXE: p2.maq || estado: 0
+pid: 3 || regA: 0 || regPC: 9000 || EXE: p3.maq || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || estado: 0
+CMD: '1'
+CMD: 'c'
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 9
+SO: SO_ESPERA_PROC não implementada
 SO: recebi IRQ 3 (E/S: relógio)
 SO: interrupção do relógio (não tratada)
-despacha estado - corrente - 0, 7160, 0, 49
-despacha estado - so       - 0, 7160, 0, 49
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 9
+SO: SO_ESPERA_PROC não implementada
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 9
+SO: SO_ESPERA_PROC não implementada
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
-despacha estado - corrente - 0, 7160, 0, 32
-despacha estado - so       - 0, 7160, 0, 32
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-despacha estado - corrente - 0, 7160, 0, 32
-despacha estado - so       - 0, 7160, 0, 32
 SO: recebi IRQ 3 (E/S: relógio)
 SO: interrupção do relógio (não tratada)
-despacha estado - corrente - 0, 7164, 0, 7005
-despacha estado - so       - 0, 7164, 0, 7005
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
-despacha estado - corrente - 0, 7160, 0, 40
-despacha estado - so       - 0, 7160, 0, 40
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
-despacha estado - corrente - 0, 7160, 0, 98
-despacha estado - so       - 0, 7160, 0, 98
 SO: recebi IRQ 3 (E/S: relógio)
 SO: interrupção do relógio (não tratada)
-despacha estado - corrente - 0, 7142, 0, 7008
-despacha estado - so       - 0, 7142, 0, 7008
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
-despacha estado - corrente - 0, 7160, 0, 97
-despacha estado - so       - 0, 7160, 0, 97
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
-despacha estado - corrente - 0, 7160, 0, 115
-despacha estado - so       - 0, 7160, 0, 115
 SO: recebi IRQ 3 (E/S: relógio)
 SO: interrupção do relógio (não tratada)
-despacha estado - corrente - 116, 7154, 0, 7010
-despacha estado - so       - 116, 7154, 0, 7010
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
-despacha estado - corrente - 0, 7160, 0, 116
-despacha estado - so       - 0, 7160, 0, 116
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
-despacha estado - corrente - 0, 7160, 0, 97
-despacha estado - so       - 0, 7160, 0, 97
 SO: recebi IRQ 3 (E/S: relógio)
 SO: interrupção do relógio (não tratada)
-despacha estado - corrente - 2, 7159, 0, 110
-despacha estado - so       - 2, 7159, 0, 110
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
-despacha estado - corrente - 0, 7160, 0, 110
-despacha estado - so       - 0, 7160, 0, 110
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
-despacha estado - corrente - 0, 7160, 0, 116
-despacha estado - so       - 0, 7160, 0, 116
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
-despacha estado - corrente - 0, 7160, 0, 101
-despacha estado - so       - 0, 7160, 0, 101
 SO: recebi IRQ 3 (E/S: relógio)
 SO: interrupção do relógio (não tratada)
-despacha estado - corrente - 0, 7160, 0, 101
-despacha estado - so       - 0, 7160, 0, 101
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
-despacha estado - corrente - 0, 7160, 0, 32
-despacha estado - so       - 0, 7160, 0, 32
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
-despacha estado - corrente - 0, 7160, 0, 67
-despacha estado - so       - 0, 7160, 0, 67
 SO: recebi IRQ 3 (E/S: relógio)
 SO: interrupção do relógio (não tratada)
-despacha estado - corrente - 0, 7164, 0, 7016
-despacha estado - so       - 0, 7164, 0, 7016
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
-despacha estado - corrente - 0, 7160, 0, 80
-despacha estado - so       - 0, 7160, 0, 80
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 8
+Processo escalonado
+pid: -1 || regA: 8 || regPC: 160 || EXE: ��[�c || estado: 4
+pid: 1 || regA: 0 || regPC: 7000 || EXE: p1.maq || estado: 1
+pid: 2 || regA: 0 || regPC: 8000 || EXE: p2.maq || estado: 0
+pid: 3 || regA: 0 || regPC: 9000 || EXE: p3.maq || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || estado: 0
+CMD: 'p'
+CMD: 'c'
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
 CMD: 'f'
 Fim da execução.
