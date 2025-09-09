@@ -73,20 +73,58 @@ static bool copia_str_da_mem(int tam, char str[tam], mem_t *mem, int ender);
 
 int processo_cria(so_t *so, char *nome_do_executavel)
 {
+  if (so->n_processos_tabela == N_PROCESSOS)
+  {
+    console_printf("TABELA DE PROCESSOS ESTÁ CHEIA\n");
+  }
+
+
   // insere um novo processo na tabela
-  so->tabela_de_processos[so->n_processos_tabela].pid = so->n_processos_tabela;
-  so->tabela_de_processos[so->n_processos_tabela].executavel = nome_do_executavel;
+  for (int i = 0; i < N_PROCESSOS; i++)
+  {
+    if (so->tabela_de_processos[i].pid == SEM_PROCESSO)
+    {
+      so->tabela_de_processos[i].pid = i;
+      so->tabela_de_processos[i].executavel = nome_do_executavel;
+    }
+  }
 
   // carrega o programa na memória
   int endereco_inicial = so_carrega_programa(so, nome_do_executavel);
   // altera o PC para o endereço de carga
   so->regPC = endereco_inicial;
   so->processo_corrente->regPC = so->regPC;
-  // processo criado vira o processo corrente
-  so->processo_corrente = &so->tabela_de_processos[so->n_processos_tabela];
-  so->n_processos_tabela++;
 
+  so->n_processos_tabela++;
   return endereco_inicial;
+}
+
+
+void processo_mata(so_t *so)
+{
+  // verifica se hà processos para serem deletados
+  if (so->n_processos_tabela <= 0)
+  {
+    console_printf("SO TENTOU MATAR UM PROCESSO QUANDO NÃO HÁ PROCESSOS CORRENTES\n");
+    return;
+  }
+
+  // mata o processo corrente
+  so->n_processos_tabela--;
+  so->processo_corrente->pid = SEM_PROCESSO;
+}
+
+
+void processo_troca_corrente(so_t *self)
+{
+  // por enquanto, acha o primeiro processo existente na tabela
+  for (int i = 0; i < self->n_processos_tabela; i++)
+  {
+    if (self->tabela_de_processos[i].pid != SEM_PROCESSO)
+    {
+      self->processo_corrente = &self->tabela_de_processos[i];
+    }
+  }
 }
 
 
@@ -200,8 +238,8 @@ static void so_salva_estado_da_cpu(so_t *self)
   self->processo_corrente->regERRO = self->regERRO;
   self->processo_corrente->regX = self->regX;
 
-  console_printf("salva estado - corrente - %d, %d, %d, %d", self->processo_corrente->regA, self->processo_corrente->regPC, self->processo_corrente->regERRO, self->processo_corrente->regX);
-  console_printf("salva estado - so       - %d, %d, %d, %d", self->regA, self->regPC, self->regERRO, self->regX);
+  // console_printf("salva estado - corrente - %d, %d, %d, %d", self->processo_corrente->regA, self->processo_corrente->regPC, self->processo_corrente->regERRO, self->processo_corrente->regX);
+  // console_printf("salva estado - so       - %d, %d, %d, %d", self->regA, self->regPC, self->regERRO, self->regX);
 }
 
 static void so_trata_pendencias(so_t *self)
@@ -319,6 +357,7 @@ static void so_trata_reset(so_t *self)
 
   // coloca o programa init na memória
   ender = processo_cria(self, "init.maq");
+  processo_troca_corrente(self);
   if (ender != 100) {
     console_printf("SO: problema na carga do programa inicial");
     self->erro_interno = true;
@@ -336,7 +375,8 @@ static void so_trata_irq_err_cpu(so_t *self)
   // t2: com suporte a processos, deveria pegar o valor do registrador erro
   //   no descritor do processo corrente, e reagir de acordo com esse erro
   //   (em geral, matando o processo)
-  err_t err = self->regERRO;
+  err_t err = self->processo_corrente->regERRO;
+  processo_mata(self);
   console_printf("SO: IRQ não tratada -- erro na CPU: %s", err_nome(err));
   self->erro_interno = true;
 }
@@ -381,7 +421,8 @@ static void so_trata_irq_chamada_sistema(so_t *self)
 {
   // a identificação da chamada está no registrador A
   // t2: com processos, o reg A deve estar no descritor do processo corrente
-  int id_chamada = self->regA;
+  // int id_chamada = self->regA;  antigo
+  int id_chamada = self->processo_corrente->regA;
   console_printf("SO: chamada de sistema %d", id_chamada);
   switch (id_chamada) {
     case SO_LE:
@@ -402,6 +443,7 @@ static void so_trata_irq_chamada_sistema(so_t *self)
     default:
       console_printf("SO: chamada de sistema desconhecida (%d)", id_chamada);
       // t2: deveria matar o processo
+      processo_mata(self);
       self->erro_interno = true;
   }
 }
@@ -445,6 +487,7 @@ static void so_chamada_le(so_t *self)
   // t2: o acesso só deve ser feito nesse momento se for possível; se não, o processo
   //   é bloqueado, e o acesso só deve ser feito mais tarde (e o processo desbloqueado)
   self->regA = dado;
+  self->processo_corrente->regA = dado;
 }
 
 // implementação da chamada se sistema SO_ESCR
@@ -481,6 +524,7 @@ static void so_chamada_escr(so_t *self)
     return;
   }
   self->regA = 0;
+  self->processo_corrente->regA = 0;
 }
 
 // implementação da chamada se sistema SO_CRIA_PROC
@@ -494,12 +538,14 @@ static void so_chamada_cria_proc(so_t *self)
   // em X está o endereço onde está o nome do arquivo
   int ender_proc;
   // t2: deveria ler o X do descritor do processo criador
-  ender_proc = self->regX;
+  ender_proc = self->processo_corrente->regX;
   char nome[100];
   if (copia_str_da_mem(100, nome, self->mem, ender_proc)) {
-    int ender_carga = so_carrega_programa(self, nome);
+    int ender_carga = processo_cria(self, nome);
+    processo_troca_corrente(self);
     if (ender_carga > 0) {
       // t2: deveria escrever no PC do descritor do processo criado
+      self->processo_corrente->regPC = ender_carga;
       self->regPC = ender_carga;
       return;
     } // else?
