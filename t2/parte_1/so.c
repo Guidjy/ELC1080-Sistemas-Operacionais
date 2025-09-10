@@ -9,6 +9,7 @@
 
 #include "so.h"
 #include "dispositivos.h"
+#include "dispositivos.h"
 #include "err.h"
 #include "irq.h"
 #include "memoria.h"
@@ -109,7 +110,7 @@ int processo_cria(so_t *so, char *nome_do_executavel)
   {
     if (so->tabela_de_processos[i].pid == SEM_PROCESSO)
     {
-      so->tabela_de_processos[i].pid = i;
+      so->tabela_de_processos[i].pid = i + 1;
       so->tabela_de_processos[i].executavel = malloc(sizeof(nome_do_executavel));
       strcpy(so->tabela_de_processos[i].executavel, nome_do_executavel);
       so->tabela_de_processos[i].estado = PRONTO;
@@ -131,7 +132,7 @@ int processo_cria(so_t *so, char *nome_do_executavel)
 }
 
 
-void processo_mata(so_t *so)
+void processo_mata(so_t *so, int pid)
 {
   // verifica se hà processos para serem deletados
   if (so->n_processos_tabela <= 0)
@@ -140,11 +141,27 @@ void processo_mata(so_t *so)
     return;
   }
 
-  // mata o processo corrente
   so->n_processos_tabela--;
-  free(so->processo_corrente->executavel);
-  so->processo_corrente->estado = FINALIZADO;
-  so->processo_corrente->pid = SEM_PROCESSO;
+
+  if (pid == 0)
+  {
+    // mata o processo corrente
+    free(so->processo_corrente->executavel);
+    so->processo_corrente->estado = FINALIZADO;
+    so->processo_corrente->pid = SEM_PROCESSO;
+  }
+  else
+  {
+    for (int i = 0; i < N_PROCESSOS; i++)
+    {
+      if (so->tabela_de_processos[i].pid == pid)
+      {
+        free(so->tabela_de_processos[i].executavel);
+        so->tabela_de_processos[i].estado = FINALIZADO;
+        so->tabela_de_processos[i].pid = SEM_PROCESSO;
+      }
+    }
+  }
 }
 
 
@@ -425,7 +442,7 @@ static void so_trata_irq_err_cpu(so_t *self)
   //   no descritor do processo corrente, e reagir de acordo com esse erro
   //   (em geral, matando o processo)
   err_t err = self->processo_corrente->regERRO;
-  processo_mata(self);
+  processo_mata(self, 0);
   console_printf("SO: IRQ não tratada -- erro na CPU: %s", err_nome(err));
   self->erro_interno = true;
 }
@@ -492,7 +509,7 @@ static void so_trata_irq_chamada_sistema(so_t *self)
     default:
       console_printf("SO: chamada de sistema desconhecida (%d)", id_chamada);
       // t2: deveria matar o processo
-      processo_mata(self);
+      processo_mata(self, 0);
       self->erro_interno = true;
   }
 }
@@ -549,6 +566,9 @@ static void so_chamada_escr(so_t *self)
   //   t2: deveria usar o dispositivo de saída corrente do processo
   for (;;) {
     int estado;
+
+    // usa um terminal diferente dependendo do pid do processo
+
     if (es_le(self->es, D_TERM_A_TELA_OK, &estado) != ERR_OK) {
       console_printf("SO: problema no acesso ao estado da tela");
       self->erro_interno = true;
@@ -613,7 +633,7 @@ static void so_chamada_mata_proc(so_t *self)
   // console_printf("SO: SO_MATA_PROC não implementada");
   // self->regA = -1;
   // self->processo_corrente->regA = -1;
-  processo_mata(self);  // mata o processo corrente
+  processo_mata(self, 0);  // mata o processo corrente
 }
 
 // implementação da chamada se sistema SO_ESPERA_PROC

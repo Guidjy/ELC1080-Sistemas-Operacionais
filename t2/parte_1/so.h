@@ -23,7 +23,7 @@ typedef struct processo_t processo_t;
 int processo_cria(so_t *so, char *nome_do_executavel);
 
 // mata o processo corrente
-void processo_mata(so_t *so);
+void processo_mata(so_t *so, int pid);
 
 // muda o processo corrente
 void processo_troca_corrente(so_t *self);
