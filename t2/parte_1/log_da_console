@@ -1,5 +1,4 @@
-CMD: '1'
-CMD: '1'
+CMD: 'c'
 SO: recebi IRQ 0 (Reset)
 SO: carga de 'trata_int.maq' em 60-72
 SO: carga de 'init.maq' em 100-270
@@ -15,8 +14,6 @@ pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
 pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
 pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
 TROCOU PRO INIT
-CMD: '1'
-CMD: 'c'
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
 SO: recebi IRQ 2 (Chamada de sistema)
@@ -90,7 +87,7 @@ CMD: '1'
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
 CMD: '1'
-CMD: '11'
+CMD: '1'
 CMD: '1'
 CMD: '1'
 CMD: '1'
@@ -186,6 +183,7 @@ pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
 pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
 pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
 pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+CMD: '1'
 CMD: 'c'
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 9
@@ -232,6 +230,641 @@ SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+CMD: 'p'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 8
+Processo escalonado
+pid: -1 || regA: 8 || regPC: 160 || EXE: �P�_ || terminal: -1 || estado: 4
+pid: 2 || regA: 0 || regPC: 7000 || EXE: p1.maq || terminal: 4 || estado: 1
+pid: 3 || regA: 0 || regPC: 8000 || EXE: p2.maq || terminal: 8 || estado: 0
+pid: 4 || regA: 0 || regPC: 9000 || EXE: p3.maq || terminal: 12 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+CMD: '1'
+CMD: 'c'
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
 SO: recebi IRQ 3 (E/S: relógio)
 SO: interrupção do relógio (não tratada)
 SO: recebi IRQ 2 (Chamada de sistema)
@@ -255,9 +888,9 @@ SO: interrupção do relógio (não tratada)
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 8
 Processo escalonado
-pid: -1 || regA: 8 || regPC: 160 || EXE: �L��Z || terminal: -1 || estado: 4
-pid: 2 || regA: 0 || regPC: 7000 || EXE: p1.maq || terminal: 4 || estado: 1
-pid: 3 || regA: 0 || regPC: 8000 || EXE: p2.maq || terminal: 8 || estado: 0
+pid: -1 || regA: 8 || regPC: 160 || EXE: �P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 7086 || EXE: a || terminal: -1 || estado: 4
+pid: 3 || regA: 0 || regPC: 8000 || EXE: p2.maq || terminal: 8 || estado: 1
 pid: 4 || regA: 0 || regPC: 9000 || EXE: p3.maq || terminal: 12 || estado: 0
 pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
 pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
@@ -267,8 +900,50 @@ pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
 pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
-CMD: 'p'
-CMD: 'c'
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
 SO: recebi IRQ 3 (E/S: relógio)
@@ -309,5 +984,1417 @@ SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 8
+Processo escalonado
+pid: -1 || regA: 8 || regPC: 160 || EXE: �P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 7086 || EXE: a || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 8088 || EXE: ��P�_ || terminal: -1 || estado: 4
+pid: 4 || regA: 0 || regPC: 9000 || EXE: p3.maq || terminal: 12 || estado: 1
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 8
+Processo escalonado
+pid: -1 || regA: 8 || regPC: 160 || EXE: �P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 7086 || EXE: a || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 8088 || EXE: ��P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 9086 || EXE: 3�P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+Processo escalonado
+pid: -1 || regA: 8 || regPC: 160 || EXE: �P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 7086 || EXE: a || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 8088 || EXE: ��P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 9086 || EXE: 3�P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+Processo escalonado
+pid: -1 || regA: 8 || regPC: 160 || EXE: �P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 7086 || EXE: a || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 8088 || EXE: ��P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 9086 || EXE: 3�P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+Processo escalonado
+pid: -1 || regA: 8 || regPC: 160 || EXE: �P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 7086 || EXE: a || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 8088 || EXE: ��P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 9086 || EXE: 3�P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+Processo escalonado
+pid: -1 || regA: 8 || regPC: 160 || EXE: �P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 7086 || EXE: a || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 8088 || EXE: ��P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 9086 || EXE: 3�P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+Processo escalonado
+pid: -1 || regA: 8 || regPC: 160 || EXE: �P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 7086 || EXE: a || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 8088 || EXE: ��P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 9086 || EXE: 3�P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+Processo escalonado
+pid: -1 || regA: 8 || regPC: 160 || EXE: �P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 7086 || EXE: a || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 8088 || EXE: ��P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 9086 || EXE: 3�P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+Processo escalonado
+pid: -1 || regA: 8 || regPC: 160 || EXE: �P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 7086 || EXE: a || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 8088 || EXE: ��P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 9086 || EXE: 3�P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+Processo escalonado
+pid: -1 || regA: 8 || regPC: 160 || EXE: �P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 7086 || EXE: a || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 8088 || EXE: ��P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 9086 || EXE: 3�P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+Processo escalonado
+pid: -1 || regA: 8 || regPC: 160 || EXE: �P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 7086 || EXE: a || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 8088 || EXE: ��P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 9086 || EXE: 3�P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+Processo escalonado
+pid: -1 || regA: 8 || regPC: 160 || EXE: �P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 7086 || EXE: a || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 8088 || EXE: ��P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 9086 || EXE: 3�P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+Processo escalonado
+pid: -1 || regA: 8 || regPC: 160 || EXE: �P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 7086 || EXE: a || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 8088 || EXE: ��P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 9086 || EXE: 3�P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+Processo escalonado
+pid: -1 || regA: 8 || regPC: 160 || EXE: �P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 7086 || EXE: a || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 8088 || EXE: ��P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 9086 || EXE: 3�P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+Processo escalonado
+pid: -1 || regA: 8 || regPC: 160 || EXE: �P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 7086 || EXE: a || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 8088 || EXE: ��P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 9086 || EXE: 3�P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+Processo escalonado
+pid: -1 || regA: 8 || regPC: 160 || EXE: �P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 7086 || EXE: a || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 8088 || EXE: ��P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 9086 || EXE: 3�P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+Processo escalonado
+pid: -1 || regA: 8 || regPC: 160 || EXE: �P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 7086 || EXE: a || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 8088 || EXE: ��P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 9086 || EXE: 3�P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+Processo escalonado
+pid: -1 || regA: 8 || regPC: 160 || EXE: �P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 7086 || EXE: a || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 8088 || EXE: ��P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 9086 || EXE: 3�P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+Processo escalonado
+pid: -1 || regA: 8 || regPC: 160 || EXE: �P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 7086 || EXE: a || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 8088 || EXE: ��P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 9086 || EXE: 3�P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+Processo escalonado
+pid: -1 || regA: 8 || regPC: 160 || EXE: �P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 7086 || EXE: a || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 8088 || EXE: ��P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 9086 || EXE: 3�P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+Processo escalonado
+pid: -1 || regA: 8 || regPC: 160 || EXE: �P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 7086 || EXE: a || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 8088 || EXE: ��P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 9086 || EXE: 3�P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+Processo escalonado
+pid: -1 || regA: 8 || regPC: 160 || EXE: �P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 7086 || EXE: a || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 8088 || EXE: ��P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 9086 || EXE: 3�P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+Processo escalonado
+pid: -1 || regA: 8 || regPC: 160 || EXE: �P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 7086 || EXE: a || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 8088 || EXE: ��P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 9086 || EXE: 3�P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+Processo escalonado
+pid: -1 || regA: 8 || regPC: 160 || EXE: �P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 7086 || EXE: a || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 8088 || EXE: ��P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 9086 || EXE: 3�P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+Processo escalonado
+pid: -1 || regA: 8 || regPC: 160 || EXE: �P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 7086 || EXE: a || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 8088 || EXE: ��P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 9086 || EXE: 3�P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+Processo escalonado
+pid: -1 || regA: 8 || regPC: 160 || EXE: �P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 7086 || EXE: a || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 8088 || EXE: ��P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 9086 || EXE: 3�P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+Processo escalonado
+pid: -1 || regA: 8 || regPC: 160 || EXE: �P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 7086 || EXE: a || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 8088 || EXE: ��P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 9086 || EXE: 3�P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+Processo escalonado
+pid: -1 || regA: 8 || regPC: 160 || EXE: �P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 7086 || EXE: a || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 8088 || EXE: ��P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 9086 || EXE: 3�P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+Processo escalonado
+pid: -1 || regA: 8 || regPC: 160 || EXE: �P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 7086 || EXE: a || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 8088 || EXE: ��P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 9086 || EXE: 3�P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+Processo escalonado
+pid: -1 || regA: 8 || regPC: 160 || EXE: �P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 7086 || EXE: a || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 8088 || EXE: ��P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 8 || regPC: 9086 || EXE: 3�P�_ || terminal: -1 || estado: 4
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
 CMD: 'f'
 Fim da execução.

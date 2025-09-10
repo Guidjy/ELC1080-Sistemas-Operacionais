@@ -596,7 +596,8 @@ static void so_chamada_le(so_t *self)
   //   t2: deveria usar dispositivo de entrada corrente do processo
   for (;;) {  // espera ocupada!
     int estado;
-    if (es_le(self->es, D_TERM_A_TECLADO_OK, &estado) != ERR_OK) {
+    int terminal = self->processo_corrente->terminal + 1;
+    if (es_le(self->es, terminal, &estado) != ERR_OK) {
       console_printf("SO: problema no acesso ao estado do teclado");
       self->erro_interno = true;
       return;
@@ -609,7 +610,8 @@ static void so_chamada_le(so_t *self)
     console_tictac(self->console);
   }
   int dado;
-  if (es_le(self->es, D_TERM_A_TECLADO, &dado) != ERR_OK) {
+  int terminal = self->processo_corrente->terminal + 0;
+  if (es_le(self->es, terminal, &dado) != ERR_OK) {
     console_printf("SO: problema no acesso ao teclado");
     self->erro_interno = true;
     return;
@@ -635,8 +637,9 @@ static void so_chamada_escr(so_t *self)
     int estado;
 
     // usa um terminal diferente dependendo do pid do processo
+    int terminal = self->processo_corrente->terminal + 3;
 
-    if (es_le(self->es, D_TERM_A_TELA_OK, &estado) != ERR_OK) {
+    if (es_le(self->es, terminal, &estado) != ERR_OK) {
       console_printf("SO: problema no acesso ao estado da tela");
       self->erro_interno = true;
       return;
@@ -653,8 +656,9 @@ static void so_chamada_escr(so_t *self)
   // t2: deveria usar os registradores do processo que está realizando a E/S
   // t2: caso o processo tenha sido bloqueado, esse acesso deve ser realizado em outra execução
   //   do SO, quando ele verificar que esse acesso já pode ser feito.
-  dado = self->regX;
-  if (es_escreve(self->es, D_TERM_A_TELA, dado) != ERR_OK) {
+  dado = self->processo_corrente->regX;
+  int terminal = self->processo_corrente->terminal + 2;
+  if (es_escreve(self->es, terminal, dado) != ERR_OK) {
     console_printf("SO: problema no acesso à tela");
     self->erro_interno = true;
     return;
