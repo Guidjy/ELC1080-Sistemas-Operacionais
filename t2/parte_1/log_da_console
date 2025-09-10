@@ -4,17 +4,18 @@ SO: recebi IRQ 0 (Reset)
 SO: carga de 'trata_int.maq' em 60-72
 SO: carga de 'init.maq' em 100-270
 Processo criado
-pid: 1 || regA: 0 || regPC: 100 || EXE: init.maq || estado: 0
-pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || estado: 0
-pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || estado: 0
-pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || estado: 0
-pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || estado: 0
-pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || estado: 0
-pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || estado: 0
-pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || estado: 0
-pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || estado: 0
-pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || estado: 0
+pid: 1 || regA: 0 || regPC: 100 || EXE: init.maq || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
 TROCOU PRO INIT
+CMD: '1'
 CMD: 'c'
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
@@ -80,10 +81,16 @@ CMD: 'p'
 CMD: '1'
 CMD: '1'
 CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
 CMD: '1'
-CMD: '1'
+CMD: '11'
 CMD: '1'
 CMD: '1'
 CMD: '1'
@@ -113,16 +120,16 @@ SO: chamada de sistema 7
 proc corrente: 1
 SO: carga de 'p1.maq' em 7000-7241
 Processo criado
-pid: 1 || regA: 7 || regPC: 114 || EXE: init.maq || estado: 1
-pid: 2 || regA: 0 || regPC: 7000 || EXE: p1.maq || estado: 0
-pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || estado: 0
-pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || estado: 0
-pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || estado: 0
-pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || estado: 0
-pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || estado: 0
-pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || estado: 0
-pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || estado: 0
-pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || estado: 0
+pid: 1 || regA: 7 || regPC: 114 || EXE: init.maq || terminal: 0 || estado: 1
+pid: 2 || regA: 0 || regPC: 7000 || EXE: p1.maq || terminal: 4 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
 CMD: '1'
 CMD: '1'
 CMD: '1'
@@ -141,16 +148,16 @@ SO: chamada de sistema 7
 proc corrente: 1
 SO: carga de 'p2.maq' em 8000-8243
 Processo criado
-pid: 1 || regA: 7 || regPC: 122 || EXE: init.maq || estado: 1
-pid: 2 || regA: 0 || regPC: 7000 || EXE: p1.maq || estado: 0
-pid: 3 || regA: 0 || regPC: 8000 || EXE: p2.maq || estado: 0
-pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || estado: 0
-pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || estado: 0
-pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || estado: 0
-pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || estado: 0
-pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || estado: 0
-pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || estado: 0
-pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || estado: 0
+pid: 1 || regA: 7 || regPC: 122 || EXE: init.maq || terminal: 0 || estado: 1
+pid: 2 || regA: 0 || regPC: 7000 || EXE: p1.maq || terminal: 4 || estado: 0
+pid: 3 || regA: 0 || regPC: 8000 || EXE: p2.maq || terminal: 8 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
 CMD: '1'
 CMD: '1'
 CMD: '1'
@@ -169,18 +176,16 @@ SO: chamada de sistema 7
 proc corrente: 1
 SO: carga de 'p3.maq' em 9000-9241
 Processo criado
-pid: 1 || regA: 7 || regPC: 130 || EXE: init.maq || estado: 1
-pid: 2 || regA: 0 || regPC: 7000 || EXE: p1.maq || estado: 0
-pid: 3 || regA: 0 || regPC: 8000 || EXE: p2.maq || estado: 0
-pid: 4 || regA: 0 || regPC: 9000 || EXE: p3.maq || estado: 0
-pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || estado: 0
-pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || estado: 0
-pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || estado: 0
-pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || estado: 0
-pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || estado: 0
-pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || estado: 0
-CMD: '1'
-CMD: '1'
+pid: 1 || regA: 7 || regPC: 130 || EXE: init.maq || terminal: 0 || estado: 1
+pid: 2 || regA: 0 || regPC: 7000 || EXE: p1.maq || terminal: 4 || estado: 0
+pid: 3 || regA: 0 || regPC: 8000 || EXE: p2.maq || terminal: 8 || estado: 0
+pid: 4 || regA: 0 || regPC: 9000 || EXE: p3.maq || terminal: 12 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
 CMD: 'c'
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 9
@@ -247,34 +252,25 @@ SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
 SO: recebi IRQ 3 (E/S: relógio)
 SO: interrupção do relógio (não tratada)
-CMD: 'p'
-CMD: '1'
-CMD: '1'
-CMD: '1'
-CMD: '1'
-CMD: '1'
-CMD: '1'
-CMD: '1'
-CMD: '1'
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 8
 Processo escalonado
-pid: -1 || regA: 8 || regPC: 160 || EXE: ��gJf^ || estado: 4
-pid: 2 || regA: 0 || regPC: 7000 || EXE: p1.maq || estado: 1
-pid: 3 || regA: 0 || regPC: 8000 || EXE: p2.maq || estado: 0
-pid: 4 || regA: 0 || regPC: 9000 || EXE: p3.maq || estado: 0
-pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || estado: 0
-pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || estado: 0
-pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || estado: 0
-pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || estado: 0
-pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || estado: 0
-pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || estado: 0
-CMD: '1'
+pid: -1 || regA: 8 || regPC: 160 || EXE: �L��Z || terminal: -1 || estado: 4
+pid: 2 || regA: 0 || regPC: 7000 || EXE: p1.maq || terminal: 4 || estado: 1
+pid: 3 || regA: 0 || regPC: 8000 || EXE: p2.maq || terminal: 8 || estado: 0
+pid: 4 || regA: 0 || regPC: 9000 || EXE: p3.maq || terminal: 12 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+pid: -1 || regA: 0 || regPC: 0 || EXE: (null) || terminal: 0 || estado: 0
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+CMD: 'p'
 CMD: 'c'
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
 SO: recebi IRQ 3 (E/S: relógio)
 SO: interrupção do relógio (não tratada)
 SO: recebi IRQ 2 (Chamada de sistema)
@@ -311,186 +307,6 @@ SO: recebi IRQ 3 (E/S: relógio)
 SO: interrupção do relógio (não tratada)
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: interrupção do relógio (não tratada)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: interrupção do relógio (não tratada)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: interrupção do relógio (não tratada)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: interrupção do relógio (não tratada)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: interrupção do relógio (não tratada)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: interrupção do relógio (não tratada)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: interrupção do relógio (não tratada)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: interrupção do relógio (não tratada)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: interrupção do relógio (não tratada)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: interrupção do relógio (não tratada)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: interrupção do relógio (não tratada)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: interrupção do relógio (não tratada)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: interrupção do relógio (não tratada)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: interrupção do relógio (não tratada)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: interrupção do relógio (não tratada)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: interrupção do relógio (não tratada)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: interrupção do relógio (não tratada)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: interrupção do relógio (não tratada)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: interrupção do relógio (não tratada)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: interrupção do relógio (não tratada)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: interrupção do relógio (não tratada)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: interrupção do relógio (não tratada)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: interrupção do relógio (não tratada)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: interrupção do relógio (não tratada)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: interrupção do relógio (não tratada)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: interrupção do relógio (não tratada)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: interrupção do relógio (não tratada)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: interrupção do relógio (não tratada)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: interrupção do relógio (não tratada)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: interrupção do relógio (não tratada)
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
 CMD: 'f'

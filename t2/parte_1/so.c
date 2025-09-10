@@ -32,6 +32,8 @@
 
 #define SEM_PROCESSO -1  // indica que não tem um processo corrente
 
+#define N_TERMINAIS 4
+
 
 enum estado_t {
   PRONTO,
@@ -49,6 +51,7 @@ struct processo_t {
   int regA;
   int regX;
   int regERRO;
+  int terminal;
   estado_t estado;
   char *executavel;
 };
@@ -67,6 +70,9 @@ struct so_t {
   processo_t *tabela_de_processos;
   int n_processos_tabela;
   processo_t *processo_corrente;  // se pid == SEM_PROCESSO, não tem processo
+
+  // vetor com os pids dos processos que estão usando cada terminal (0 == TERM_A, 1 == TERM_B...)
+  int terminais_usados[4];
 };
 
 
@@ -88,7 +94,8 @@ static void tablea_proc_imprime(so_t *self)
     int regPC = self->tabela_de_processos[i].regPC;
     char *exe = self->tabela_de_processos[i].executavel;
     int estado = self->tabela_de_processos[i].estado;
-    console_printf("pid: %d || regA: %d || regPC: %d || EXE: %s || estado: %d", pid, regA, regPC, exe, estado);
+    int terminal = self->tabela_de_processos[i].terminal;
+    console_printf("pid: %d || regA: %d || regPC: %d || EXE: %s || terminal: %d || estado: %d", pid, regA, regPC, exe, terminal, estado);
   }
 }
 
@@ -96,6 +103,35 @@ static void tablea_proc_imprime(so_t *self)
 // ---------------------------------------------------------------------
 // Funções de processos
 // ---------------------------------------------------------------------
+
+
+static bool associa_terminal_a_processo(so_t *so, processo_t *proc)
+{
+  for (int i = 0; i < N_TERMINAIS; i++)
+  {
+    if (so->terminais_usados[i] == SEM_PROCESSO)
+    {
+      so->terminais_usados[i] = proc->pid;
+      switch (i)
+      {
+        case 0:
+          proc->terminal = D_TERM_A;
+          break;
+        case 1:
+          proc->terminal = D_TERM_B;
+          break;
+        case 2:
+          proc->terminal = D_TERM_C;
+          break;
+        default:
+          proc->terminal = D_TERM_D;
+      }
+      return true;
+    }
+  }
+  return false;  // não tem um terminal disponível
+}
+
 
 int processo_cria(so_t *so, char *nome_do_executavel)
 {
@@ -123,6 +159,13 @@ int processo_cria(so_t *so, char *nome_do_executavel)
   int endereco_inicial = so_carrega_programa(so, nome_do_executavel);
   so->tabela_de_processos[i].regPC = endereco_inicial;
 
+  // vê se tem um terminal disponível e associa ao processo
+  if (!associa_terminal_a_processo(so, &so->tabela_de_processos[i]))
+  {
+    so->tabela_de_processos[i].terminal = -1;
+    console_printf("TERMINAL NÃO ASSOCIADO");
+  }
+
   // imprime tabela para debugar
   console_printf("Processo criado\n");
   tablea_proc_imprime(so);
@@ -149,6 +192,14 @@ void processo_mata(so_t *so, int pid)
     free(so->processo_corrente->executavel);
     so->processo_corrente->estado = FINALIZADO;
     so->processo_corrente->pid = SEM_PROCESSO;
+    so->processo_corrente->terminal = -1;
+    for (int i = 0; i < N_TERMINAIS; i++)
+    {
+      if (so->terminais_usados[i] == so->processo_corrente->pid)
+      {
+        so->terminais_usados[i] = SEM_PROCESSO;
+      }
+    }
   }
   else
   {
@@ -159,7 +210,16 @@ void processo_mata(so_t *so, int pid)
         free(so->tabela_de_processos[i].executavel);
         so->tabela_de_processos[i].estado = FINALIZADO;
         so->tabela_de_processos[i].pid = SEM_PROCESSO;
+        so->tabela_de_processos[i].terminal = -1;
+        for (int j = 0; j < N_TERMINAIS; j++)
+        {
+          if (so->terminais_usados[j] == so->tabela_de_processos[i].pid)
+          {
+            so->terminais_usados[j] = SEM_PROCESSO;
+          }
+        }
       }
+
     }
   }
 }
@@ -197,6 +257,7 @@ so_t *so_cria(cpu_t *cpu, mem_t *mem, es_t *es, console_t *console)
   self->console = console;
   self->erro_interno = false;
 
+  // cria tabela de processo
   self->tabela_de_processos = malloc(N_PROCESSOS * sizeof(processo_t));
   assert(self->tabela_de_processos != NULL);
   for (int i = 0; i < N_PROCESSOS; i++) 
@@ -205,6 +266,12 @@ so_t *so_cria(cpu_t *cpu, mem_t *mem, es_t *es, console_t *console)
   }
   self->n_processos_tabela = 0;
   self->processo_corrente = &self->tabela_de_processos[0];
+
+  // inicializa vetor de terminais usados
+  for (int i = 0; i < N_TERMINAIS; i++)
+  {
+    self->terminais_usados[i] = SEM_PROCESSO;
+  }
 
   // quando a CPU executar uma instrução CHAMAC, deve chamar a função
   //   so_trata_interrupcao, com primeiro argumento um ptr para o SO
