@@ -28,7 +28,7 @@
 // intervalo entre interrupções do relógio
 #define INTERVALO_INTERRUPCAO 50   // em instruções executadas
 
-#define N_PROCESSOS 10   // número máximo de processos
+#define N_PROCESSOS 5   // número máximo de processos
 
 #define SEM_PROCESSO -1  // indica que não tem um processo corrente
 
@@ -59,6 +59,7 @@ struct processo_t {
   char *executavel;
 
   int dispositivo_causou_bloqueio;
+  int pid_esperando;  // pid do processo que está esperando morrer
 };
 
 
@@ -96,11 +97,12 @@ static void tablea_proc_imprime(so_t *self)
   {
     int pid = self->tabela_de_processos[i].pid;
     int regA = self->tabela_de_processos[i].regA;
+    int regX = self->tabela_de_processos[i].regX;
     int regPC = self->tabela_de_processos[i].regPC;
     char *exe = self->tabela_de_processos[i].executavel;
     int estado = self->tabela_de_processos[i].estado;
     int terminal = self->tabela_de_processos[i].terminal;
-    console_printf("pid: %d || regA: %d || regPC: %d || EXE: %s || terminal: %d || estado: %d", pid, regA, regPC, exe, terminal, estado);
+    console_printf("pid: %d || regA: %d || regX: %d || regPC: %d || EXE: %s || t: %d || estado: %d", pid, regA, regX, regPC, exe, terminal, estado);
   }
 }
 
@@ -156,6 +158,7 @@ int processo_cria(so_t *so, char *nome_do_executavel)
       strcpy(so->tabela_de_processos[i].executavel, nome_do_executavel);
       so->tabela_de_processos[i].estado = PRONTO;
       so->tabela_de_processos[i].dispositivo_causou_bloqueio = SEM_DISPOSITIVO;
+      so->tabela_de_processos[i].pid_esperando = SEM_PROCESSO;
       break;
     }
     i++;
@@ -228,6 +231,15 @@ void processo_mata(so_t *so, int pid)
 
     }
   }
+
+  // verifica se tinha algum processo esperado a morte desse
+  for (int i = 0; i < N_PROCESSOS; i++)
+  {
+    if (so->tabela_de_processos[i].pid_esperando == pid)
+    {
+      so->tabela_de_processos[i].estado = PRONTO;
+    }
+  }
 }
 
 
@@ -246,6 +258,21 @@ void processo_troca_corrente(so_t *self)
     i++;
   }
 }
+
+
+/*
+
+// verifica se um processo com o pid existe
+static bool processo_existe(so_t *self, int pid)
+{
+  for (int i = 0; i < N_PROCESSOS; i++)
+  {
+    if (self->tabela_de_processos[i].pid == pid) return true;
+  }
+  return false;
+}
+
+*/
 
 
 // ---------------------------------------------------------------------
@@ -767,7 +794,7 @@ static void so_chamada_mata_proc(so_t *self)
   // console_printf("SO: SO_MATA_PROC não implementada");
   // self->regA = -1;
   // self->processo_corrente->regA = -1;
-  processo_mata(self, 0);  // mata o processo corrente
+  processo_mata(self, self->processo_corrente->regX);  // mata o processo corrente
 }
 
 // implementação da chamada se sistema SO_ESPERA_PROC
@@ -776,8 +803,29 @@ static void so_chamada_espera_proc(so_t *self)
 {
   // t2: deveria bloquear o processo se for o caso (e desbloquear na morte do esperado)
   // ainda sem suporte a processos, retorna erro -1
-  console_printf("SO: SO_ESPERA_PROC não implementada");
+  console_printf("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
+  console_printf("SO: SO_ESPERA_PROC não implementada - pid: %d", self->processo_corrente->regX);
+  console_printf("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
   self->regA = -1;
+
+  /*
+
+  // verifica se o processo a se esperar é válido
+  if (self->processo_corrente->regX == self->processo_corrente->pid || 
+    !processo_existe(self, self->processo_corrente->regX))
+  {
+    console_printf("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
+    console_printf("PROCESSO INVÁLIDO");
+    console_printf("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
+    self->erro_interno = true;
+    return;
+  }
+
+  // bloqueia o processo chamador
+  self->processo_corrente->estado = BLOQUEADO;
+  self->processo_corrente->pid_esperando = self->processo_corrente->regX;
+
+  */
 }
 
 
