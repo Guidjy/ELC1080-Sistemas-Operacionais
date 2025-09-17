@@ -98,11 +98,11 @@ static void tablea_proc_imprime(so_t *self)
     int pid = self->tabela_de_processos[i].pid;
     int regA = self->tabela_de_processos[i].regA;
     int regX = self->tabela_de_processos[i].regX;
-    int regPC = self->tabela_de_processos[i].regPC;
+    //int regPC = self->tabela_de_processos[i].regPC;
     char *exe = self->tabela_de_processos[i].executavel;
     int estado = self->tabela_de_processos[i].estado;
     int terminal = self->tabela_de_processos[i].terminal;
-    console_printf("pid: %d || regA: %d || regX: %d || regPC: %d || EXE: %s || t: %d || estado: %d", pid, regA, regX, regPC, exe, terminal, estado);
+    console_printf("pid: %d || regA: %d || regX: %d || EXE: %s || t: %d || estado: %d", pid, regA, regX, exe, terminal, estado);
   }
 }
 
@@ -168,6 +168,13 @@ int processo_cria(so_t *so, char *nome_do_executavel)
   int endereco_inicial = so_carrega_programa(so, nome_do_executavel);
   so->tabela_de_processos[i].regPC = endereco_inicial;
 
+  // verifica se o endereço é válido
+  if (endereco_inicial < 0) {
+    console_printf("SO: problema na carga de um programa");
+    so->erro_interno = true;
+    return -1;
+  }
+
   // vê se tem um terminal disponível e associa ao processo
   if (!associa_terminal_a_processo(so, &so->tabela_de_processos[i]))
   {
@@ -180,7 +187,7 @@ int processo_cria(so_t *so, char *nome_do_executavel)
   tablea_proc_imprime(so);
 
   so->n_processos_tabela++;
-  return endereco_inicial;
+  return so->tabela_de_processos[i].pid;
 }
 
 
@@ -260,8 +267,6 @@ void processo_troca_corrente(so_t *self)
 }
 
 
-/*
-
 // verifica se um processo com o pid existe
 static bool processo_existe(so_t *self, int pid)
 {
@@ -271,8 +276,6 @@ static bool processo_existe(so_t *self, int pid)
   }
   return false;
 }
-
-*/
 
 
 // ---------------------------------------------------------------------
@@ -571,15 +574,18 @@ static void so_trata_reset(so_t *self)
   //   deste código
 
   // coloca o programa init na memória
-  ender = processo_cria(self, "init.maq");
+  int pid = processo_cria(self, "init.maq");
   processo_troca_corrente(self);
   console_printf("TROCOU PRO INIT");
   self->processo_corrente->estado = EXECUCAO;
+  self->processo_corrente->regA = pid;
+  /*
   if (ender != 100) {
     console_printf("SO: problema na carga do programa inicial");
     self->erro_interno = true;
     return;
   }
+  */
 }
 
 // interrupção gerada quando a CPU identifica um erro
@@ -771,18 +777,22 @@ static void so_chamada_cria_proc(so_t *self)
   ender_proc = self->processo_corrente->regX;
   console_printf("proc corrente: %d", self->processo_corrente->pid);
   char nome[100];
+  int pid;
   if (copia_str_da_mem(100, nome, self->mem, ender_proc)) {
-    int ender_carga = processo_cria(self, nome);
+    pid = processo_cria(self, nome);
+
+    /*
     if (ender_carga > 0) {
       // t2: deveria escrever no PC do descritor do processo criado
       // isso está sendo feito em processo_cria
       return;
     } // else?
+    */
   }
   // deveria escrever -1 (se erro) ou o PID do processo criado (se OK) no reg A
   //   do processo que pediu a criação
-  self->processo_corrente->regA = -1;
-  self->regA = -1;
+  self->processo_corrente->regA = pid;
+  self->regA = pid;
 }
 
 // implementação da chamada se sistema SO_MATA_PROC
@@ -803,12 +813,12 @@ static void so_chamada_espera_proc(so_t *self)
 {
   // t2: deveria bloquear o processo se for o caso (e desbloquear na morte do esperado)
   // ainda sem suporte a processos, retorna erro -1
+  /*
   console_printf("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
   console_printf("SO: SO_ESPERA_PROC não implementada - pid: %d", self->processo_corrente->regX);
   console_printf("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
   self->regA = -1;
-
-  /*
+  */
 
   // verifica se o processo a se esperar é válido
   if (self->processo_corrente->regX == self->processo_corrente->pid || 
@@ -821,11 +831,11 @@ static void so_chamada_espera_proc(so_t *self)
     return;
   }
 
+  console_printf("[%d] vai esperar o fim de [%d]", self->processo_corrente->pid, self->processo_corrente->regX);
+
   // bloqueia o processo chamador
   self->processo_corrente->estado = BLOQUEADO;
   self->processo_corrente->pid_esperando = self->processo_corrente->regX;
-
-  */
 }
 
 
