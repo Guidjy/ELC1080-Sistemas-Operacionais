@@ -36,7 +36,7 @@
 #define SEM_DISPOSITIVO -1;  // indica que não tem um dispositivo que causou bloqueio
 #define N_TERMINAIS 4
 
-#define ESCALONADOR 0
+#define ESCALONADOR 1
 #define SEM_ESCALONADOR 0
 #define ROUND_ROBIN 1
 
@@ -190,9 +190,12 @@ int processo_cria(so_t *so, char *nome_do_executavel)
     console_printf("TERMINAL NÃO ASSOCIADO");
   }
 
+  // insere na fila de processo prontos
+  fila_enque(so->processos_prontos, so->tabela_de_processos[i].pid);
+
   // imprime tabela para debugar
   console_printf("Processo criado\n");
-  tablea_proc_imprime(so);
+  //tablea_proc_imprime(so);
 
   so->n_processos_tabela++;
   return so->tabela_de_processos[i].pid;
@@ -224,6 +227,7 @@ void processo_mata(so_t *so, int pid)
         so->terminais_usados[i] = SEM_PROCESSO;
       }
     }
+    fila_deque(so->processos_prontos);
   }
   else
   {
@@ -253,6 +257,7 @@ void processo_mata(so_t *so, int pid)
     if (so->tabela_de_processos[i].pid_esperando == pid)
     {
       so->tabela_de_processos[i].estado = PRONTO;
+      fila_enque(so->processos_prontos, so->tabela_de_processos[i].pid);
     }
   }
 }
@@ -463,6 +468,7 @@ static void so_trata_pendencias(so_t *self)
       // desbloqueia o processo
       p->estado = PRONTO;
       p->dispositivo_causou_bloqueio = SEM_DISPOSITIVO;
+      fila_enque(self->processos_prontos, p->pid);
 
     }
   }
@@ -483,7 +489,16 @@ static void so_escalona(so_t *self)
   switch (ESCALONADOR)
   {
     case ROUND_ROBIN:
-      //todo
+      // pega o primeiro processo da fila de processos prontos
+      int pid_escalonado = fila_get(self->processos_prontos, 0);
+      for (int i = 0; i < N_PROCESSOS; i++)
+      {
+        if (self->tabela_de_processos[i].pid == pid_escalonado && pid_escalonado != -1)
+        {
+          // torna-o o processo corrente
+          self->processo_corrente = &self->tabela_de_processos[i];
+        }
+      }
       break;
     default:
       // bota o primeiro processo PRONTO para executar
@@ -634,7 +649,15 @@ static void so_trata_irq_relogio(so_t *self)
   // t2: deveria tratar a interrupção
   //   por exemplo, decrementa o quantum do processo corrente, quando se tem
   //   um escalonador com quantum
-  console_printf("SO: interrupção do relógio (não tratada)");
+  //console_printf("SO: interrupção do relógio (não tratada)");
+  self->processo_corrente->quantum--;
+  if (self->processo_corrente->quantum <= 0 && self->processo_corrente->estado != BLOQUEADO)
+  {
+    self->processo_corrente->quantum = 10;
+    fila_deque(self->processos_prontos);
+    // ATENÇÃO: talvez não funcione sapoha
+    fila_enque(self->processos_prontos, self->processo_corrente->pid);
+  }
 }
 
 // foi gerada uma interrupção para a qual o SO não está preparado
@@ -707,6 +730,7 @@ static void so_chamada_le(so_t *self)
       console_printf("SO: problema no acesso ao estado do teclado");
       // bloqueia o processo
       self->processo_corrente->estado = BLOQUEADO;
+      fila_deque(self->processos_prontos);
       self->processo_corrente->dispositivo_causou_bloqueio = terminal;
       self->erro_interno = true;
       return;
@@ -752,6 +776,7 @@ static void so_chamada_escr(so_t *self)
       console_printf("SO: problema no acesso ao estado da tela");
       // bloqueia o processo
       self->processo_corrente->estado = BLOQUEADO;
+      fila_deque(self->processos_prontos);
       self->processo_corrente->dispositivo_causou_bloqueio = terminal;
       self->erro_interno = true;
       return;
@@ -851,6 +876,7 @@ static void so_chamada_espera_proc(so_t *self)
 
   // bloqueia o processo chamador
   self->processo_corrente->estado = BLOQUEADO;
+  fila_deque(self->processos_prontos);
   self->processo_corrente->pid_esperando = self->processo_corrente->regX;
 }
 
