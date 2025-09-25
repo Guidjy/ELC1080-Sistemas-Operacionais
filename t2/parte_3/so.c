@@ -14,7 +14,7 @@
 #include "irq.h"
 #include "memoria.h"
 #include "programa.h"
-#include "lista_encadeada.h"
+#include "fila.h"
 
 #include <stdlib.h>
 #include <stdbool.h>
@@ -30,19 +30,13 @@
 #define INTERVALO_INTERRUPCAO 50   // em instruções executadas
 #define QUANTUM 10
 
-
 #define N_PROCESSOS 5   // número máximo de processos
-
 #define SEM_PROCESSO -1  // indica que não tem um processo corrente
 
-
 #define SEM_DISPOSITIVO -1;  // indica que não tem um dispositivo que causou bloqueio
-
 #define N_TERMINAIS 4
 
-
-#define ESCALONADOR 1  // escolhe o escalonador
-
+#define ESCALONADOR 1
 #define SEM_ESCALONADOR 0
 #define ROUND_ROBIN 1
 
@@ -71,7 +65,6 @@ struct processo_t {
   int dispositivo_causou_bloqueio;
   int pid_esperando;  // pid do processo que está esperando morrer
 
-  
   int quantum;
 };
 
@@ -89,9 +82,7 @@ struct so_t {
   processo_t *tabela_de_processos;
   int n_processos_tabela;
   processo_t *processo_corrente;  // se pid == SEM_PROCESSO, não tem processo
-
-  // lista de processos prontos usada pelo escalonador (guarda o pid)
-  Lista *processos_prontos;
+  Fila *processos_prontos;
 
   // vetor com os pids dos processos que estão usando cada terminal (0 == TERM_A, 1 == TERM_B...)
   int terminais_usados[4];
@@ -115,11 +106,10 @@ static void tablea_proc_imprime(so_t *self)
     int regA = self->tabela_de_processos[i].regA;
     int regX = self->tabela_de_processos[i].regX;
     //int regPC = self->tabela_de_processos[i].regPC;
-    //char *exe = self->tabela_de_processos[i].executavel;
+    char *exe = self->tabela_de_processos[i].executavel;
     int estado = self->tabela_de_processos[i].estado;
     int terminal = self->tabela_de_processos[i].terminal;
-    int quantum = self->tabela_de_processos[i].quantum;
-    console_printf("pid: %d || regA: %d || regX: %d || quantum: %d || t: %d || estado: %d", pid, regA, regX, quantum, terminal, estado);
+    console_printf("pid: %d || regA: %d || regX: %d || EXE: %s || t: %d || estado: %d", pid, regA, regX, exe, terminal, estado);
   }
 }
 
@@ -176,7 +166,7 @@ int processo_cria(so_t *so, char *nome_do_executavel)
       so->tabela_de_processos[i].estado = PRONTO;
       so->tabela_de_processos[i].dispositivo_causou_bloqueio = SEM_DISPOSITIVO;
       so->tabela_de_processos[i].pid_esperando = SEM_PROCESSO;
-      so->tabela_de_processos[i].quantum = QUANTUM;
+      so->tabela_de_processos[i].quantum = 10;
       break;
     }
     i++;
@@ -200,13 +190,12 @@ int processo_cria(so_t *so, char *nome_do_executavel)
     console_printf("TERMINAL NÃO ASSOCIADO");
   }
 
-  // insere na fila de processos prontos
-  int pid = so->tabela_de_processos[i].pid;
-  lista_append(so->processos_prontos, &pid);
+  // insere na fila de processo prontos
+  fila_enque(so->processos_prontos, so->tabela_de_processos[i].pid);
 
   // imprime tabela para debugar
   console_printf("Processo criado\n");
-  tablea_proc_imprime(so);
+  //tablea_proc_imprime(so);
 
   so->n_processos_tabela++;
   return so->tabela_de_processos[i].pid;
@@ -223,7 +212,6 @@ void processo_mata(so_t *so, int pid)
   }
 
   so->n_processos_tabela--;
-  int pid_morto;
 
   if (pid == 0)
   {
@@ -239,8 +227,7 @@ void processo_mata(so_t *so, int pid)
         so->terminais_usados[i] = SEM_PROCESSO;
       }
     }
-    // remove da fila de processos prontos
-    lista_deque(so->processos_prontos, &pid_morto);
+    fila_deque(so->processos_prontos);
   }
   else
   {
@@ -259,9 +246,8 @@ void processo_mata(so_t *so, int pid)
             so->terminais_usados[j] = SEM_PROCESSO;
           }
         }
-        lista_remove(so->processos_prontos, &pid_morto, i);
-        break;
       }
+
     }
   }
 
@@ -271,7 +257,7 @@ void processo_mata(so_t *so, int pid)
     if (so->tabela_de_processos[i].pid_esperando == pid)
     {
       so->tabela_de_processos[i].estado = PRONTO;
-      lista_append(so->processos_prontos, &so->tabela_de_processos[i].pid);
+      fila_enque(so->processos_prontos, so->tabela_de_processos[i].pid);
     }
   }
 }
@@ -306,25 +292,6 @@ static bool processo_existe(so_t *self, int pid)
 
 
 // ---------------------------------------------------------------------
-// Funções dos escalonadore
-// ---------------------------------------------------------------------
-
-
-static void imprime_prontos(so_t *self) 
-{
-  int n_prontos = self->processos_prontos->n_elem;
-  int prontos[n_prontos];
-  for (int i = 0; i < n_prontos; i++)
-  {
-    lista_get(self->processos_prontos, i, &prontos[i]);
-  }
-  console_printf("Fila de prontos: %d, %d, %d, %d, %d", prontos[0], prontos[1], prontos[2], prontos[3], prontos[4]);
-}
-
-
-
-
-// ---------------------------------------------------------------------
 // CRIAÇÃO {{{1
 // ---------------------------------------------------------------------
 
@@ -348,15 +315,13 @@ so_t *so_cria(cpu_t *cpu, mem_t *mem, es_t *es, console_t *console)
   }
   self->n_processos_tabela = 0;
   self->processo_corrente = &self->tabela_de_processos[0];
+  self->processos_prontos = fila_cria();
 
   // inicializa vetor de terminais usados
   for (int i = 0; i < N_TERMINAIS; i++)
   {
     self->terminais_usados[i] = SEM_PROCESSO;
   }
-
-  // cria a lista de processos prontos
-  self->processos_prontos = lista_cria(sizeof(int));
 
   // quando a CPU executar uma instrução CHAMAC, deve chamar a função
   //   so_trata_interrupcao, com primeiro argumento um ptr para o SO
@@ -503,8 +468,7 @@ static void so_trata_pendencias(so_t *self)
       // desbloqueia o processo
       p->estado = PRONTO;
       p->dispositivo_causou_bloqueio = SEM_DISPOSITIVO;
-      int pid = p->pid;
-      lista_append(self->processos_prontos, &pid);
+      fila_enque(self->processos_prontos, p->pid);
 
     }
   }
@@ -522,29 +486,18 @@ static void so_escalona(so_t *self)
   // verifica se o processo corrente está em execução
   if (self->processo_corrente->estado == EXECUCAO) return;
 
-  switch(ESCALONADOR)
+  switch (ESCALONADOR)
   {
     case ROUND_ROBIN:
-      // pega o pid do primeiro processo na fila de prontos
-      imprime_prontos(self);
-      int pid;
-      lista_get(self->processos_prontos, 0, &pid);
-      // acha o processo  na tabela
-      bool encontrado = false;
-      for (int i = 0; i < N_PROCESSOS; i++) 
+      // pega o primeiro processo da fila de processos prontos
+      int pid_escalonado = fila_get(self->processos_prontos, 0);
+      for (int i = 0; i < N_PROCESSOS; i++)
       {
-        if (self->tabela_de_processos[i].pid == pid) 
+        if (self->tabela_de_processos[i].pid == pid_escalonado && pid_escalonado != -1)
         {
           // torna-o o processo corrente
           self->processo_corrente = &self->tabela_de_processos[i];
-          self->processo_corrente->estado = EXECUCAO;
-          encontrado = true;
-          break;
         }
-      }
-      if (!encontrado)
-      {
-        console_printf("----------NÃO ECONTRADO");
       }
       break;
     default:
@@ -653,14 +606,7 @@ static void so_trata_reset(so_t *self)
 
   // coloca o programa init na memória
   int pid = processo_cria(self, "init.maq");
-  switch(ESCALONADOR)
-  {
-    case ROUND_ROBIN:
-      lista_append(self->processos_prontos, &pid);
-      break;
-    default:
-      processo_troca_corrente(self);
-  }
+  processo_troca_corrente(self);
   console_printf("TROCOU PRO INIT");
   self->processo_corrente->estado = EXECUCAO;
   self->processo_corrente->regA = pid;
@@ -703,16 +649,14 @@ static void so_trata_irq_relogio(so_t *self)
   // t2: deveria tratar a interrupção
   //   por exemplo, decrementa o quantum do processo corrente, quando se tem
   //   um escalonador com quantum
-  self->processo_corrente->quantum--;
   //console_printf("SO: interrupção do relógio (não tratada)");
-  // se quantum atingir 0, move o processo para o final da fila
-  if (self->processo_corrente->quantum <= 0)
+  self->processo_corrente->quantum--;
+  if (self->processo_corrente->quantum <= 0 && self->processo_corrente->estado != BLOQUEADO)
   {
     self->processo_corrente->quantum = 10;
-    self->processo_corrente->estado = PRONTO;
-    int pid;
-    lista_deque(self->processos_prontos, &pid);
-    lista_append(self->processos_prontos, &pid);
+    fila_deque(self->processos_prontos);
+    // ATENÇÃO: talvez não funcione sapoha
+    fila_enque(self->processos_prontos, self->processo_corrente->pid);
   }
 }
 
@@ -786,6 +730,7 @@ static void so_chamada_le(so_t *self)
       console_printf("SO: problema no acesso ao estado do teclado");
       // bloqueia o processo
       self->processo_corrente->estado = BLOQUEADO;
+      fila_deque(self->processos_prontos);
       self->processo_corrente->dispositivo_causou_bloqueio = terminal;
       self->erro_interno = true;
       return;
@@ -831,6 +776,7 @@ static void so_chamada_escr(so_t *self)
       console_printf("SO: problema no acesso ao estado da tela");
       // bloqueia o processo
       self->processo_corrente->estado = BLOQUEADO;
+      fila_deque(self->processos_prontos);
       self->processo_corrente->dispositivo_causou_bloqueio = terminal;
       self->erro_interno = true;
       return;
@@ -899,7 +845,7 @@ static void so_chamada_mata_proc(so_t *self)
   // console_printf("SO: SO_MATA_PROC não implementada");
   // self->regA = -1;
   // self->processo_corrente->regA = -1;
-  processo_mata(self, self->processo_corrente->regX);  // mata o processo de pid regX
+  processo_mata(self, self->processo_corrente->regX);  // mata o processo corrente
 }
 
 // implementação da chamada se sistema SO_ESPERA_PROC
@@ -930,6 +876,7 @@ static void so_chamada_espera_proc(so_t *self)
 
   // bloqueia o processo chamador
   self->processo_corrente->estado = BLOQUEADO;
+  fila_deque(self->processos_prontos);
   self->processo_corrente->pid_esperando = self->processo_corrente->regX;
 }
 

@@ -22,7 +22,7 @@ typedef struct processo_t processo_t;
 // carrega um programa na memória, altera o processo corrente e retorna o endereço de carga
 int processo_cria(so_t *so, char *nome_do_executavel);
 
-// mata o processo de pid pid
+// mata o processo corrente
 void processo_mata(so_t *so, int pid);
 
 // muda o processo corrente
