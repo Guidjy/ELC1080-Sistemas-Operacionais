@@ -36,9 +36,10 @@
 #define SEM_DISPOSITIVO -1;  // indica que não tem um dispositivo que causou bloqueio
 #define N_TERMINAIS 4
 
-#define ESCALONADOR 1
+#define ESCALONADOR 2
 #define SEM_ESCALONADOR 0
 #define ROUND_ROBIN 1
+#define PRIORIDADE 2
 
 
 enum estado_t {
@@ -66,6 +67,7 @@ struct processo_t {
   int pid_esperando;  // pid do processo que está esperando morrer
 
   int quantum;
+  float prioridade;
 };
 
 
@@ -166,7 +168,8 @@ int processo_cria(so_t *so, char *nome_do_executavel)
       so->tabela_de_processos[i].estado = PRONTO;
       so->tabela_de_processos[i].dispositivo_causou_bloqueio = SEM_DISPOSITIVO;
       so->tabela_de_processos[i].pid_esperando = SEM_PROCESSO;
-      so->tabela_de_processos[i].quantum = 10;
+      so->tabela_de_processos[i].quantum = QUANTUM;
+      so->tabela_de_processos[i].prioridade = 0.5;
       break;
     }
     i++;
@@ -288,6 +291,14 @@ static bool processo_existe(so_t *self, int pid)
     if (self->tabela_de_processos[i].pid == pid) return true;
   }
   return false;
+}
+
+
+// atualiza a prioridade de um processo
+static void processo_atualiza_prioridade(processo_t *proc)
+{
+  // prio = (prio + t_exec/t_quantum) / 2
+  proc->prioridade = (proc->prioridade + proc->quantum / QUANTUM) / 2;
 }
 
 
@@ -489,6 +500,7 @@ static void so_escalona(so_t *self)
   switch (ESCALONADOR)
   {
     case ROUND_ROBIN:
+      console_printf("ROUND ROBIN\n");
       // pega o primeiro processo da fila de processos prontos
       int pid_escalonado = fila_get(self->processos_prontos, 0);
       for (int i = 0; i < N_PROCESSOS; i++)
@@ -500,7 +512,36 @@ static void so_escalona(so_t *self)
         }
       }
       break;
+
+    case PRIORIDADE:
+      console_printf("PRIORIDADE\n");
+      // pega o indice do processo com a maior prioridade na tabela de processos (menor valor do campo ->prioridade)
+      int indice_maior_prioridade = SEM_PROCESSO;
+      float maior_prioridade = QUANTUM;
+      for (int i = 0; i < N_PROCESSOS; i++)
+      {
+        if (self->tabela_de_processos[i].estado == FINALIZADO) continue;
+
+        if (self->tabela_de_processos[i].prioridade < maior_prioridade)
+        {
+          indice_maior_prioridade = i;
+          maior_prioridade = self->tabela_de_processos[i].prioridade;
+        }
+      }
+      // escalona o processo de maior prioridade
+      if (indice_maior_prioridade != SEM_PROCESSO)
+      {
+        self->processo_corrente = &self->tabela_de_processos[indice_maior_prioridade];
+      }
+      else
+      {
+        // apenas tem um processo na tabela - deixa ele corrente
+        processo_troca_corrente(self);
+      }
+      break;
+
     default:
+      console_printf("NENHUM\n");
       // bota o primeiro processo PRONTO para executar
       processo_troca_corrente(self);
   }
@@ -654,6 +695,7 @@ static void so_trata_irq_relogio(so_t *self)
   if (self->processo_corrente->quantum <= 0 && self->processo_corrente->estado != BLOQUEADO)
   {
     self->processo_corrente->quantum = 10;
+    processo_atualiza_prioridade(self->processo_corrente);
     fila_deque(self->processos_prontos);
     // ATENÇÃO: talvez não funcione sapoha
     fila_enque(self->processos_prontos, self->processo_corrente->pid);
@@ -730,6 +772,7 @@ static void so_chamada_le(so_t *self)
       console_printf("SO: problema no acesso ao estado do teclado");
       // bloqueia o processo
       self->processo_corrente->estado = BLOQUEADO;
+      processo_atualiza_prioridade(self->processo_corrente);
       fila_deque(self->processos_prontos);
       self->processo_corrente->dispositivo_causou_bloqueio = terminal;
       self->erro_interno = true;
@@ -776,6 +819,7 @@ static void so_chamada_escr(so_t *self)
       console_printf("SO: problema no acesso ao estado da tela");
       // bloqueia o processo
       self->processo_corrente->estado = BLOQUEADO;
+      processo_atualiza_prioridade(self->processo_corrente);
       fila_deque(self->processos_prontos);
       self->processo_corrente->dispositivo_causou_bloqueio = terminal;
       self->erro_interno = true;
@@ -876,6 +920,7 @@ static void so_chamada_espera_proc(so_t *self)
 
   // bloqueia o processo chamador
   self->processo_corrente->estado = BLOQUEADO;
+  processo_atualiza_prioridade(self->processo_corrente);
   fila_deque(self->processos_prontos);
   self->processo_corrente->pid_esperando = self->processo_corrente->regX;
 }
