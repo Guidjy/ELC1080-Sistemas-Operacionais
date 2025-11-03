@@ -15,6 +15,7 @@ typedef struct processo_t processo_t;
 #include "cpu.h"
 #include "es.h"
 #include "console.h" // só para uma gambiarra
+#include <stdbool.h>
 
 
 // funções de processos
@@ -27,6 +28,9 @@ void processo_mata(so_t *so, int pid);
 
 // muda o processo corrente
 void processo_troca_corrente(so_t *self);
+
+// verifica se todos os processos encerraram
+bool todos_processos_encerrados(so_t *self);
 
 // funçoes de SO
 

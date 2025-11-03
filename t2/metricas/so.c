@@ -15,6 +15,7 @@
 #include "memoria.h"
 #include "programa.h"
 #include "fila.h"
+#include "metricas.h"
 
 #include <stdlib.h>
 #include <stdbool.h>
@@ -280,6 +281,17 @@ void processo_troca_corrente(so_t *self)
     }
     i++;
   }
+}
+
+
+bool todos_processos_encerrados(so_t *self)
+{
+  for (int i = 0; i < N_PROCESSOS; i++)
+  {
+    if (self->tabela_de_processos[i].pid != SEM_PROCESSO) return false;
+  }
+
+  return true;
 }
 
 
@@ -549,6 +561,9 @@ static void so_escalona(so_t *self)
   // imprime tabela para debugar
   console_printf("Processo escalonado\n");
   tablea_proc_imprime(self);
+
+  // verifica se todos os processos encerraram
+  if (todos_processos_encerrados(self)) console_printf("TODOS PROCESSOS ENCERRARAM\n");
 }
 
 static int so_despacha(so_t *self)
