@@ -563,7 +563,8 @@ static void so_escalona(so_t *self)
   tablea_proc_imprime(self);
 
   // verifica se todos os processos encerraram
-  if (todos_processos_encerrados(self)) console_printf("TODOS PROCESSOS ENCERRARAM\n");
+  metricas.n_processos_criados = 20;  //teste
+  if (todos_processos_encerrados(self)) console_printf("TODOS PROCESSOS ENCERRARAM - %d\n", metricas.n_processos_criados);
 }
 
 static int so_despacha(so_t *self)
