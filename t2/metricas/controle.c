@@ -4,6 +4,7 @@
 // so25b
 
 #include "controle.h"
+#include "metricas.h"
 
 #include <stdlib.h>
 #include <string.h>
@@ -47,6 +48,13 @@ void controle_laco(controle_t *self)
     if (self->estado == passo || self->estado == executando) {
       cpu_executa_1(self->cpu);
       relogio_tictac(self->relogio);
+
+      // metricas
+      metricas.tempo_total_execucao++;
+      if (metricas.so_oscioso)
+      {
+        metricas.tempo_total_ocioso++;
+      }
 
       if (self->estado == passo) self->estado = parado;
 

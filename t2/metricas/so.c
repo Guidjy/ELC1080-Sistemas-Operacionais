@@ -201,6 +201,7 @@ int processo_cria(so_t *so, char *nome_do_executavel)
   console_printf("Processo criado\n");
   //tablea_proc_imprime(so);
 
+  metricas.n_processos_criados++;
   so->n_processos_tabela++;
   return so->tabela_de_processos[i].pid;
 }
@@ -474,6 +475,8 @@ static void so_trata_pendencias(so_t *self)
             return;
           }
           p->regA = dado;
+
+          metricas.n_irq_teclado++;
         }
         // escrita
         if (operacao == 3)
@@ -485,6 +488,8 @@ static void so_trata_pendencias(so_t *self)
             return;
           }
           p->regA = 0;
+
+          metricas.n_irq_tela++;
         }
       }
 
@@ -512,7 +517,6 @@ static void so_escalona(so_t *self)
   switch (ESCALONADOR)
   {
     case ROUND_ROBIN:
-      console_printf("ROUND ROBIN\n");
       // pega o primeiro processo da fila de processos prontos
       int pid_escalonado = fila_get(self->processos_prontos, 0);
       for (int i = 0; i < N_PROCESSOS; i++)
@@ -526,7 +530,6 @@ static void so_escalona(so_t *self)
       break;
 
     case PRIORIDADE:
-      console_printf("PRIORIDADE\n");
       // pega o indice do processo com a maior prioridade na tabela de processos (menor valor do campo ->prioridade)
       int indice_maior_prioridade = SEM_PROCESSO;
       float maior_prioridade = QUANTUM;
@@ -534,7 +537,7 @@ static void so_escalona(so_t *self)
       {
         if (self->tabela_de_processos[i].estado == FINALIZADO) continue;
 
-        if (self->tabela_de_processos[i].prioridade < maior_prioridade)
+        if (self->tabela_de_processos[i].prioridade < maior_prioridade && self->tabela_de_processos[i].estado == PRONTO)
         {
           indice_maior_prioridade = i;
           maior_prioridade = self->tabela_de_processos[i].prioridade;
@@ -558,13 +561,35 @@ static void so_escalona(so_t *self)
       processo_troca_corrente(self);
   }
 
+  // (métricas) verifica se o so está oscioso
+  int n_proc_bloqueados = 0;
+  for (int i = 0; i < N_PROCESSOS; i++)
+  {
+    if (self->tabela_de_processos[i].pid !=- SEM_PROCESSO && self->tabela_de_processos[i].estado == BLOQUEADO)
+    {
+      n_proc_bloqueados++;
+    }
+  }
+  if (n_proc_bloqueados == self->n_processos_tabela)
+  {
+    metricas.so_oscioso = true;
+  }
+  else
+  {
+    metricas.so_oscioso = false;
+  }
+
   // imprime tabela para debugar
   console_printf("Processo escalonado\n");
   tablea_proc_imprime(self);
 
   // verifica se todos os processos encerraram
   metricas.n_processos_criados = 20;  //teste
-  if (todos_processos_encerrados(self)) console_printf("TODOS PROCESSOS ENCERRARAM - %d\n", metricas.n_processos_criados);
+  if (todos_processos_encerrados(self))
+  {
+    console_printf("TODOS PROCESSOS ENCERRARAM - %d\n", metricas.n_processos_criados);
+    metricas_imprime();
+  }
 }
 
 static int so_despacha(so_t *self)
@@ -612,18 +637,23 @@ static void so_trata_irq(so_t *self, int irq)
   // verifica o tipo de interrupção que está acontecendo, e atende de acordo
   switch (irq) {
     case IRQ_RESET:
+      metricas.n_irq_reset++;
       so_trata_reset(self);
       break;
     case IRQ_SISTEMA:
+      metricas.n_irq_sistema++;
       so_trata_irq_chamada_sistema(self);
       break;
     case IRQ_ERR_CPU:
+      metricas.n_irq_err_cpu++;
       so_trata_irq_err_cpu(self);
       break;
     case IRQ_RELOGIO:
+      metricas.n_irq_relogio++;
       so_trata_irq_relogio(self);
       break;
     default:
+    metricas.n_irq_desconhecida++;
       so_trata_irq_desconhecida(self, irq);
   }
 }
