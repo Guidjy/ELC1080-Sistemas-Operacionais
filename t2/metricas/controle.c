@@ -49,12 +49,25 @@ void controle_laco(controle_t *self)
       cpu_executa_1(self->cpu);
       relogio_tictac(self->relogio);
 
-      // metricas
+      // (metricas) calcula tempo ocioso
       metricas.tempo_total_execucao++;
       if (metricas.so_oscioso)
       {
         metricas.tempo_total_ocioso++;
       }
+      // (metricas) processos
+      for (int i = 0; i < 5; i++)
+      {
+        if (metricas.processos_pid[i] == -1) continue;
+        // guarda o tempo de criação de um processo
+        if (metricas.processos_recem_criado[i])
+        {
+          metricas.tempo_criacao[i] = metricas.tempo_total_execucao;
+          metricas.tempo_criacao[i] = false;
+        }
+        // TODO: estadodos procs
+      }
+
 
       if (self->estado == passo) self->estado = parado;
 

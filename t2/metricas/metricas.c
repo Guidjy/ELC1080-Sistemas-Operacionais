@@ -33,6 +33,16 @@ void inicializa_metricas(metricas_t *m)
     // tempo de retorno de processos
     m->tempo_retorno_processo = (int*) malloc(N_PROCESSOS * sizeof(int));
     assert(m->tempo_retorno_processo != NULL);
+    // estado dos processos
+    m->processos_estado = (int*) malloc(N_PROCESSOS * sizeof(int));
+    assert(m->processos_estado != NULL);
+    // tempo de criação do processo
+    m->tempo_criacao = (int*) malloc(N_PROCESSOS * sizeof(int));
+    assert(m->tempo_criacao != NULL);
+    // processos recem criados
+    m->processos_recem_criado = (bool*) calloc(N_PROCESSOS, sizeof(bool));
+    assert(m->processos_recem_criado != NULL);
+
     // n vezes prontos
     m->n_prontos = (int*) malloc(N_PROCESSOS * sizeof(int));
     assert(m->n_prontos != NULL);
@@ -78,5 +88,5 @@ void metricas_imprime()
     console_printf("- tempo total de execução: %d", metricas.tempo_total_execucao);
     console_printf("- tempo total ocioso: %d", metricas.tempo_total_ocioso);
     console_printf("- irqs: %d %d %d %d %d %d %d", metricas.n_irq_reset, metricas.n_irq_err_cpu, metricas.n_irq_sistema, metricas.n_irq_teclado, metricas.n_irq_tela, metricas.n_irq_relogio, metricas.n_irq_desconhecida);
-    
+    console_printf("- n preempções: %d", metricas.n_preempcoes);
 }

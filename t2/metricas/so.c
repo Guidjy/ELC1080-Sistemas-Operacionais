@@ -171,6 +171,12 @@ int processo_cria(so_t *so, char *nome_do_executavel)
       so->tabela_de_processos[i].pid_esperando = SEM_PROCESSO;
       so->tabela_de_processos[i].quantum = QUANTUM;
       so->tabela_de_processos[i].prioridade = 0.5;
+
+      // metricas
+      metricas.processos_pid[i] = i + 1;
+      metricas.processos_estado[i] = PRONTO;
+      metricas.processos_recem_criado[i] = true;
+
       break;
     }
     i++;
@@ -525,6 +531,7 @@ static void so_escalona(so_t *self)
         {
           // torna-o o processo corrente
           self->processo_corrente = &self->tabela_de_processos[i];
+          metricas.n_preempcoes++;
         }
       }
       break;
@@ -547,6 +554,7 @@ static void so_escalona(so_t *self)
       if (indice_maior_prioridade != SEM_PROCESSO)
       {
         self->processo_corrente = &self->tabela_de_processos[indice_maior_prioridade];
+        metricas.n_preempcoes++;
       }
       else
       {
@@ -559,6 +567,7 @@ static void so_escalona(so_t *self)
       console_printf("NENHUM\n");
       // bota o primeiro processo PRONTO para executar
       processo_troca_corrente(self);
+      metricas.n_preempcoes++;
   }
 
   // (métricas) verifica se o so está oscioso
@@ -584,7 +593,6 @@ static void so_escalona(so_t *self)
   tablea_proc_imprime(self);
 
   // verifica se todos os processos encerraram
-  metricas.n_processos_criados = 20;  //teste
   if (todos_processos_encerrados(self))
   {
     console_printf("TODOS PROCESSOS ENCERRARAM - %d\n", metricas.n_processos_criados);

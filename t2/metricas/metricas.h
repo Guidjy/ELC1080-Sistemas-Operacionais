@@ -19,7 +19,6 @@ typedef struct metricas {
     int n_irq_desconhecida;
 
     int n_preempcoes;
-    int *processos_pid;
     int *tempo_retorno_processo;
     int *n_prontos;
     int *tempo_pronto;
@@ -31,6 +30,11 @@ typedef struct metricas {
 
     // informação relevante sobre o estado do so
     bool so_oscioso;        // todos os processos estão bloqueados
+    // informações relevante sobre o estado dos processos
+    int *processos_pid;
+    int *processos_estado;
+    int *tempo_criacao;
+    bool *processos_recem_criado;
      
 } metricas_t;
 
