@@ -37,7 +37,7 @@
 #define SEM_DISPOSITIVO -1;  // indica que não tem um dispositivo que causou bloqueio
 #define N_TERMINAIS 4
 
-#define ESCALONADOR 0
+#define ESCALONADOR 2
 #define SEM_ESCALONADOR 0
 #define ROUND_ROBIN 1
 #define PRIORIDADE 2

@@ -97,1401 +97,2214 @@ pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 9
 [1] vai esperar o fim de [2]
-NENHUM
 Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 9
 [1] vai esperar o fim de [3]
-NENHUM
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
 Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 9
 [1] vai esperar o fim de [4]
-NENHUM
 Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 8
-NENHUM
 Processo escalonado
-TEMPO DE RETORNO: 1096 - 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+TEMPO DE RETORNO: 7509 - 2
 SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+CMD: 'p'
+CMD: 'c'
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 8
-NENHUM
 Processo escalonado
-TEMPO DE RETORNO: 11751 - 557
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+TEMPO DE RETORNO: 14970 - 570
 SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 8
-NENHUM
 Processo escalonado
-TEMPO DE RETORNO: 16560 - 570
-SO: recebi IRQ 3 (E/S: relógio)
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+CMD: 'p'
+CMD: 'c'
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 CMD: 'p'
 CMD: 'd2'
 CMD: 'c'
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: recebi IRQ 2 (Chamada de sistema)
-SO: chamada de sistema 2
+Processo escalonado
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 8
-NENHUM
 Processo escalonado
-TODOS PROCESSOS ENCERRARAM - 4
-- n processos criados: 4
-- tempo total de execução: 24256
-- tempo total ocioso: 0
-- irqs: 1 0 462 0 0 450 0
-- n preempções: 7
-- tempo de retorno proc -1: 1094
-- n vezes em cada  estado proc -1 : pronto[4], block[3], exec[0]
-- tempo em cada estado do proc -1 : pronto[595], block[500], exec[0]
-- tempo de retorno proc 0: 11194
-- n vezes em cada  estado proc 0 : pronto[1], block[0], exec[0]
-- tempo em cada estado do proc 0 : pronto[11750], block[0], exec[0]
-- tempo de retorno proc 1: 15990
-- n vezes em cada  estado proc 1 : pronto[1], block[0], exec[0]
-- tempo em cada estado do proc 1 : pronto[16559], block[0], exec[0]
-- tempo de retorno proc 2: 0
-- n vezes em cada  estado proc 2 : pronto[1], block[0], exec[0]
-- tempo em cada estado do proc 2 : pronto[24256], block[0], exec[0]
-TEMPO DE RETORNO: 24257 - 583
+TEMPO DE RETORNO: 21485 - 583
 SO: recebi IRQ 3 (E/S: relógio)
-NENHUM
 Processo escalonado
-TODOS PROCESSOS ENCERRARAM - 4
-- n processos criados: 4
-- tempo total de execução: 24267
-- tempo total ocioso: 11
-- irqs: 1 0 462 0 0 451 0
-- n preempções: 8
-- tempo de retorno proc -1: 1094
-- n vezes em cada  estado proc -1 : pronto[4], block[3], exec[0]
-- tempo em cada estado do proc -1 : pronto[595], block[500], exec[0]
-- tempo de retorno proc 0: 11194
-- n vezes em cada  estado proc 0 : pronto[1], block[0], exec[0]
-- tempo em cada estado do proc 0 : pronto[11750], block[0], exec[0]
-- tempo de retorno proc 1: 15990
-- n vezes em cada  estado proc 1 : pronto[1], block[0], exec[0]
-- tempo em cada estado do proc 1 : pronto[16559], block[0], exec[0]
-- tempo de retorno proc 2: 23674
-- n vezes em cada  estado proc 2 : pronto[1], block[0], exec[0]
-- tempo em cada estado do proc 2 : pronto[24256], block[0], exec[0]
 SO: recebi IRQ 3 (E/S: relógio)
-NENHUM
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo escalonado
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 8
 Processo escalonado
 TODOS PROCESSOS ENCERRARAM - 4
-- n processos criados: 4
-- tempo total de execução: 24320
-- tempo total ocioso: 64
-- irqs: 1 0 462 0 0 452 0
-- n preempções: 9
-- tempo de retorno proc -1: 1094
-- n vezes em cada  estado proc -1 : pronto[4], block[3], exec[0]
-- tempo em cada estado do proc -1 : pronto[595], block[500], exec[0]
-- tempo de retorno proc 0: 11194
-- n vezes em cada  estado proc 0 : pronto[1], block[0], exec[0]
-- tempo em cada estado do proc 0 : pronto[11750], block[0], exec[0]
-- tempo de retorno proc 1: 15990
-- n vezes em cada  estado proc 1 : pronto[1], block[0], exec[0]
-- tempo em cada estado do proc 1 : pronto[16559], block[0], exec[0]
-- tempo de retorno proc 2: 23674
-- n vezes em cada  estado proc 2 : pronto[1], block[0], exec[0]
-- tempo em cada estado do proc 2 : pronto[24256], block[0], exec[0]
+TEMPO DE RETORNO: 24265 - 557
+SO: recebi IRQ 3 (E/S: relógio)
+Processo escalonado
+TODOS PROCESSOS ENCERRARAM - 4
 CMD: 'p'
 CMD: 'f'
 Fim da execução.

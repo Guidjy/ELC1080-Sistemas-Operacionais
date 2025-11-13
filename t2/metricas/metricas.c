@@ -98,11 +98,13 @@ void metricas_imprime()
     fprintf(f, "- n processos criados: %d\n", metricas.n_processos_criados);
     fprintf(f, "- tempo total de execução: %d\n", metricas.tempo_total_execucao);
     fprintf(f, "- tempo total ocioso: %d\n", metricas.tempo_total_ocioso);
-    fprintf(f, "- irqs: %d %d %d %d %d %d %d\n",metricas.n_irq_reset, metricas.n_irq_err_cpu, metricas.n_irq_sistema, metricas.n_irq_teclado, metricas.n_irq_tela, metricas.n_irq_relogio, metricas.n_irq_desconhecida);
+    fprintf(f, "- irqs: reset[%d], err_cpou[%d], sistema[%d], teclado[%d] tela[%d] relogio[%d], desconhecida[%d]\n",metricas.n_irq_reset, metricas.n_irq_err_cpu, metricas.n_irq_sistema, metricas.n_irq_teclado, metricas.n_irq_tela, metricas.n_irq_relogio, metricas.n_irq_desconhecida);
     fprintf(f, "- n preempções: %d\n", metricas.n_preempcoes);
 
+    fprintf(f, "\nMétricas de processos:\n");
     for (int i = 0; i < 4; i++) 
     {
+        fprintf(f, "Processo %d\n", i);
         fprintf(f, "- tempo de retorno proc %d: %d\n",i - 1, metricas.tempo_retorno_processo[i]);
         fprintf(f, "- n vezes em cada estado proc %d : pronto[%d], block[%d], exec[%d]\n", i - 1, metricas.n_prontos[i], metricas.n_bloqueados[i], metricas.n_execucao[i]);
         fprintf(f, "- tempo em cada estado do proc %d : pronto[%d], block[%d], exec[%d]\n", i - 1, metricas.tempo_pronto[i], metricas.tempo_bloqueado[i], metricas.tempo_execucao[i]);
