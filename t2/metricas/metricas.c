@@ -3,6 +3,7 @@
 #include "console.h"
 #include <assert.h>
 #include <stdlib.h> 
+#include <stdio.h>
 
 
 // em so.c:
@@ -42,6 +43,9 @@ void inicializa_metricas(metricas_t *m)
     // processos recem criados
     m->processos_recem_criado = (bool*) calloc(N_PROCESSOS, sizeof(bool));
     assert(m->processos_recem_criado != NULL);
+    // final do processo ja registrado
+    m->final_ja_registrado = (bool*) calloc(N_PROCESSOS, sizeof(bool));
+    assert(m->final_ja_registrado != NULL);
 
     // n vezes prontos
     m->n_prontos = (int*) malloc(N_PROCESSOS * sizeof(int));
@@ -84,9 +88,25 @@ void inicializa_metricas(metricas_t *m)
 
 void metricas_imprime()
 {
-    console_printf("- n processos criados: %d", metricas.n_processos_criados);
-    console_printf("- tempo total de execução: %d", metricas.tempo_total_execucao);
-    console_printf("- tempo total ocioso: %d", metricas.tempo_total_ocioso);
-    console_printf("- irqs: %d %d %d %d %d %d %d", metricas.n_irq_reset, metricas.n_irq_err_cpu, metricas.n_irq_sistema, metricas.n_irq_teclado, metricas.n_irq_tela, metricas.n_irq_relogio, metricas.n_irq_desconhecida);
-    console_printf("- n preempções: %d", metricas.n_preempcoes);
+    FILE *f = fopen("relatorio.txt", "w");
+    if (f == NULL) 
+    {
+        perror("Erro ao abrir relatorio.txt");
+        return;
+    }
+
+    fprintf(f, "- n processos criados: %d\n", metricas.n_processos_criados);
+    fprintf(f, "- tempo total de execução: %d\n", metricas.tempo_total_execucao);
+    fprintf(f, "- tempo total ocioso: %d\n", metricas.tempo_total_ocioso);
+    fprintf(f, "- irqs: %d %d %d %d %d %d %d\n",metricas.n_irq_reset, metricas.n_irq_err_cpu, metricas.n_irq_sistema, metricas.n_irq_teclado, metricas.n_irq_tela, metricas.n_irq_relogio, metricas.n_irq_desconhecida);
+    fprintf(f, "- n preempções: %d\n", metricas.n_preempcoes);
+
+    for (int i = 0; i < 4; i++) 
+    {
+        fprintf(f, "- tempo de retorno proc %d: %d\n",i - 1, metricas.tempo_retorno_processo[i]);
+        fprintf(f, "- n vezes em cada estado proc %d : pronto[%d], block[%d], exec[%d]\n", i - 1, metricas.n_prontos[i], metricas.n_bloqueados[i], metricas.n_execucao[i]);
+        fprintf(f, "- tempo em cada estado do proc %d : pronto[%d], block[%d], exec[%d]\n", i - 1, metricas.tempo_pronto[i], metricas.tempo_bloqueado[i], metricas.tempo_execucao[i]);
+    }
+
+    fclose(f);
 }

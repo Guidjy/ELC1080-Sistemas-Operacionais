@@ -32,6 +32,9 @@ void processo_troca_corrente(so_t *self);
 // verifica se todos os processos encerraram
 bool todos_processos_encerrados(so_t *self);
 
+// acha o índice de um processo na tablea aparti do pid
+int acha_indice_por_pid(so_t *self, int pid);
+
 // funçoes de SO
 
 so_t *so_cria(cpu_t *cpu, mem_t *mem, es_t *es, console_t *console);

@@ -35,6 +35,7 @@ typedef struct metricas {
     int *processos_estado;
     int *tempo_criacao;
     bool *processos_recem_criado;
+    bool *final_ja_registrado;
      
 } metricas_t;
 

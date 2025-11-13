@@ -58,14 +58,35 @@ void controle_laco(controle_t *self)
       // (metricas) processos
       for (int i = 0; i < 5; i++)
       {
-        if (metricas.processos_pid[i] == -1) continue;
         // guarda o tempo de criação de um processo
         if (metricas.processos_recem_criado[i])
         {
           metricas.tempo_criacao[i] = metricas.tempo_total_execucao;
-          metricas.tempo_criacao[i] = false;
+          metricas.processos_recem_criado[i] = false;
         }
-        // TODO: estadodos procs
+        // metricas do tempo em cada estado
+        switch (metricas.processos_estado[i])
+        {
+          case 0:  // pronto
+            metricas.tempo_pronto[i]++;
+            break;
+          case 1:  // execução
+            metricas.tempo_execucao[i]++;
+            break;
+          case 2:  // espera
+            // não foi pedido
+            break;
+          case 3:  // bloqueado
+            metricas.tempo_bloqueado[i]++;
+            break;
+          default:  // finalizado
+            if (!metricas.final_ja_registrado[i])
+            {
+              metricas.tempo_retorno_processo[i] = metricas.tempo_total_execucao - metricas.tempo_criacao[i];
+              console_printf("TEMPO DE RETORNO: %d - %d", metricas.tempo_total_execucao, metricas.tempo_criacao[i]);
+              metricas.final_ja_registrado[i] = true;
+            }
+        }
       }
 
 

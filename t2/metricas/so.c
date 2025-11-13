@@ -37,7 +37,7 @@
 #define SEM_DISPOSITIVO -1;  // indica que não tem um dispositivo que causou bloqueio
 #define N_TERMINAIS 4
 
-#define ESCALONADOR 2
+#define ESCALONADOR 0
 #define SEM_ESCALONADOR 0
 #define ROUND_ROBIN 1
 #define PRIORIDADE 2
@@ -175,6 +175,7 @@ int processo_cria(so_t *so, char *nome_do_executavel)
       // metricas
       metricas.processos_pid[i] = i + 1;
       metricas.processos_estado[i] = PRONTO;
+      metricas.n_prontos[i]++;
       metricas.processos_recem_criado[i] = true;
 
       break;
@@ -205,7 +206,7 @@ int processo_cria(so_t *so, char *nome_do_executavel)
 
   // imprime tabela para debugar
   console_printf("Processo criado\n");
-  //tablea_proc_imprime(so);
+  tablea_proc_imprime(so);
 
   metricas.n_processos_criados++;
   so->n_processos_tabela++;
@@ -229,6 +230,8 @@ void processo_mata(so_t *so, int pid)
     // mata o processo corrente
     free(so->processo_corrente->executavel);
     so->processo_corrente->estado = FINALIZADO;
+    int indice_finalizado = acha_indice_por_pid(so, so->processo_corrente->pid);
+    metricas.processos_estado[indice_finalizado] = FINALIZADO;
     so->processo_corrente->pid = SEM_PROCESSO;
     so->processo_corrente->terminal = -1;
     for (int i = 0; i < N_TERMINAIS; i++)
@@ -268,6 +271,8 @@ void processo_mata(so_t *so, int pid)
     if (so->tabela_de_processos[i].pid_esperando == pid)
     {
       so->tabela_de_processos[i].estado = PRONTO;
+      // metricas
+      metricas.n_prontos[i]++;
       fila_enque(so->processos_prontos, so->tabela_de_processos[i].pid);
     }
   }
@@ -300,6 +305,17 @@ bool todos_processos_encerrados(so_t *self)
 
   return true;
 }
+
+
+int acha_indice_por_pid(so_t *self, int pid)
+{
+  for (int i = 0; i < N_PROCESSOS; i++)
+  {
+    if (self->tabela_de_processos[i].pid == pid) return i;
+  }
+  return SEM_PROCESSO;
+}
+
 
 
 // verifica se um processo com o pid existe
@@ -501,6 +517,8 @@ static void so_trata_pendencias(so_t *self)
 
       // desbloqueia o processo
       p->estado = PRONTO;
+      // metricas
+      metricas.n_prontos[acha_indice_por_pid(self, p->pid)]++;
       p->dispositivo_causou_bloqueio = SEM_DISPOSITIVO;
       fila_enque(self->processos_prontos, p->pid);
 
@@ -531,7 +549,10 @@ static void so_escalona(so_t *self)
         {
           // torna-o o processo corrente
           self->processo_corrente = &self->tabela_de_processos[i];
-          metricas.n_preempcoes++;
+          // (metricas)
+          metricas.processos_estado[i] = EXECUCAO;
+          metricas.n_execucao[i]++;
+
         }
       }
       break;
@@ -542,7 +563,7 @@ static void so_escalona(so_t *self)
       float maior_prioridade = QUANTUM;
       for (int i = 0; i < N_PROCESSOS; i++)
       {
-        if (self->tabela_de_processos[i].estado == FINALIZADO) continue;
+        if (self->tabela_de_processos[i].estado == FINALIZADO || self->tabela_de_processos[i].pid == SEM_PROCESSO) continue;
 
         if (self->tabela_de_processos[i].prioridade < maior_prioridade && self->tabela_de_processos[i].estado == PRONTO)
         {
@@ -554,7 +575,9 @@ static void so_escalona(so_t *self)
       if (indice_maior_prioridade != SEM_PROCESSO)
       {
         self->processo_corrente = &self->tabela_de_processos[indice_maior_prioridade];
-        metricas.n_preempcoes++;
+        // metricas
+        metricas.processos_estado[indice_maior_prioridade] = EXECUCAO;
+        metricas.n_execucao[indice_maior_prioridade]++;
       }
       else
       {
@@ -567,14 +590,13 @@ static void so_escalona(so_t *self)
       console_printf("NENHUM\n");
       // bota o primeiro processo PRONTO para executar
       processo_troca_corrente(self);
-      metricas.n_preempcoes++;
   }
 
   // (métricas) verifica se o so está oscioso
   int n_proc_bloqueados = 0;
   for (int i = 0; i < N_PROCESSOS; i++)
   {
-    if (self->tabela_de_processos[i].pid !=- SEM_PROCESSO && self->tabela_de_processos[i].estado == BLOQUEADO)
+    if (self->tabela_de_processos[i].pid != SEM_PROCESSO && self->tabela_de_processos[i].estado == BLOQUEADO)
     {
       n_proc_bloqueados++;
     }
@@ -587,10 +609,12 @@ static void so_escalona(so_t *self)
   {
     metricas.so_oscioso = false;
   }
+  // (metricas) aumenta o número de preempções
+  metricas.n_preempcoes++;
 
   // imprime tabela para debugar
   console_printf("Processo escalonado\n");
-  tablea_proc_imprime(self);
+  // tablea_proc_imprime(self);
 
   // verifica se todos os processos encerraram
   if (todos_processos_encerrados(self))
@@ -826,6 +850,11 @@ static void so_chamada_le(so_t *self)
       console_printf("SO: problema no acesso ao estado do teclado");
       // bloqueia o processo
       self->processo_corrente->estado = BLOQUEADO;
+      // (metricas)
+      int indice_bloqueado = acha_indice_por_pid(self, self->processo_corrente->pid);
+      metricas.processos_estado[indice_bloqueado] = BLOQUEADO;
+      metricas.n_bloqueados[indice_bloqueado]++;
+      // fim das metricas
       processo_atualiza_prioridade(self->processo_corrente);
       fila_deque(self->processos_prontos);
       self->processo_corrente->dispositivo_causou_bloqueio = terminal;
@@ -873,6 +902,11 @@ static void so_chamada_escr(so_t *self)
       console_printf("SO: problema no acesso ao estado da tela");
       // bloqueia o processo
       self->processo_corrente->estado = BLOQUEADO;
+      // (metricas)
+      int indice_bloqueado = acha_indice_por_pid(self, self->processo_corrente->pid);
+      metricas.processos_estado[indice_bloqueado] = BLOQUEADO;
+      metricas.n_bloqueados[indice_bloqueado]++;
+      // fim das metricas
       processo_atualiza_prioridade(self->processo_corrente);
       fila_deque(self->processos_prontos);
       self->processo_corrente->dispositivo_causou_bloqueio = terminal;
@@ -974,6 +1008,11 @@ static void so_chamada_espera_proc(so_t *self)
 
   // bloqueia o processo chamador
   self->processo_corrente->estado = BLOQUEADO;
+  // (metricas)
+  int indice_bloqueado = acha_indice_por_pid(self, self->processo_corrente->pid);
+  metricas.processos_estado[indice_bloqueado] = BLOQUEADO;
+  metricas.n_bloqueados[indice_bloqueado]++;
+  // fim das metricas
   processo_atualiza_prioridade(self->processo_corrente);
   fila_deque(self->processos_prontos);
   self->processo_corrente->pid_esperando = self->processo_corrente->regX;
