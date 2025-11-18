@@ -37,7 +37,7 @@
 #define SEM_DISPOSITIVO -1;  // indica que não tem um dispositivo que causou bloqueio
 #define N_TERMINAIS 4
 
-#define ESCALONADOR 0
+#define ESCALONADOR 1
 #define SEM_ESCALONADOR 0
 #define ROUND_ROBIN 1
 #define PRIORIDADE 2
@@ -887,32 +887,35 @@ static void so_chamada_cria_proc(so_t *self)
   // quem chamou o sistema não vai mais ser executado, coitado!
   // t2: deveria criar um novo processo
   // t3: identifica direito esses processos
-  processo_t processo_criador = *self->processo_corrente;
+  // processo_t processo_criador = *self->processo_corrente;
 
   // em X está o endereço onde está o nome do arquivo
   int ender_proc;
   // t2: deveria ler o X do descritor do processo criador
-  ender_proc = processo_criador.regX;
+  ender_proc = self->processo_corrente->regX;
   char nome[100];
   int pid;
-  if (so_copia_str_do_processo(self, 100, nome, ender_proc, processo_criador)) {
+  if (so_copia_str_do_processo(self, 100, nome, ender_proc, *self->processo_corrente)) {
     int ender_carga = -1;
     pid = processo_cria(self, nome, &ender_carga);
     // usado aqui para não gerar warning
     int indice_proc_criado = acha_indice_por_pid(self, pid);
     console_printf("indice proc criado: %d\n", indice_proc_criado);
 
-    /*
+    
     if (ender_carga != -1) {
       // t2: deveria escrever no PC do descritor do processo criado (escreve em processo_cria())
-      self->regPC = ender_carga;
+
+      // escreve o pid do processo criado no reg A do processo criador
+      self->processo_corrente->regA = pid;
+      //self->regPC = ender_carga; (feito em processo_cria())
+      processo_troca_corrente(self);  // NÃO DEVERIA ESTAR AQUI
       return;
     } // else?
-    */
+    
   }
   // deveria escrever -1 (se erro) ou o PID do processo criado (se OK) no reg A
   //   do processo que pediu a criação
-  self->processo_corrente->regA = pid;
   self->regA = -1;
 }
 
