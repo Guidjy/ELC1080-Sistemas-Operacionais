@@ -197,7 +197,7 @@ static bool associa_terminal_a_processo(so_t *so, processo_t *proc)
 }
 
 
-int processo_cria(so_t *so, char *nome_do_executavel)
+int processo_cria(so_t *so, char *nome_do_executavel, int *ender_carga)
 {
   if (so->n_processos_tabela == N_PROCESSOS)
   {
@@ -225,6 +225,7 @@ int processo_cria(so_t *so, char *nome_do_executavel)
 
   // carrega o programa na memória
   int endereco_inicial = so_carrega_programa(so, so->tabela_de_processos[i], nome_do_executavel);
+  if (ender_carga != NULL) memcpy(ender_carga, &endereco_inicial, sizeof(int));
   so->tabela_de_processos[i].regPC = endereco_inicial;
 
   // verifica se o endereço é válido
@@ -713,7 +714,7 @@ static void so_trata_reset(so_t *self)
   //   deste código
 
   // coloca o programa init na memória
-  int pid = processo_cria(self, "init.maq");
+  int pid = processo_cria(self, "init.maq", NULL);
   processo_troca_corrente(self);
   console_printf("TROCOU PRO INIT");
   self->processo_corrente->estado = EXECUCAO;
@@ -891,24 +892,23 @@ static void so_chamada_cria_proc(so_t *self)
   // em X está o endereço onde está o nome do arquivo
   int ender_proc;
   // t2: deveria ler o X do descritor do processo criador
-  ender_proc = self->regX;
+  ender_proc = processo_criador.regX;
   char nome[100];
   int pid;
   if (so_copia_str_do_processo(self, 100, nome, ender_proc, processo_criador)) {
-    pid = processo_cria(self, nome);
-    // usado aqui só pra não dar warning
+    int ender_carga = -1;
+    pid = processo_cria(self, nome, &ender_carga);
+    // usado aqui para não gerar warning
     int indice_proc_criado = acha_indice_por_pid(self, pid);
     console_printf("indice proc criado: %d\n", indice_proc_criado);
-    /*
-    int indice_proc_criado = acha_indice_por_pid(self, pid);
-    int ender_carga = so_carrega_programa(self, self->tabela_de_processos[indice_proc_criado], nome);
 
+    /*
     if (ender_carga != -1) {
-      // t2: deveria escrever no PC do descritor do processo criado
+      // t2: deveria escrever no PC do descritor do processo criado (escreve em processo_cria())
       self->regPC = ender_carga;
       return;
     } // else?
-     */
+    */
   }
   // deveria escrever -1 (se erro) ou o PID do processo criado (se OK) no reg A
   //   do processo que pediu a criação
