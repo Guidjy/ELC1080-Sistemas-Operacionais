@@ -37,7 +37,7 @@
 #define SEM_DISPOSITIVO -1;  // indica que não tem um dispositivo que causou bloqueio
 #define N_TERMINAIS 4
 
-#define ESCALONADOR 0
+#define ESCALONADOR 1
 #define SEM_ESCALONADOR 0
 #define ROUND_ROBIN 1
 #define PRIORIDADE 2
@@ -94,6 +94,8 @@ struct processo_t {
 
   int quantum;
   float prioridade;
+
+  tabpag_t *tabpag;
 };
 
 
@@ -122,7 +124,7 @@ struct so_t {
   // uma tabela de páginas para poder usar a MMU
   // t3: com processos, não tem esta tabela global, tem que ter uma para
   //     cada processo
-  tabpag_t *tabpag_global;
+  // tabpag_t *tabpag_global;
 };
 
 
@@ -218,6 +220,7 @@ int processo_cria(so_t *so, char *nome_do_executavel, int *ender_carga)
       so->tabela_de_processos[i].pid_esperando = SEM_PROCESSO;
       so->tabela_de_processos[i].quantum = QUANTUM;
       so->tabela_de_processos[i].prioridade = 0.5;
+      so->tabela_de_processos[i].tabpag = tabpag_cria();
       break;
     }
     i++;
@@ -272,6 +275,8 @@ void processo_mata(so_t *so, int pid)
     so->processo_corrente->estado = FINALIZADO;
     so->processo_corrente->pid = SEM_PROCESSO;
     so->processo_corrente->terminal = -1;
+    tabpag_destroi(so->processo_corrente->tabpag);
+    // TODO: liberar páginas de memória secundária e os quadros de memória real
     for (int i = 0; i < N_TERMINAIS; i++)
     {
       if (so->terminais_usados[i] == so->processo_corrente->pid)
@@ -291,6 +296,8 @@ void processo_mata(so_t *so, int pid)
         so->tabela_de_processos[i].estado = FINALIZADO;
         so->tabela_de_processos[i].pid = SEM_PROCESSO;
         so->tabela_de_processos[i].terminal = -1;
+        tabpag_destroi(so->tabela_de_processos[i].tabpag);
+        // TODO: liberar páginas de memória secundária e os quadros de memória real
         for (int j = 0; j < N_TERMINAIS; j++)
         {
           if (so->terminais_usados[j] == so->tabela_de_processos[i].pid)
@@ -325,6 +332,8 @@ void processo_troca_corrente(so_t *self)
     {
       self->processo_corrente = &self->tabela_de_processos[i];
       self->processo_corrente->estado = EXECUCAO;
+      // define a tabela de páginas a ser usada nas próximas traduções
+      mmu_define_tabpag(self->mmu, self->processo_corrente->tabpag);
       break;
     }
     i++;
@@ -392,8 +401,8 @@ so_t *so_cria(cpu_t *cpu, mem_t *mem, mmu_t *mmu,
   // inicializa a tabela de páginas global, e entrega ela para a MMU
   // t3: com processos, essa tabela não existiria, teria uma por processo, que
   //     deve ser colocada na MMU quando o processo é despachado para execução
-  self->tabpag_global = tabpag_cria();
-  mmu_define_tabpag(self->mmu, self->tabpag_global);
+  // elf->tabpag_global = tabpag_cria();
+  // mmu_define_tabpag(self->mmu, self->tabpag_global);
 
   return self;
 }
@@ -568,6 +577,8 @@ static void so_escalona(so_t *self)
         {
           // torna-o o processo corrente
           self->processo_corrente = &self->tabela_de_processos[i];
+          // define a tabela de páginas a ser usada nas próximas traduções
+          mmu_define_tabpag(self->mmu, self->processo_corrente->tabpag);
         }
       }
       break;
@@ -591,6 +602,8 @@ static void so_escalona(so_t *self)
       if (indice_maior_prioridade != SEM_PROCESSO)
       {
         self->processo_corrente = &self->tabela_de_processos[indice_maior_prioridade];
+        // define a tabela de páginas a ser usada nas próximas traduções
+        mmu_define_tabpag(self->mmu, self->processo_corrente->tabpag);
       }
       else
       {
@@ -607,7 +620,7 @@ static void so_escalona(so_t *self)
 
   // imprime tabela para debugar
   console_printf("Processo escalonado\n");
-  tablea_proc_imprime(self);
+  //tablea_proc_imprime(self);
 }
 
 
@@ -803,6 +816,7 @@ static void so_trata_irq_chamada_sistema(so_t *self)
   }
 }
 
+
 // implementação da chamada se sistema SO_LE
 // faz a leitura de um dado da entrada corrente do processo, coloca o dado no reg A
 static void so_chamada_le(so_t *self)
@@ -818,8 +832,14 @@ static void so_chamada_le(so_t *self)
   //   t2: deveria usar dispositivo de entrada corrente do processo
   for (;;) {  // espera ocupada!
     int estado;
-    if (es_le(self->es, D_TERM_A_TECLADO_OK, &estado) != ERR_OK) {
+    int terminal = self->processo_corrente->terminal + 1;
+    if (es_le(self->es, terminal, &estado) != ERR_OK) {
       console_printf("SO: problema no acesso ao estado do teclado");
+      // bloqueia o processo
+      self->processo_corrente->estado = BLOQUEADO;
+      processo_atualiza_prioridade(self->processo_corrente);
+      fila_deque(self->processos_prontos);
+      self->processo_corrente->dispositivo_causou_bloqueio = terminal;
       self->erro_interno = true;
       return;
     }
@@ -831,7 +851,8 @@ static void so_chamada_le(so_t *self)
     console_tictac(self->console);
   }
   int dado;
-  if (es_le(self->es, D_TERM_A_TECLADO, &dado) != ERR_OK) {
+  int terminal = self->processo_corrente->terminal + 0;
+  if (es_le(self->es, terminal, &dado) != ERR_OK) {
     console_printf("SO: problema no acesso ao teclado");
     self->erro_interno = true;
     return;
@@ -842,7 +863,9 @@ static void so_chamada_le(so_t *self)
   // t2: o acesso só deve ser feito nesse momento se for possível; se não, o processo
   //   é bloqueado, e o acesso só deve ser feito mais tarde (e o processo desbloqueado)
   self->regA = dado;
+  self->processo_corrente->regA = dado;
 }
+
 
 // implementação da chamada se sistema SO_ESCR
 // escreve o valor do reg X na saída corrente do processo
@@ -854,8 +877,17 @@ static void so_chamada_escr(so_t *self)
   //   t2: deveria usar o dispositivo de saída corrente do processo
   for (;;) {
     int estado;
-    if (es_le(self->es, D_TERM_A_TELA_OK, &estado) != ERR_OK) {
+
+    // usa um terminal diferente dependendo do pid do processo
+    int terminal = self->processo_corrente->terminal + 3;
+
+    if (es_le(self->es, terminal, &estado) != ERR_OK) {
       console_printf("SO: problema no acesso ao estado da tela");
+      // bloqueia o processo
+      self->processo_corrente->estado = BLOQUEADO;
+      processo_atualiza_prioridade(self->processo_corrente);
+      fila_deque(self->processos_prontos);
+      self->processo_corrente->dispositivo_causou_bloqueio = terminal;
       self->erro_interno = true;
       return;
     }
@@ -871,13 +903,15 @@ static void so_chamada_escr(so_t *self)
   // t2: deveria usar os registradores do processo que está realizando a E/S
   // t2: caso o processo tenha sido bloqueado, esse acesso deve ser realizado em outra execução
   //   do SO, quando ele verificar que esse acesso já pode ser feito.
-  dado = self->regX;
-  if (es_escreve(self->es, D_TERM_A_TELA, dado) != ERR_OK) {
+  dado = self->processo_corrente->regX;
+  int terminal = self->processo_corrente->terminal + 2;
+  if (es_escreve(self->es, terminal, dado) != ERR_OK) {
     console_printf("SO: problema no acesso à tela");
     self->erro_interno = true;
     return;
   }
   self->regA = 0;
+  self->processo_corrente->regA = 0;
 }
 
 // implementação da chamada se sistema SO_CRIA_PROC
@@ -1044,7 +1078,7 @@ static int so_carrega_programa_na_memoria_virtual(so_t *self,
   int quadro_fim = quadro_ini + n_paginas - 1;
   // mapeia as páginas nos quadros
   for (int i = 0; i < n_paginas; i++) {
-    tabpag_define_quadro(self->tabpag_global, pagina_ini + i, quadro_ini + i);
+    tabpag_define_quadro(processo.tabpag, pagina_ini + i, quadro_ini + i);
   }
   self->quadro_livre = quadro_fim + 1;
 
