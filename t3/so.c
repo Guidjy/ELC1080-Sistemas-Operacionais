@@ -121,10 +121,8 @@ struct so_t {
   // t3: com memória virtual, o controle de memória livre e ocupada deve ser mais
   //     completo que isso
   int quadro_livre;
-  // uma tabela de páginas para poder usar a MMU
-  // t3: com processos, não tem esta tabela global, tem que ter uma para
-  //     cada processo
-  // tabpag_t *tabpag_global;
+  // indica quando o disco estará livre
+  int disco_livre;
 };
 
 
@@ -376,6 +374,7 @@ so_t *so_cria(cpu_t *cpu, mem_t *mem, mmu_t *mmu,
   self->es = es;
   self->console = console;
   self->erro_interno = false;
+  self->disco_livre = 0;
 
   // cria tabela de processo
   self->tabela_de_processos = malloc(N_PROCESSOS * sizeof(processo_t));
@@ -1069,7 +1068,11 @@ static int so_carrega_programa_na_memoria_virtual(so_t *self,
   //   alocada aqui (sem reuso)
   int end_virt_ini = prog_end_carga(programa);
   // o código abaixo só funciona se o programa iniciar no início de uma página
-  if ((end_virt_ini % TAM_PAGINA) != 0) return -1;
+  if ((end_virt_ini % TAM_PAGINA) != 0)
+  {
+    console_printf("ERRO: PROGRAMA NÃO INICIA NO INICIO DE UMA PAGINA");
+    return -1;
+  }
   int end_virt_fim = end_virt_ini + prog_tamanho(programa) - 1;
   int pagina_ini = end_virt_ini / TAM_PAGINA;
   int pagina_fim = end_virt_fim / TAM_PAGINA;

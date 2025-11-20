@@ -24,6 +24,7 @@
 // estrutura com os componentes do computador simulado
 typedef struct {
   mem_t *mem;
+  mem_t *mem_secundaria;
   mmu_t *mmu;
   cpu_t *cpu;
   relogio_t *relogio;
@@ -85,6 +86,7 @@ static void cria_hardware(hardware_t *hw)
   // cria a memória
   hw->mem = mem_cria(MEM_TAM);
   inicializa_rom(hw->mem);
+  // cria a ma
   // cria a MMU
   hw->mmu = mmu_cria(hw->mem);
 
