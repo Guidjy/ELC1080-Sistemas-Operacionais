@@ -47,7 +47,7 @@
 //   todos montados para serem executados no endereço 0 e o endereço 0
 //   físico é usado pelo hardware nas interrupções.
 // Os programas estão sendo carregados no início de um quadro, e usam quantos
-//   quadros forem necessárias. Para isso a variável quadro_livre contém
+//   quadros forem necessárias. Para isso a variável pagina_livre contém
 //   o número do primeiro quadro da memória principal que ainda não foi usado.
 //   Na carga do processo, a tabela de páginas (deveria ter uma por processo,
 //   mas não tem processo) é alterada para que o endereço virtual 0 resulte
@@ -117,12 +117,17 @@ struct so_t {
   // vetor com os pids dos processos que estão usando cada terminal (0 == TERM_A, 1 == TERM_B...)
   int terminais_usados[4];
 
-  // primeiro quadro da memória que está livre (quadros anteriores estão ocupados)
+  // primeira pagina da memória principal que está livre (paginas anteriores estão ocupados)
   // t3: com memória virtual, o controle de memória livre e ocupada deve ser mais
   //     completo que isso
-  int quadro_livre;
+  int pagina_livre;
+
+  // -=-=-=- memória secundaria -=-=-=-
+  mem_t *mem_secundaria;
   // indica quando o disco estará livre
   int disco_livre;
+  // primeiro quadro da memória secundária que está livre (quadros anteriores estão ocupados)
+  int quadro_livre;
 };
 
 
@@ -362,7 +367,7 @@ static void processo_atualiza_prioridade(processo_t *proc)
 // CRIAÇÃO {{{1
 // ---------------------------------------------------------------------
 
-so_t *so_cria(cpu_t *cpu, mem_t *mem, mmu_t *mmu,
+so_t *so_cria(cpu_t *cpu, mem_t *mem, mem_t *mem_secundaria, mmu_t *mmu,
               es_t *es, console_t *console)
 {
   so_t *self = malloc(sizeof(*self));
@@ -370,11 +375,13 @@ so_t *so_cria(cpu_t *cpu, mem_t *mem, mmu_t *mmu,
 
   self->cpu = cpu;
   self->mem = mem;
+  self->mem_secundaria = mem;
   self->mmu = mmu;
   self->es = es;
   self->console = console;
   self->erro_interno = false;
   self->disco_livre = 0;
+  self->quadro_livre = 0;
 
   // cria tabela de processo
   self->tabela_de_processos = malloc(N_PROCESSOS * sizeof(processo_t));
@@ -713,7 +720,7 @@ static void so_trata_reset(so_t *self)
   //   contém o endereço final da memória protegida (que não podem ser usadas
   //   por programas de usuário)
   // t3: o controle de memória livre deve ser mais aprimorado que isso  
-  self->quadro_livre = CPU_END_FIM_PROT / TAM_PAGINA + 1;
+  self->pagina_livre = CPU_END_FIM_PROT / TAM_PAGINA + 1;
 
   // t2: deveria criar um processo para o init, e inicializar o estado do
   //   processador para esse processo com os registradores zerados, exceto
@@ -1041,6 +1048,7 @@ static int so_carrega_programa_na_memoria_fisica(so_t *self, programa_t *program
 {
   int end_ini = prog_end_carga(programa);
   int end_fim = end_ini + prog_tamanho(programa);
+  console_printf("TAMANHO DO TRATA_INT: %d", prog_tamanho(programa));
 
   for (int end = end_ini; end < end_fim; end++) {
     if (mem_escreve(self->mem, end, prog_dado(programa, end)) != ERR_OK) {
@@ -1053,10 +1061,13 @@ static int so_carrega_programa_na_memoria_fisica(so_t *self, programa_t *program
   return end_ini;
 }
 
+
+// na verdade só carrega o programa na memória secundária
 static int so_carrega_programa_na_memoria_virtual(so_t *self,
                                                   programa_t *programa,
                                                   processo_t processo)
 {
+  console_printf("CARGA DE PROGRAMA NA MEM VIRTUAL");
   // t3: isto tá furado...
   // está simplesmente lendo para o próximo quadro que nunca foi ocupado,
   //   nem testa se tem memória disponível
@@ -1065,40 +1076,42 @@ static int so_carrega_programa_na_memoria_virtual(so_t *self,
   //   da tabela de páginas do processo como inválidas. Assim, as páginas serão
   //   colocadas na memória principal por demanda. Para simplificar ainda mais, a
   //   memória secundária pode ser alocada da forma como a principal está sendo
-  //   alocada aqui (sem reuso)
+  //   alocada aqui (sem reuso) 
+  
+  /* 0-0: "Uma forma simples implementar a alocação de quadros a um processo é com paginação sob demanda. 
+  Em vez de escolher onde colocar as páginas de um processo novo, carrega-se o processo completamente em 
+  memória secundária quando ele é criado, sem alocar nenhum quadro da memória principal para ele. Dessa 
+  forma nenhuma página está mapeada, e a tabela de páginas pode ficar vazia. Quando o processo executar, 
+  causará faltas de página, e caberá ao algoritmo de substituição de páginas decidir onde colocar as 
+  páginas do processo." */
+  
+  // calcula quantas páginas e quadros serão alocadas para o programa
   int end_virt_ini = prog_end_carga(programa);
-  // o código abaixo só funciona se o programa iniciar no início de uma página
-  if ((end_virt_ini % TAM_PAGINA) != 0)
-  {
-    console_printf("ERRO: PROGRAMA NÃO INICIA NO INICIO DE UMA PAGINA");
-    return -1;
-  }
   int end_virt_fim = end_virt_ini + prog_tamanho(programa) - 1;
   int pagina_ini = end_virt_ini / TAM_PAGINA;
   int pagina_fim = end_virt_fim / TAM_PAGINA;
   int n_paginas = pagina_fim - pagina_ini + 1;
   int quadro_ini = self->quadro_livre;
-  int quadro_fim = quadro_ini + n_paginas - 1;
-  // mapeia as páginas nos quadros
-  for (int i = 0; i < n_paginas; i++) {
-    tabpag_define_quadro(processo.tabpag, pagina_ini + i, quadro_ini + i);
-  }
-  self->quadro_livre = quadro_fim + 1;
+  int quadro_fim = quadro_ini + n_paginas - 1;  // 0-0: páginas e quadros tem o mesmo tamanho
 
-  // carrega o programa na memória principal
-  int end_fis_ini = quadro_ini * TAM_PAGINA;
-  int end_fis = end_fis_ini;
-  for (int end_virt = end_virt_ini; end_virt <= end_virt_fim; end_virt++) {
-    if (mem_escreve(self->mem, end_fis, prog_dado(programa, end_virt)) != ERR_OK) {
-      console_printf("Erro na carga da memória, end virt %d fís %d\n", end_virt,
-                     end_fis);
+  // carrega o programa na memória secundária
+  int end_secund_ini = self->quadro_livre * TAM_PAGINA;
+  int end_secund_fim = end_secund_ini + prog_tamanho(programa);
+  int end_secund = end_secund_ini;
+  while(end_secund <= end_secund_fim)
+  {
+    if (mem_escreve(self->mem_secundaria, end_secund, prog_dado(programa, end_secund)) != ERR_OK) {
+      console_printf("Erro na carga da memória, end secundaria %d\n", end_secund);
       return -1;
     }
-    end_fis++;
+    end_secund++;
   }
-  console_printf("SO: carga na memória virtual V%d-%d F%d-%d npag=%d",
-                 end_virt_ini, end_virt_fim, end_fis_ini, end_fis - 1, n_paginas);
-  return end_virt_ini;
+
+  // atualiza o primeiro quadro disponível
+  self->quadro_livre = quadro_fim + 1;
+
+  console_printf("SO: carga na memória secundária %d - %d, npag=%d", end_secund_ini, end_secund_fim, n_paginas);
+  return end_secund_ini;
 }
 
 

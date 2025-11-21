@@ -86,7 +86,8 @@ static void cria_hardware(hardware_t *hw)
   // cria a memória
   hw->mem = mem_cria(MEM_TAM);
   inicializa_rom(hw->mem);
-  // cria a ma
+  // cria a memória secundária
+  hw->mem_secundaria = mem_cria(MEM_TAM);
   // cria a MMU
   hw->mmu = mmu_cria(hw->mem);
 
@@ -126,6 +127,7 @@ static void destroi_hardware(hardware_t *hw)
   console_destroi(hw->console);
   mmu_destroi(hw->mmu);
   mem_destroi(hw->mem);
+  mem_destroi(hw->mem_secundaria);
 }
 
 int main()
@@ -136,7 +138,7 @@ int main()
   // cria o hardware
   cria_hardware(&hw);
   // cria o sistema operacional
-  so = so_cria(hw.cpu, hw.mem, hw.mmu, hw.es, hw.console);
+  so = so_cria(hw.cpu, hw.mem, hw.mem_secundaria, hw.mmu, hw.es, hw.console);
 
   // executa o laço principal do controlador
   controle_laco(hw.controle);
