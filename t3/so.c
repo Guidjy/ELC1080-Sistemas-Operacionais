@@ -37,7 +37,7 @@
 #define SEM_DISPOSITIVO -1;  // indica que não tem um dispositivo que causou bloqueio
 #define N_TERMINAIS 4
 
-#define ESCALONADOR 1
+#define ESCALONADOR 0
 #define SEM_ESCALONADOR 0
 #define ROUND_ROBIN 1
 #define PRIORIDADE 2
@@ -740,6 +740,7 @@ static void so_trata_reset(so_t *self)
   self->processo_corrente->regA = pid;
 }
 
+
 // interrupção gerada quando a CPU identifica um erro
 static void so_trata_irq_err_cpu(so_t *self)
 {
@@ -750,11 +751,17 @@ static void so_trata_irq_err_cpu(so_t *self)
   // t2: com suporte a processos, deveria pegar o valor do registrador erro
   //   no descritor do processo corrente, e reagir de acordo com esse erro
   //   (em geral, matando o processo)
-  err_t err = self->regERRO;
-  console_printf("SO: IRQ não tratada -- erro na CPU: %s (%d)",
-                 err_nome(err), self->regComplemento);
-                 console_printf("pid%d PC%d", self->processo_corrente->pid, self->processo_corrente->regPC);
-  self->erro_interno = true;
+  err_t err = self->processo_corrente->regERRO;
+  if (err == ERR_PAG_AUSENTE)
+  {
+    console_printf("PAGINA AUSENTE");
+  }
+  else
+  {
+    processo_mata(self, 0);
+    console_printf("SO: IRQ não tratada -- erro na CPU: %s", err_nome(err));
+    self->erro_interno = true;
+  }
 }
 
 // interrupção gerada quando o timer expira
@@ -1086,21 +1093,29 @@ static int so_carrega_programa_na_memoria_virtual(so_t *self,
   páginas do processo." */
   
   // calcula quantas páginas e quadros serão alocadas para o programa
-  int end_virt_ini = prog_end_carga(programa);
-  int end_virt_fim = end_virt_ini + prog_tamanho(programa) - 1;
+  /*
   int pagina_ini = end_virt_ini / TAM_PAGINA;
   int pagina_fim = end_virt_fim / TAM_PAGINA;
   int n_paginas = pagina_fim - pagina_ini + 1;
   int quadro_ini = self->quadro_livre;
   int quadro_fim = quadro_ini + n_paginas - 1;  // 0-0: páginas e quadros tem o mesmo tamanho
+  */
+
+  int end_virtual_ini = 0;
+  int end_virtual_fim = prog_tamanho(programa) - 1;
+  int pagina_ini = end_virtual_ini / TAM_PAGINA;
+  int pagina_fim = end_virtual_fim / TAM_PAGINA;
+  int n_paginas = pagina_fim - pagina_ini + 1;
+  int quadro_ini = self->quadro_livre;
+  int quadro_fim = quadro_ini + n_paginas - 1;
 
   // carrega o programa na memória secundária
   int end_secund_ini = self->quadro_livre * TAM_PAGINA;
-  int end_secund_fim = end_secund_ini + prog_tamanho(programa);
   int end_secund = end_secund_ini;
-  while(end_secund <= end_secund_fim)
+
+  for (int end_virtual = end_virtual_ini; end_virtual <= end_virtual_fim; end_virtual++)
   {
-    if (mem_escreve(self->mem_secundaria, end_secund, prog_dado(programa, end_secund)) != ERR_OK) {
+    if (mem_escreve(self->mem_secundaria, end_secund, prog_dado(programa, end_virtual)) != ERR_OK) {
       console_printf("Erro na carga da memória, end secundaria %d\n", end_secund);
       return -1;
     }
@@ -1110,7 +1125,7 @@ static int so_carrega_programa_na_memoria_virtual(so_t *self,
   // atualiza o primeiro quadro disponível
   self->quadro_livre = quadro_fim + 1;
 
-  console_printf("SO: carga na memória secundária %d - %d, npag=%d", end_secund_ini, end_secund_fim, n_paginas);
+  console_printf("SO: carga na memória secundária %d - %d, npag=%d, quadro livre: %d", end_secund_ini, end_secund, n_paginas, self->quadro_livre);
   return end_secund_ini;
 }
 

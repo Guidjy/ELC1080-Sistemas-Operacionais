@@ -10,6 +10,7 @@
 #include "cpu.h"
 #include "err.h"
 #include "instrucao.h"
+#include "console.h"
 
 #include <stdbool.h>
 #include <stdlib.h>
@@ -503,6 +504,7 @@ void cpu_executa_1(cpu_t *self)
   //   até que venha uma interrupção de E/S
   if (self->erro != ERR_OK && self->erro != ERR_CPU_PARADA) {
     // se a interrupção não é aceita nesse ponto, temos um problema grave...
+    // console_printf("ERRO CPU: %d", self->erro);
     assert(cpu_interrompe(self, IRQ_ERR_CPU));
   }
 }
