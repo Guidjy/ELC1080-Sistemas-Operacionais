@@ -1109,6 +1109,14 @@ static int so_carrega_programa_na_memoria_virtual(so_t *self,
   int quadro_ini = self->quadro_livre;
   int quadro_fim = quadro_ini + n_paginas - 1;
 
+  // mapeia as páginas na mem virtual aos quadros da mem secundaria
+  for (int i = 0; i < n_paginas; i++)
+  {
+    tabpag_define_quadro(processo.tabpag, pagina_ini + i, quadro_ini + i);
+  }
+  // atualiza o primeiro quadro disponível
+  self->quadro_livre = quadro_fim + 1;
+
   // carrega o programa na memória secundária
   int end_secund_ini = self->quadro_livre * TAM_PAGINA;
   int end_secund = end_secund_ini;
@@ -1121,9 +1129,6 @@ static int so_carrega_programa_na_memoria_virtual(so_t *self,
     }
     end_secund++;
   }
-
-  // atualiza o primeiro quadro disponível
-  self->quadro_livre = quadro_fim + 1;
 
   console_printf("SO: carga na memória secundária %d - %d, npag=%d, quadro livre: %d", end_secund_ini, end_secund, n_paginas, self->quadro_livre);
   return end_secund_ini;

@@ -1,0 +1,74 @@
+CMD: 'c'
+SO: recebi IRQ 0 (Reset)
+SO: carga de 'trata_int.maq'
+TAMANHO DO TRATA_INT: 12
+SO: carga na memória física 60-72
+SO: carga de 'init.maq'
+CARGA DE PROGRAMA NA MEM VIRTUAL
+SO: carga na memória secundária 170 - 340, npag=17, quadro livre: 17
+Processo criado
+pid: 1 || regA: 0 || regX: 0 || EXE: init.maq || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+TROCOU PRO INIT
+SO: recebi IRQ 1 (Erro de execução)
+PAGINA AUSENTE
+SO: recebi IRQ 1 (Erro de execução)
+PAGINA AUSENTE
+SO: recebi IRQ 1 (Erro de execução)
+PAGINA AUSENTE
+SO: recebi IRQ 1 (Erro de execução)
+PAGINA AUSENTE
+SO: recebi IRQ 1 (Erro de execução)
+PAGINA AUSENTE
+SO: recebi IRQ 1 (Erro de execução)
+PAGINA AUSENTE
+SO: recebi IRQ 1 (Erro de execução)
+PAGINA AUSENTE
+SO: recebi IRQ 1 (Erro de execução)
+PAGINA AUSENTE
+SO: recebi IRQ 1 (Erro de execução)
+PAGINA AUSENTE
+SO: recebi IRQ 1 (Erro de execução)
+PAGINA AUSENTE
+SO: recebi IRQ 1 (Erro de execução)
+PAGINA AUSENTE
+SO: recebi IRQ 1 (Erro de execução)
+PAGINA AUSENTE
+SO: recebi IRQ 1 (Erro de execução)
+PAGINA AUSENTE
+SO: recebi IRQ 1 (Erro de execução)
+PAGINA AUSENTE
+SO: recebi IRQ 1 (Erro de execução)
+PAGINA AUSENTE
+SO: recebi IRQ 1 (Erro de execução)
+PAGINA AUSENTE
+SO: recebi IRQ 1 (Erro de execução)
+PAGINA AUSENTE
+SO: recebi IRQ 1 (Erro de execução)
+PAGINA AUSENTE
+SO: recebi IRQ 1 (Erro de execução)
+PAGINA AUSENTE
+SO: recebi IRQ 1 (Erro de execução)
+PAGINA AUSENTE
+SO: recebi IRQ 1 (Erro de execução)
+PAGINA AUSENTE
+SO: recebi IRQ 1 (Erro de execução)
+PAGINA AUSENTE
+SO: recebi IRQ 1 (Erro de execução)
+PAGINA AUSENTE
+SO: recebi IRQ 1 (Erro de execução)
+PAGINA AUSENTE
+SO: recebi IRQ 1 (Erro de execução)
+PAGINA AUSENTE
+SO: recebi IRQ 1 (Erro de execução)
+PAGINA AUSENTE
+SO: recebi IRQ 1 (Erro de execução)
+PAGINA AUSENTE
+SO: recebi IRQ 1 (Erro de execução)
+PAGINA AUSENTE
+CMD: 'p'
+CMD: 'f'
+Fim da execução.
