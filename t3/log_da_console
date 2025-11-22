@@ -14,61 +14,46 @@ pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
 pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
 TROCOU PRO INIT
 SO: recebi IRQ 1 (Erro de execução)
-PAGINA AUSENTE
+PAGINA AUSENTE (end_virt 170)
 SO: recebi IRQ 1 (Erro de execução)
-PAGINA AUSENTE
+PAGINA AUSENTE (end_virt 170)
 SO: recebi IRQ 1 (Erro de execução)
-PAGINA AUSENTE
+PAGINA AUSENTE (end_virt 170)
 SO: recebi IRQ 1 (Erro de execução)
-PAGINA AUSENTE
+PAGINA AUSENTE (end_virt 170)
 SO: recebi IRQ 1 (Erro de execução)
-PAGINA AUSENTE
+PAGINA AUSENTE (end_virt 170)
 SO: recebi IRQ 1 (Erro de execução)
-PAGINA AUSENTE
+PAGINA AUSENTE (end_virt 170)
 SO: recebi IRQ 1 (Erro de execução)
-PAGINA AUSENTE
+PAGINA AUSENTE (end_virt 170)
 SO: recebi IRQ 1 (Erro de execução)
-PAGINA AUSENTE
+PAGINA AUSENTE (end_virt 170)
 SO: recebi IRQ 1 (Erro de execução)
-PAGINA AUSENTE
+PAGINA AUSENTE (end_virt 170)
 SO: recebi IRQ 1 (Erro de execução)
-PAGINA AUSENTE
+PAGINA AUSENTE (end_virt 170)
 SO: recebi IRQ 1 (Erro de execução)
-PAGINA AUSENTE
+PAGINA AUSENTE (end_virt 170)
 SO: recebi IRQ 1 (Erro de execução)
-PAGINA AUSENTE
+PAGINA AUSENTE (end_virt 170)
 SO: recebi IRQ 1 (Erro de execução)
-PAGINA AUSENTE
+PAGINA AUSENTE (end_virt 170)
 SO: recebi IRQ 1 (Erro de execução)
-PAGINA AUSENTE
+PAGINA AUSENTE (end_virt 170)
 SO: recebi IRQ 1 (Erro de execução)
-PAGINA AUSENTE
+PAGINA AUSENTE (end_virt 170)
 SO: recebi IRQ 1 (Erro de execução)
-PAGINA AUSENTE
+PAGINA AUSENTE (end_virt 170)
 SO: recebi IRQ 1 (Erro de execução)
-PAGINA AUSENTE
+PAGINA AUSENTE (end_virt 170)
 SO: recebi IRQ 1 (Erro de execução)
-PAGINA AUSENTE
+PAGINA AUSENTE (end_virt 170)
 SO: recebi IRQ 1 (Erro de execução)
-PAGINA AUSENTE
+PAGINA AUSENTE (end_virt 170)
 SO: recebi IRQ 1 (Erro de execução)
-PAGINA AUSENTE
+PAGINA AUSENTE (end_virt 170)
 SO: recebi IRQ 1 (Erro de execução)
-PAGINA AUSENTE
-SO: recebi IRQ 1 (Erro de execução)
-PAGINA AUSENTE
-SO: recebi IRQ 1 (Erro de execução)
-PAGINA AUSENTE
-SO: recebi IRQ 1 (Erro de execução)
-PAGINA AUSENTE
-SO: recebi IRQ 1 (Erro de execução)
-PAGINA AUSENTE
-SO: recebi IRQ 1 (Erro de execução)
-PAGINA AUSENTE
-SO: recebi IRQ 1 (Erro de execução)
-PAGINA AUSENTE
-SO: recebi IRQ 1 (Erro de execução)
-PAGINA AUSENTE
-CMD: 'p'
+PAGINA AUSENTE (end_virt 170)
 CMD: 'f'
 Fim da execução.

@@ -135,3 +135,9 @@ err_t tabpag_traduz(tabpag_t *self, int pagina, int *pquadro)
   *pquadro = self->tabela[pagina].quadro;
   return ERR_OK;
 }
+
+
+int pega_quadro_por_pagina(tabpag_t *self, int pag)
+{
+  return self->tabela[pag].quadro;
+}

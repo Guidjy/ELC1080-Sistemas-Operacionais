@@ -20,6 +20,10 @@
 #include "err.h"
 
 // tipo opaco que representa a memória
+struct mem_t {
+  int tam;
+  int *conteudo;
+};
 typedef struct mem_t mem_t;
 
 // cria uma região de memória com capacidade para 'tam' valores (inteiros)

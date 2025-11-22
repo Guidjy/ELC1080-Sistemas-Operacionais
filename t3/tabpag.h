@@ -61,4 +61,10 @@ bool tabpag_bit_alteracao(tabpag_t *self, int pagina);
 // retorna ERR_PAG_AUSENTE (e não altera '*pquadro') se a página for inválida
 err_t tabpag_traduz(tabpag_t *self, int pagina, int *pquadro);
 
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=- minhas funções -=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+// retorna o número do quadro de memória física principal associado a uma página de um processo
+// 0-0: pag = número da pagina
+int pega_quadro_por_pagina(tabpag_t *self, int pag);
+
 #endif // TABPAG_H

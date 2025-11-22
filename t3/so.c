@@ -27,6 +27,8 @@
 // CONSTANTES E TIPOS {{{1
 // ---------------------------------------------------------------------
 
+#define MEM_TAM 10000
+
 // intervalo entre interrupções do relógio
 #define INTERVALO_INTERRUPCAO 50   // em instruções executadas
 #define QUANTUM 10
@@ -84,6 +86,7 @@ struct processo_t {
   int regA;
   int regX;
   int regERRO;
+  int regComplemento;
 
   int terminal;
   estado_t estado;
@@ -102,6 +105,7 @@ struct processo_t {
 struct so_t {
   cpu_t *cpu;
   mem_t *mem;
+  bool *mem_quadros_ocupados;  // vetor que indica quais quais quadros da memória principal estam ocupados
   mmu_t *mmu;
   es_t *es;
   console_t *console;
@@ -375,6 +379,8 @@ so_t *so_cria(cpu_t *cpu, mem_t *mem, mem_t *mem_secundaria, mmu_t *mmu,
 
   self->cpu = cpu;
   self->mem = mem;
+  self->mem_quadros_ocupados = calloc(MEM_TAM / TAM_PAGINA, sizeof(bool));
+  assert(self->mem_quadros_ocupados != NULL);
   self->mem_secundaria = mem;
   self->mmu = mmu;
   self->es = es;
@@ -482,6 +488,7 @@ static void so_salva_estado_da_cpu(so_t *self)
   if (mem_le(self->mem, CPU_END_A, &self->regA) != ERR_OK
       || mem_le(self->mem, CPU_END_PC, &self->regPC) != ERR_OK
       || mem_le(self->mem, CPU_END_erro, &self->regERRO) != ERR_OK
+      || mem_le(self->mem, CPU_END_complemento, &self->regComplemento) != ERR_OK
       || mem_le(self->mem, 59, &self->regX)) {
     console_printf("SO: erro na leitura dos registradores");
     self->erro_interno = true;
@@ -492,6 +499,7 @@ static void so_salva_estado_da_cpu(so_t *self)
   self->processo_corrente->regPC = self->regPC;
   self->processo_corrente->regERRO = self->regERRO;
   self->processo_corrente->regX = self->regX;
+  self->processo_corrente->regComplemento = self->regComplemento;
 
   // console_printf("salva estado - corrente - %d, %d, %d, %d", self->processo_corrente->regA, self->processo_corrente->regPC, self->processo_corrente->regERRO, self->processo_corrente->regX);
   // console_printf("salva estado - so       - %d, %d, %d, %d", self->regA, self->regPC, self->regERRO, self->regX);
@@ -650,6 +658,7 @@ static int so_despacha(so_t *self)
   if (mem_escreve(self->mem, CPU_END_A, self->processo_corrente->regA) != ERR_OK
       || mem_escreve(self->mem, CPU_END_PC, self->processo_corrente->regPC) != ERR_OK
       || mem_escreve(self->mem, CPU_END_erro, self->processo_corrente->regERRO) != ERR_OK
+      || mem_escreve(self->mem, CPU_END_complemento, self->processo_corrente->regComplemento) != ERR_OK
       || mem_escreve(self->mem, 59, self->processo_corrente->regX)) {
     console_printf("SO: erro na escrita dos registradores");
     self->erro_interno = true;
@@ -754,7 +763,16 @@ static void so_trata_irq_err_cpu(so_t *self)
   err_t err = self->processo_corrente->regERRO;
   if (err == ERR_PAG_AUSENTE)
   {
-    console_printf("PAGINA AUSENTE");
+    // pode ser dois casos:
+    // 1) acesso a um endereço fora do espaço de endereçamento do processo (e o SO deve matar o 
+    //    processo por "segmentation fault"); (TODO)
+    // 2) pode ser uma falta de página: o processo está tentando acessar uma posição de memória 
+    //    válida, mas ela no momento não está na memória principal. 
+    // endereço virtual que causou a page fault
+    int end_virt = self->regComplemento;
+    console_printf("PAGINA AUSENTE (end_virt %d)", end_virt);
+    
+    
   }
   else
   {
