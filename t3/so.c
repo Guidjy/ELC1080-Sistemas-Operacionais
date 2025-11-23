@@ -67,6 +67,8 @@
 //#define NENHUM_PROCESSO -1
 //#define ALGUM_PROCESSO 0
 
+#define MEM_TAM 10000
+
 
 enum estado_t {
   PRONTO,
@@ -123,6 +125,8 @@ struct so_t {
   // t3: com memória virtual, o controle de memória livre e ocupada deve ser mais
   //     completo que isso
   int quadro_livre_mem;
+  // vetor de quadros com 0 sendo um quadro ocupado e 1 sendo um quadro livre
+  bool *quadros_livres;
 
   // -=-=-=-=-=-=-=- Memória secundária -=-=-=-=-=-=-=-
   mem_t *mem2;
@@ -158,6 +162,8 @@ static void tablea_proc_imprime(so_t *self)
     console_printf("pid: %d || regA: %d || regX: %d || EXE: %s || t: %d || estado: %d", pid, regA, regX, exe, terminal, estado);
   }
 }
+
+
 // acha o índice de um processo na tabela de processos a partir de seu pid
 static int acha_indice_por_pid(so_t *self, int pid)
 {
@@ -166,6 +172,14 @@ static int acha_indice_por_pid(so_t *self, int pid)
     if (self->tabela_de_processos[i].pid == pid) return i;
   }
   return SEM_PROCESSO;
+}
+
+
+// retorna o índice do primeiro quadro livre que encontrar na memória principal (-1 se não achar)
+int acha_quadro_livre(so_t *self)
+{
+  for (int i = 0; i < MEM_TAM/TAM_PAGINA; i++) if (self->quadros_livres[i]) return i;
+  return -1;
 }
 
 
@@ -379,6 +393,10 @@ so_t *so_cria(cpu_t *cpu, mem_t *mem, mem_t *mem_secundaria, mmu_t *mmu,
   self->console = console;
   self->erro_interno = false;
 
+  self->quadros_livres = malloc(MEM_TAM / TAM_PAGINA * sizeof(bool));
+  assert(self->quadros_livres != NULL);
+  for (int i = 0; i < MEM_TAM/TAM_PAGINA; i++) self->quadros_livres[i] = true;  // marca todos os quadros como livres
+
   // cria tabela de processo
   self->tabela_de_processos = malloc(N_PROCESSOS * sizeof(processo_t));
   assert(self->tabela_de_processos != NULL);
@@ -581,6 +599,7 @@ static void so_escalona(so_t *self)
         {
           // torna-o o processo corrente
           self->processo_corrente = &self->tabela_de_processos[i];
+          mmu_define_tabpag(self->mmu, self->processo_corrente->tabgpag);
         }
       }
       break;
@@ -604,6 +623,7 @@ static void so_escalona(so_t *self)
       if (indice_maior_prioridade != SEM_PROCESSO)
       {
         self->processo_corrente = &self->tabela_de_processos[indice_maior_prioridade];
+        mmu_define_tabpag(self->mmu, self->processo_corrente->tabgpag);
       }
       else
       {
@@ -717,6 +737,8 @@ static void so_trata_reset(so_t *self)
   // t3: o controle de memória livre deve ser mais aprimorado que isso  
   self->quadro_livre_mem = CPU_END_FIM_PROT / TAM_PAGINA + 1;
   self->quadro_livre_mem2 = 0;
+  // marca os quadros de memória protegida como nao livres;
+  for (int i = 0; i < self->quadro_livre_mem + 1; i++) self->quadros_livres[i] = false;
 
   // t2: deveria criar um processo para o init, e inicializar o estado do
   //   processador para esse processo com os registradores zerados, exceto
@@ -736,6 +758,46 @@ static void so_trata_reset(so_t *self)
   self->processo_corrente->regA = pid;
 }
 
+
+static void trata_falta_de_pagina(so_t *self, int quadro_livre)
+{
+  // marca o quadro encontrado como não livre
+  self->quadros_livres[quadro_livre] = false;
+  // pega a pagina do endereço virtual que causou a interrupção
+  int end = self->processo_corrente->regComplemento;
+  int pagina = end / TAM_PAGINA;
+  // copia a página da memória secundária para o quadro livre
+  int end_virt_ini = pagina * TAM_PAGINA;
+  int end_virt_fim = end_virt_ini + TAM_PAGINA - 1;
+  int end_mem2_ini = self->processo_corrente->quadro_mem2 * TAM_PAGINA + (end - end % TAM_PAGINA);
+  int end_mem2 = end_mem2_ini;
+  for (int end_virt = end_virt_ini; end_virt <= end_virt_fim; end_virt++)
+  {
+    // lê o dado da memória secundária
+    int dado;
+    if (mem_le(self->mem2, end_mem2, &dado) != ERR_OK) 
+    {
+      console_printf("ERRO NO TRATAMENTO DA PAGE FAULT");
+      return;
+    }
+    end_mem2++;
+    // copia o dado lido para a memória principal
+    int end_mem_principal = quadro_livre * TAM_PAGINA + (end_virt - end_virt_ini);
+    if (mem_escreve(self->mem, end_mem_principal, dado) != ERR_OK)
+    {
+      console_printf("ERRO NO TRATAMENTO DA PAGE FAULT");
+      return;
+    }
+  }
+
+  // altera a tabela de páginas do processo para indicar que a página está nesse quadro
+  tabpag_define_quadro(self->processo_corrente->tabgpag, pagina, quadro_livre);
+
+  // bloqueia o processo por um tempo
+  self->processo_corrente->estado = BLOQUEADO;
+}
+
+
 // interrupção gerada quando a CPU identifica um erro
 static void so_trata_irq_err_cpu(so_t *self)
 {
@@ -753,6 +815,19 @@ static void so_trata_irq_err_cpu(so_t *self)
   if (err == ERR_PAG_AUSENTE)
   {
     console_printf("PAGE FAULT");
+    // verifica se tem um quadro livre na memória principal
+    int quadro_livre = acha_quadro_livre(self);
+    if (quadro_livre != -1)
+    {
+      trata_falta_de_pagina(self, quadro_livre);
+    }
+    else
+    {
+      // substituição de página
+      console_printf("SUBSTITUIÇÃO DE PÁGINA");
+    }
+    return;
+
   }
   else
   {

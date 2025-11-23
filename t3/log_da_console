@@ -1,5 +1,4 @@
-CMD: '1'
-CMD: '1'
+CMD: 'c'
 SO: recebi IRQ 0 (Reset)
 SO: carga de 'trata_int.maq'
 SO: carga na memória física 60-72
@@ -12,28 +11,1409 @@ pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
 pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
 pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
 TROCOU PRO INIT
-CMD: '1'
-CMD: '1'
-CMD: '1'
-CMD: '1'
-CMD: '1'
-CMD: '1'
-CMD: '1'
 SO: recebi IRQ 1 (Erro de execução)
 PAGE FAULT
-CMD: '1'
-CMD: '1'
-CMD: '1'
-CMD: '1'
-CMD: '1'
-CMD: '1'
-CMD: '1'
-CMD: '1'
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
 SO: recebi IRQ 1 (Erro de execução)
 PAGE FAULT
-CMD: '1'
-CMD: '1f'
-CMD: ''
-Comando '
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+NENHUM
+Processo escalonado
+pid: 1 || regA: 1 || regX: 0 || EXE: init.maq || t: 0 || estado: 1
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
+pid: -1 || regA: 0 || regX: 0 || EXE: (null) || t: 0 || estado: 0
 CMD: 'f'
 Fim da execução.
