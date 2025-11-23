@@ -96,6 +96,7 @@ struct processo_t {
   float prioridade;
 
   tabpag_t *tabgpag;
+  int quadro_mem2;  // quadro a partir do qual o programa foi carregado em memória secundária
 };
 
 
@@ -124,6 +125,8 @@ struct so_t {
 
   // -=-=-=-=-=-=-=- Memória secundária -=-=-=-=-=-=-=-
   mem_t *mem2;
+  // primeiro quadro da memória secundária que está livre
+  int quadro_livre_mem2;
 };
 
 
@@ -134,7 +137,7 @@ static int so_trata_interrupcao(void *argC, int reg_A);
 // no t3, foi adicionado o 'processo' aos argumentos dessas funções 
 // carrega o programa contido no arquivo para memória virtual de um processo
 // retorna o endereço virtual inicial de execução
-static int so_carrega_programa(so_t *self, processo_t processo,
+static int so_carrega_programa(so_t *self, processo_t *processo,
                                char *nome_do_executavel);
 // copia para str da memória do processo, até copiar um 0 (retorna true) ou tam bytes
 static bool so_copia_str_do_processo(so_t *self, int tam, char str[tam],
@@ -226,7 +229,7 @@ int processo_cria(so_t *so, char *nome_do_executavel, int *ender_carga)
   }
 
   // carrega o programa na memória
-  int endereco_inicial = so_carrega_programa(so, so->tabela_de_processos[i], nome_do_executavel);
+  int endereco_inicial = so_carrega_programa(so, &so->tabela_de_processos[i], nome_do_executavel);
   if (ender_carga != NULL) memcpy(ender_carga, &endereco_inicial, sizeof(int));
   so->tabela_de_processos[i].regPC = endereco_inicial;
 
@@ -691,7 +694,7 @@ static void so_trata_reset(so_t *self)
   //   foi definido na inicialização do SO)
   processo_t *p = (processo_t*) malloc(sizeof(processo_t));
   p->pid = SEM_PROCESSO;
-  int ender = so_carrega_programa(self, *p, "trata_int.maq");
+  int ender = so_carrega_programa(self, p, "trata_int.maq");
   if (ender != CPU_END_TRATADOR) {
     console_printf("SO: problema na carga do programa de tratamento de interrupção");
     self->erro_interno = true;
@@ -708,6 +711,7 @@ static void so_trata_reset(so_t *self)
   //   por programas de usuário)
   // t3: o controle de memória livre deve ser mais aprimorado que isso  
   self->quadro_livre_mem = CPU_END_FIM_PROT / TAM_PAGINA + 1;
+  self->quadro_livre_mem2 = 0;
 
   // t2: deveria criar um processo para o init, e inicializar o estado do
   //   processador para esse processo com os registradores zerados, exceto
@@ -982,13 +986,13 @@ static void so_chamada_espera_proc(so_t *self)
 static int so_carrega_programa_na_memoria_fisica(so_t *self, programa_t *programa);
 static int so_carrega_programa_na_memoria_virtual(so_t *self,
                                                   programa_t *programa,
-                                                  processo_t processo);
+                                                  processo_t *processo);
 
 // carrega o programa na memória
 // se processo for NENHUM_PROCESSO, carrega o programa na memória física
 //   senão, carrega na memória virtual do processo
 // retorna o endereço de carga ou -1
-static int so_carrega_programa(so_t *self, processo_t processo,
+static int so_carrega_programa(so_t *self, processo_t *processo,
                                char *nome_do_executavel)
 {
   console_printf("SO: carga de '%s'", nome_do_executavel);
@@ -1000,7 +1004,7 @@ static int so_carrega_programa(so_t *self, processo_t processo,
   }
 
   int end_carga;
-  if (processo.pid == SEM_PROCESSO  ) {
+  if (processo->pid == SEM_PROCESSO  ) {
     end_carga = so_carrega_programa_na_memoria_fisica(self, programa);
   } else {
     end_carga = so_carrega_programa_na_memoria_virtual(self, programa, processo);
@@ -1028,7 +1032,7 @@ static int so_carrega_programa_na_memoria_fisica(so_t *self, programa_t *program
 
 static int so_carrega_programa_na_memoria_virtual(so_t *self,
                                                   programa_t *programa,
-                                                  processo_t processo)
+                                                  processo_t *processo)
 {
   // t3: isto tá furado...
   // está simplesmente lendo para o próximo quadro que nunca foi ocupado,
@@ -1039,29 +1043,33 @@ static int so_carrega_programa_na_memoria_virtual(so_t *self,
   //   colocadas na memória principal por demanda. Para simplificar ainda mais, a
   //   memória secundária pode ser alocada da forma como a principal está sendo
   //   alocada aqui (sem reuso)
-  int end_virt_ini = prog_end_carga(programa);
-  // o código abaixo só funciona se o programa iniciar no início de uma página
-  if ((end_virt_ini % TAM_PAGINA) != 0) return -1;
-  int end_virt_fim = end_virt_ini + prog_tamanho(programa) - 1;
+
+  // calcula o tamanho de páginas necessárias para o programa
+  int end_virt_ini = 0;
+  int end_virt_fim = prog_tamanho(programa) - 1;
   int pagina_ini = end_virt_ini / TAM_PAGINA;
   int pagina_fim = end_virt_fim / TAM_PAGINA;
   int n_paginas = pagina_fim - pagina_ini + 1;
-  int quadro_ini = self->quadro_livre_mem;
-  //int quadro_fim = quadro_ini + n_paginas - 1;
-  // mapeia as páginas nos quadros
+  int quadro_ini = self->quadro_livre_mem2;
+  int quadro_fim = quadro_ini + n_paginas - 1;
 
-  // carrega o programa na memória principal
+  // carrega o programa na memória secundária
   int end_fis_ini = quadro_ini * TAM_PAGINA;
   int end_fis = end_fis_ini;
   for (int end_virt = end_virt_ini; end_virt <= end_virt_fim; end_virt++) {
-    if (mem_escreve(self->mem, end_fis, prog_dado(programa, end_virt)) != ERR_OK) {
-      console_printf("Erro na carga da memória, end virt %d fís %d\n", end_virt,
-                     end_fis);
+    if (mem_escreve(self->mem2, end_fis, prog_dado(programa, end_virt)) != ERR_OK) {
+      console_printf("Erro na carga da memória, end virt %d fís %d\n", end_virt, end_fis);
       return -1;
     }
     end_fis++;
   }
-  console_printf("SO: carga na memória virtual V%d-%d F%d-%d npag=%d",
+
+  // atualiza o quadro livre inicial da memória secundária
+  self->quadro_livre_mem2 = quadro_fim + 1;
+  // guarda o quadro de mem2 no qual o programa do processo foi carregado
+  processo->quadro_mem2 = quadro_ini;
+
+  console_printf("SO: carga na memória secundária V%d-%d F%d-%d npag=%d",
                  end_virt_ini, end_virt_fim, end_fis_ini, end_fis - 1, n_paginas);
   return end_virt_ini;
 }
