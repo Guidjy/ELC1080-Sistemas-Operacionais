@@ -1,6 +1,4 @@
 CMD: '1'
-CMD: '[A1'
-Comando '[' não reconhecido
 CMD: '1'
 SO: recebi IRQ 0 (Reset)
 SO: carga de 'trata_int.maq'
@@ -22,7 +20,20 @@ CMD: '1'
 CMD: '1'
 CMD: '1'
 SO: recebi IRQ 1 (Erro de execução)
-SO: IRQ não tratada -- erro na CPU: Página ausente (0)
-pid1 PC0
+PAGE FAULT
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+CMD: '1'
+SO: recebi IRQ 1 (Erro de execução)
+PAGE FAULT
+CMD: '1'
+CMD: '1f'
+CMD: ''
+Comando '
 CMD: 'f'
 Fim da execução.

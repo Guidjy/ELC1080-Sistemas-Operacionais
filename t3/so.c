@@ -84,6 +84,7 @@ struct processo_t {
   int regA;
   int regX;
   int regERRO;
+  int regComplemento;
 
   int terminal;
   estado_t estado;
@@ -223,6 +224,7 @@ int processo_cria(so_t *so, char *nome_do_executavel, int *ender_carga)
       so->tabela_de_processos[i].quantum = QUANTUM;
       so->tabela_de_processos[i].prioridade = 0.5;
       so->tabela_de_processos[i].tabgpag = tabpag_cria();
+      so->tabela_de_processos[i].quadro_mem2 = 0;
       break;
     }
     i++;
@@ -476,6 +478,7 @@ static void so_salva_estado_da_cpu(so_t *self)
   if (mem_le(self->mem, CPU_END_A, &self->regA) != ERR_OK
       || mem_le(self->mem, CPU_END_PC, &self->regPC) != ERR_OK
       || mem_le(self->mem, CPU_END_erro, &self->regERRO) != ERR_OK
+      || mem_le(self->mem, CPU_END_complemento, &self->regComplemento) != ERR_OK
       || mem_le(self->mem, 59, &self->regX)) {
     console_printf("SO: erro na leitura dos registradores");
     self->erro_interno = true;
@@ -485,6 +488,7 @@ static void so_salva_estado_da_cpu(so_t *self)
   self->processo_corrente->regA = self->regA;
   self->processo_corrente->regPC = self->regPC;
   self->processo_corrente->regERRO = self->regERRO;
+  self->processo_corrente->regComplemento = self->regComplemento;
   self->processo_corrente->regX = self->regX;
 
   // console_printf("salva estado - corrente - %d, %d, %d, %d", self->processo_corrente->regA, self->processo_corrente->regPC, self->processo_corrente->regERRO, self->processo_corrente->regX);
@@ -640,6 +644,7 @@ static int so_despacha(so_t *self)
   if (mem_escreve(self->mem, CPU_END_A, self->processo_corrente->regA) != ERR_OK
       || mem_escreve(self->mem, CPU_END_PC, self->processo_corrente->regPC) != ERR_OK
       || mem_escreve(self->mem, CPU_END_erro, self->processo_corrente->regERRO) != ERR_OK
+      || mem_escreve(self->mem, CPU_END_complemento, self->processo_corrente->regComplemento) != ERR_OK
       || mem_escreve(self->mem, 59, self->processo_corrente->regX)) {
     console_printf("SO: erro na escrita dos registradores");
     self->erro_interno = true;
@@ -741,11 +746,21 @@ static void so_trata_irq_err_cpu(so_t *self)
   // t2: com suporte a processos, deveria pegar o valor do registrador erro
   //   no descritor do processo corrente, e reagir de acordo com esse erro
   //   (em geral, matando o processo)
+  
   err_t err = self->regERRO;
-  console_printf("SO: IRQ não tratada -- erro na CPU: %s (%d)",
-                 err_nome(err), self->regComplemento);
-                 console_printf("pid%d PC%d", self->processo_corrente->pid, self->processo_corrente->regPC);
-  self->erro_interno = true;
+  
+  // verifica se o erro foi uma falta de página
+  if (err == ERR_PAG_AUSENTE)
+  {
+    console_printf("PAGE FAULT");
+  }
+  else
+  {
+    console_printf("SO: IRQ não tratada -- erro na CPU: %s (%d)",
+    err_nome(err), self->regComplemento);
+    console_printf("pid%d PC%d", self->processo_corrente->pid, self->processo_corrente->regPC);
+    self->erro_interno = true;
+  }
 }
 
 // interrupção gerada quando o timer expira
