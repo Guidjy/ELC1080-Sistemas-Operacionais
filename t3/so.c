@@ -16,6 +16,7 @@
 #include "programa.h"
 #include "tabpag.h"
 #include "fila.h"
+#include "relogio.h"
 
 #include <stdlib.h>
 #include <stdbool.h>
@@ -68,6 +69,9 @@
 //#define ALGUM_PROCESSO 0
 
 #define MEM_TAM 10000
+// tempo de transferência de uma página entre a memória principal e a secundária
+#define TEMPO_SWAP 0  // 0 por enquanto para testar
+#define PROTEGIDO 100 // pid de uma página protegida
 
 
 enum estado_t {
@@ -78,6 +82,12 @@ enum estado_t {
   FINALIZADO,
 };
 typedef enum estado_t estado_t;
+
+
+typedef struct quadro {
+  int pid;
+  int pagina;
+} quadro_t;
 
 
 struct processo_t {
@@ -100,6 +110,7 @@ struct processo_t {
 
   tabpag_t *tabgpag;
   int quadro_mem2;  // quadro a partir do qual o programa foi carregado em memória secundária
+  int data_desbloqueio;  // data até desbloquear um processo
 };
 
 
@@ -125,11 +136,15 @@ struct so_t {
   // t3: com memória virtual, o controle de memória livre e ocupada deve ser mais
   //     completo que isso
   int quadro_livre_mem;
-  // vetor de quadros com 0 sendo um quadro ocupado e 1 sendo um quadro livre
-  bool *quadros_livres;
+  // vetor de quadros com o pid do dono do quadro e o número da página que o ocupa
+  quadro_t *tabquadros;
 
   // -=-=-=-=-=-=-=- Memória secundária -=-=-=-=-=-=-=-
   mem_t *mem2;
+  // indica se a memória secundária está liberada
+  bool mem2_livre;
+  // tempo até liberar a memória secundária
+  int mem2_tempo_ate_livre;
   // primeiro quadro da memória secundária que está livre
   int quadro_livre_mem2;
 };
@@ -178,7 +193,7 @@ static int acha_indice_por_pid(so_t *self, int pid)
 // retorna o índice do primeiro quadro livre que encontrar na memória principal (-1 se não achar)
 int acha_quadro_livre(so_t *self)
 {
-  for (int i = 0; i < MEM_TAM/TAM_PAGINA; i++) if (self->quadros_livres[i]) return i;
+  for (int i = 0; i < MEM_TAM/TAM_PAGINA; i++) if (self->tabquadros[i].pid == SEM_PROCESSO) return i;
   return -1;
 }
 
@@ -239,6 +254,7 @@ int processo_cria(so_t *so, char *nome_do_executavel, int *ender_carga)
       so->tabela_de_processos[i].prioridade = 0.5;
       so->tabela_de_processos[i].tabgpag = tabpag_cria();
       so->tabela_de_processos[i].quadro_mem2 = 0;
+      so->tabela_de_processos[i].data_desbloqueio = 0;
       break;
     }
     i++;
@@ -392,10 +408,15 @@ so_t *so_cria(cpu_t *cpu, mem_t *mem, mem_t *mem_secundaria, mmu_t *mmu,
   self->es = es;
   self->console = console;
   self->erro_interno = false;
+  self->mem2_livre = true;
+  self->mem2_tempo_ate_livre = 0;
 
-  self->quadros_livres = malloc(MEM_TAM / TAM_PAGINA * sizeof(bool));
-  assert(self->quadros_livres != NULL);
-  for (int i = 0; i < MEM_TAM/TAM_PAGINA; i++) self->quadros_livres[i] = true;  // marca todos os quadros como livres
+  self->tabquadros = malloc(MEM_TAM / TAM_PAGINA * sizeof(quadro_t));
+  assert(self->tabquadros != NULL);
+  for (int i = 0; i < MEM_TAM/TAM_PAGINA; i++){
+    self->tabquadros[i].pagina = -1;
+    self->tabquadros[i].pid = SEM_PROCESSO;
+  }
 
   // cria tabela de processo
   self->tabela_de_processos = malloc(N_PROCESSOS * sizeof(processo_t));
@@ -565,14 +586,18 @@ static void so_trata_pendencias(so_t *self)
         }
       }
 
-      // desbloqueia o processo
-      p->estado = PRONTO;
-      p->dispositivo_causou_bloqueio = SEM_DISPOSITIVO;
-      fila_enque(self->processos_prontos, p->pid);
+      // desbloqueia o processo se tiver na hora
+      int agora = relogio_agora();
+      if (p->data_desbloqueio <= agora)
+      {
+        p->estado = PRONTO;
+        p->dispositivo_causou_bloqueio = SEM_DISPOSITIVO;
+        p->data_desbloqueio = 0;
+        fila_enque(self->processos_prontos, p->pid);
+      }
 
     }
   }
-
 }
 
 
@@ -738,7 +763,7 @@ static void so_trata_reset(so_t *self)
   self->quadro_livre_mem = CPU_END_FIM_PROT / TAM_PAGINA + 1;
   self->quadro_livre_mem2 = 0;
   // marca os quadros de memória protegida como nao livres;
-  for (int i = 0; i < self->quadro_livre_mem + 1; i++) self->quadros_livres[i] = false;
+  for (int i = 0; i < self->quadro_livre_mem + 1; i++) self->tabquadros[i].pid = PROTEGIDO;
 
   // t2: deveria criar um processo para o init, e inicializar o estado do
   //   processador para esse processo com os registradores zerados, exceto
@@ -762,7 +787,7 @@ static void so_trata_reset(so_t *self)
 static void trata_falta_de_pagina(so_t *self, int quadro_livre)
 {
   // marca o quadro encontrado como não livre
-  self->quadros_livres[quadro_livre] = false;
+  self->tabquadros[quadro_livre].pid = self->processo_corrente->pid;
   // pega a pagina do endereço virtual que causou a interrupção
   int end = self->processo_corrente->regComplemento;
   int pagina = end / TAM_PAGINA;
@@ -792,9 +817,6 @@ static void trata_falta_de_pagina(so_t *self, int quadro_livre)
 
   // altera a tabela de páginas do processo para indicar que a página está nesse quadro
   tabpag_define_quadro(self->processo_corrente->tabgpag, pagina, quadro_livre);
-
-  // bloqueia o processo por um tempo
-  self->processo_corrente->estado = BLOQUEADO;
 }
 
 
@@ -819,7 +841,21 @@ static void so_trata_irq_err_cpu(so_t *self)
     int quadro_livre = acha_quadro_livre(self);
     if (quadro_livre != -1)
     {
-      trata_falta_de_pagina(self, quadro_livre);
+      // verifica se o disco está livre
+      int agora = relogio_agora();
+      if (self->mem2_livre)
+      {
+        // trata falta de página es estiver livre
+        trata_falta_de_pagina(self, quadro_livre);
+        // "se o disco estiver livre, atualiza-se esse tempo (bloqueio do processo) para "agora" mais o tempo de espera"
+        self->processo_corrente->data_desbloqueio = agora + TEMPO_SWAP;
+      }
+      else
+      {
+        // "se não estiver, soma-se o tempo de espera a essa variável (tempo de bloqueio do processo).
+        self->processo_corrente->data_desbloqueio += TEMPO_SWAP;
+      }
+      self->processo_corrente->estado = BLOQUEADO;
     }
     else
     {

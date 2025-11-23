@@ -45,4 +45,7 @@ void relogio_tictac(relogio_t *self);
 err_t relogio_leitura(void *disp, int id, int *pvalor);
 err_t relogio_escrita(void *disp, int id, int pvalor);
 
+// retorna o tempo atual
+int relogio_agora();
+
 #endif // RELOGIO_H
