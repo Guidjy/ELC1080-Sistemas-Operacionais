@@ -8,6 +8,12 @@
 #include <stdlib.h>
 #include <assert.h>
 
+// tipo de dados para representar uma região de memória
+struct mem_t {
+  int tam;
+  int *conteudo;
+};
+
 
 // funções que implementam as operações da memória
 

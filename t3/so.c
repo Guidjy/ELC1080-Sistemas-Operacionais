@@ -27,8 +27,6 @@
 // CONSTANTES E TIPOS {{{1
 // ---------------------------------------------------------------------
 
-#define MEM_TAM 10000
-
 // intervalo entre interrupções do relógio
 #define INTERVALO_INTERRUPCAO 50   // em instruções executadas
 #define QUANTUM 10
@@ -49,7 +47,7 @@
 //   todos montados para serem executados no endereço 0 e o endereço 0
 //   físico é usado pelo hardware nas interrupções.
 // Os programas estão sendo carregados no início de um quadro, e usam quantos
-//   quadros forem necessárias. Para isso a variável pagina_livre contém
+//   quadros forem necessárias. Para isso a variável quadro_livre contém
 //   o número do primeiro quadro da memória principal que ainda não foi usado.
 //   Na carga do processo, a tabela de páginas (deveria ter uma por processo,
 //   mas não tem processo) é alterada para que o endereço virtual 0 resulte
@@ -86,7 +84,6 @@ struct processo_t {
   int regA;
   int regX;
   int regERRO;
-  int regComplemento;
 
   int terminal;
   estado_t estado;
@@ -98,14 +95,13 @@ struct processo_t {
   int quantum;
   float prioridade;
 
-  tabpag_t *tabpag;
+  tabpag_t *tabgpag;
 };
 
 
 struct so_t {
   cpu_t *cpu;
   mem_t *mem;
-  bool *mem_quadros_ocupados;  // vetor que indica quais quais quadros da memória principal estam ocupados
   mmu_t *mmu;
   es_t *es;
   console_t *console;
@@ -121,17 +117,13 @@ struct so_t {
   // vetor com os pids dos processos que estão usando cada terminal (0 == TERM_A, 1 == TERM_B...)
   int terminais_usados[4];
 
-  // primeira pagina da memória principal que está livre (paginas anteriores estão ocupados)
+  // primeiro quadro da memória principal que está livre (quadros anteriores estão ocupados)
   // t3: com memória virtual, o controle de memória livre e ocupada deve ser mais
   //     completo que isso
-  int pagina_livre;
+  int quadro_livre_mem;
 
-  // -=-=-=- memória secundaria -=-=-=-
-  mem_t *mem_secundaria;
-  // indica quando o disco estará livre
-  int disco_livre;
-  // primeiro quadro da memória secundária que está livre (quadros anteriores estão ocupados)
-  int quadro_livre;
+  // -=-=-=-=-=-=-=- Memória secundária -=-=-=-=-=-=-=-
+  mem_t *mem2;
 };
 
 
@@ -227,7 +219,7 @@ int processo_cria(so_t *so, char *nome_do_executavel, int *ender_carga)
       so->tabela_de_processos[i].pid_esperando = SEM_PROCESSO;
       so->tabela_de_processos[i].quantum = QUANTUM;
       so->tabela_de_processos[i].prioridade = 0.5;
-      so->tabela_de_processos[i].tabpag = tabpag_cria();
+      so->tabela_de_processos[i].tabgpag = tabpag_cria();
       break;
     }
     i++;
@@ -282,8 +274,7 @@ void processo_mata(so_t *so, int pid)
     so->processo_corrente->estado = FINALIZADO;
     so->processo_corrente->pid = SEM_PROCESSO;
     so->processo_corrente->terminal = -1;
-    tabpag_destroi(so->processo_corrente->tabpag);
-    // TODO: liberar páginas de memória secundária e os quadros de memória real
+    tabpag_destroi(so->processo_corrente->tabgpag);
     for (int i = 0; i < N_TERMINAIS; i++)
     {
       if (so->terminais_usados[i] == so->processo_corrente->pid)
@@ -303,8 +294,7 @@ void processo_mata(so_t *so, int pid)
         so->tabela_de_processos[i].estado = FINALIZADO;
         so->tabela_de_processos[i].pid = SEM_PROCESSO;
         so->tabela_de_processos[i].terminal = -1;
-        tabpag_destroi(so->tabela_de_processos[i].tabpag);
-        // TODO: liberar páginas de memória secundária e os quadros de memória real
+        tabpag_destroi(so->tabela_de_processos[i].tabgpag);
         for (int j = 0; j < N_TERMINAIS; j++)
         {
           if (so->terminais_usados[j] == so->tabela_de_processos[i].pid)
@@ -339,8 +329,7 @@ void processo_troca_corrente(so_t *self)
     {
       self->processo_corrente = &self->tabela_de_processos[i];
       self->processo_corrente->estado = EXECUCAO;
-      // define a tabela de páginas a ser usada nas próximas traduções
-      mmu_define_tabpag(self->mmu, self->processo_corrente->tabpag);
+      mmu_define_tabpag(self->mmu, self->processo_corrente->tabgpag);
       break;
     }
     i++;
@@ -379,15 +368,11 @@ so_t *so_cria(cpu_t *cpu, mem_t *mem, mem_t *mem_secundaria, mmu_t *mmu,
 
   self->cpu = cpu;
   self->mem = mem;
-  self->mem_quadros_ocupados = calloc(MEM_TAM / TAM_PAGINA, sizeof(bool));
-  assert(self->mem_quadros_ocupados != NULL);
-  self->mem_secundaria = mem;
+  self->mem2 = mem_secundaria;
   self->mmu = mmu;
   self->es = es;
   self->console = console;
   self->erro_interno = false;
-  self->disco_livre = 0;
-  self->quadro_livre = 0;
 
   // cria tabela de processo
   self->tabela_de_processos = malloc(N_PROCESSOS * sizeof(processo_t));
@@ -413,8 +398,8 @@ so_t *so_cria(cpu_t *cpu, mem_t *mem, mem_t *mem_secundaria, mmu_t *mmu,
   // inicializa a tabela de páginas global, e entrega ela para a MMU
   // t3: com processos, essa tabela não existiria, teria uma por processo, que
   //     deve ser colocada na MMU quando o processo é despachado para execução
-  // elf->tabpag_global = tabpag_cria();
-  // mmu_define_tabpag(self->mmu, self->tabpag_global);
+  //self->tabpag_global = tabpag_cria();
+  //mmu_define_tabpag(self->mmu, self->tabpag_global);
 
   return self;
 }
@@ -488,7 +473,6 @@ static void so_salva_estado_da_cpu(so_t *self)
   if (mem_le(self->mem, CPU_END_A, &self->regA) != ERR_OK
       || mem_le(self->mem, CPU_END_PC, &self->regPC) != ERR_OK
       || mem_le(self->mem, CPU_END_erro, &self->regERRO) != ERR_OK
-      || mem_le(self->mem, CPU_END_complemento, &self->regComplemento) != ERR_OK
       || mem_le(self->mem, 59, &self->regX)) {
     console_printf("SO: erro na leitura dos registradores");
     self->erro_interno = true;
@@ -499,7 +483,6 @@ static void so_salva_estado_da_cpu(so_t *self)
   self->processo_corrente->regPC = self->regPC;
   self->processo_corrente->regERRO = self->regERRO;
   self->processo_corrente->regX = self->regX;
-  self->processo_corrente->regComplemento = self->regComplemento;
 
   // console_printf("salva estado - corrente - %d, %d, %d, %d", self->processo_corrente->regA, self->processo_corrente->regPC, self->processo_corrente->regERRO, self->processo_corrente->regX);
   // console_printf("salva estado - so       - %d, %d, %d, %d", self->regA, self->regPC, self->regERRO, self->regX);
@@ -591,8 +574,6 @@ static void so_escalona(so_t *self)
         {
           // torna-o o processo corrente
           self->processo_corrente = &self->tabela_de_processos[i];
-          // define a tabela de páginas a ser usada nas próximas traduções
-          mmu_define_tabpag(self->mmu, self->processo_corrente->tabpag);
         }
       }
       break;
@@ -616,8 +597,6 @@ static void so_escalona(so_t *self)
       if (indice_maior_prioridade != SEM_PROCESSO)
       {
         self->processo_corrente = &self->tabela_de_processos[indice_maior_prioridade];
-        // define a tabela de páginas a ser usada nas próximas traduções
-        mmu_define_tabpag(self->mmu, self->processo_corrente->tabpag);
       }
       else
       {
@@ -634,7 +613,7 @@ static void so_escalona(so_t *self)
 
   // imprime tabela para debugar
   console_printf("Processo escalonado\n");
-  //tablea_proc_imprime(self);
+  tablea_proc_imprime(self);
 }
 
 
@@ -658,7 +637,6 @@ static int so_despacha(so_t *self)
   if (mem_escreve(self->mem, CPU_END_A, self->processo_corrente->regA) != ERR_OK
       || mem_escreve(self->mem, CPU_END_PC, self->processo_corrente->regPC) != ERR_OK
       || mem_escreve(self->mem, CPU_END_erro, self->processo_corrente->regERRO) != ERR_OK
-      || mem_escreve(self->mem, CPU_END_complemento, self->processo_corrente->regComplemento) != ERR_OK
       || mem_escreve(self->mem, 59, self->processo_corrente->regX)) {
     console_printf("SO: erro na escrita dos registradores");
     self->erro_interno = true;
@@ -729,7 +707,7 @@ static void so_trata_reset(so_t *self)
   //   contém o endereço final da memória protegida (que não podem ser usadas
   //   por programas de usuário)
   // t3: o controle de memória livre deve ser mais aprimorado que isso  
-  self->pagina_livre = CPU_END_FIM_PROT / TAM_PAGINA + 1;
+  self->quadro_livre_mem = CPU_END_FIM_PROT / TAM_PAGINA + 1;
 
   // t2: deveria criar um processo para o init, e inicializar o estado do
   //   processador para esse processo com os registradores zerados, exceto
@@ -749,7 +727,6 @@ static void so_trata_reset(so_t *self)
   self->processo_corrente->regA = pid;
 }
 
-
 // interrupção gerada quando a CPU identifica um erro
 static void so_trata_irq_err_cpu(so_t *self)
 {
@@ -760,26 +737,11 @@ static void so_trata_irq_err_cpu(so_t *self)
   // t2: com suporte a processos, deveria pegar o valor do registrador erro
   //   no descritor do processo corrente, e reagir de acordo com esse erro
   //   (em geral, matando o processo)
-  err_t err = self->processo_corrente->regERRO;
-  if (err == ERR_PAG_AUSENTE)
-  {
-    // pode ser dois casos:
-    // 1) acesso a um endereço fora do espaço de endereçamento do processo (e o SO deve matar o 
-    //    processo por "segmentation fault"); (TODO)
-    // 2) pode ser uma falta de página: o processo está tentando acessar uma posição de memória 
-    //    válida, mas ela no momento não está na memória principal. 
-    // endereço virtual que causou a page fault
-    int end_virt = self->regComplemento;
-    console_printf("PAGINA AUSENTE (end_virt %d)", end_virt);
-    
-    
-  }
-  else
-  {
-    processo_mata(self, 0);
-    console_printf("SO: IRQ não tratada -- erro na CPU: %s", err_nome(err));
-    self->erro_interno = true;
-  }
+  err_t err = self->regERRO;
+  console_printf("SO: IRQ não tratada -- erro na CPU: %s (%d)",
+                 err_nome(err), self->regComplemento);
+                 console_printf("pid%d PC%d", self->processo_corrente->pid, self->processo_corrente->regPC);
+  self->erro_interno = true;
 }
 
 // interrupção gerada quando o timer expira
@@ -847,7 +809,6 @@ static void so_trata_irq_chamada_sistema(so_t *self)
   }
 }
 
-
 // implementação da chamada se sistema SO_LE
 // faz a leitura de um dado da entrada corrente do processo, coloca o dado no reg A
 static void so_chamada_le(so_t *self)
@@ -863,14 +824,8 @@ static void so_chamada_le(so_t *self)
   //   t2: deveria usar dispositivo de entrada corrente do processo
   for (;;) {  // espera ocupada!
     int estado;
-    int terminal = self->processo_corrente->terminal + 1;
-    if (es_le(self->es, terminal, &estado) != ERR_OK) {
+    if (es_le(self->es, D_TERM_A_TECLADO_OK, &estado) != ERR_OK) {
       console_printf("SO: problema no acesso ao estado do teclado");
-      // bloqueia o processo
-      self->processo_corrente->estado = BLOQUEADO;
-      processo_atualiza_prioridade(self->processo_corrente);
-      fila_deque(self->processos_prontos);
-      self->processo_corrente->dispositivo_causou_bloqueio = terminal;
       self->erro_interno = true;
       return;
     }
@@ -882,8 +837,7 @@ static void so_chamada_le(so_t *self)
     console_tictac(self->console);
   }
   int dado;
-  int terminal = self->processo_corrente->terminal + 0;
-  if (es_le(self->es, terminal, &dado) != ERR_OK) {
+  if (es_le(self->es, D_TERM_A_TECLADO, &dado) != ERR_OK) {
     console_printf("SO: problema no acesso ao teclado");
     self->erro_interno = true;
     return;
@@ -894,9 +848,7 @@ static void so_chamada_le(so_t *self)
   // t2: o acesso só deve ser feito nesse momento se for possível; se não, o processo
   //   é bloqueado, e o acesso só deve ser feito mais tarde (e o processo desbloqueado)
   self->regA = dado;
-  self->processo_corrente->regA = dado;
 }
-
 
 // implementação da chamada se sistema SO_ESCR
 // escreve o valor do reg X na saída corrente do processo
@@ -908,17 +860,8 @@ static void so_chamada_escr(so_t *self)
   //   t2: deveria usar o dispositivo de saída corrente do processo
   for (;;) {
     int estado;
-
-    // usa um terminal diferente dependendo do pid do processo
-    int terminal = self->processo_corrente->terminal + 3;
-
-    if (es_le(self->es, terminal, &estado) != ERR_OK) {
+    if (es_le(self->es, D_TERM_A_TELA_OK, &estado) != ERR_OK) {
       console_printf("SO: problema no acesso ao estado da tela");
-      // bloqueia o processo
-      self->processo_corrente->estado = BLOQUEADO;
-      processo_atualiza_prioridade(self->processo_corrente);
-      fila_deque(self->processos_prontos);
-      self->processo_corrente->dispositivo_causou_bloqueio = terminal;
       self->erro_interno = true;
       return;
     }
@@ -934,15 +877,13 @@ static void so_chamada_escr(so_t *self)
   // t2: deveria usar os registradores do processo que está realizando a E/S
   // t2: caso o processo tenha sido bloqueado, esse acesso deve ser realizado em outra execução
   //   do SO, quando ele verificar que esse acesso já pode ser feito.
-  dado = self->processo_corrente->regX;
-  int terminal = self->processo_corrente->terminal + 2;
-  if (es_escreve(self->es, terminal, dado) != ERR_OK) {
+  dado = self->regX;
+  if (es_escreve(self->es, D_TERM_A_TELA, dado) != ERR_OK) {
     console_printf("SO: problema no acesso à tela");
     self->erro_interno = true;
     return;
   }
   self->regA = 0;
-  self->processo_corrente->regA = 0;
 }
 
 // implementação da chamada se sistema SO_CRIA_PROC
@@ -1073,7 +1014,6 @@ static int so_carrega_programa_na_memoria_fisica(so_t *self, programa_t *program
 {
   int end_ini = prog_end_carga(programa);
   int end_fim = end_ini + prog_tamanho(programa);
-  console_printf("TAMANHO DO TRATA_INT: %d", prog_tamanho(programa));
 
   for (int end = end_ini; end < end_fim; end++) {
     if (mem_escreve(self->mem, end, prog_dado(programa, end)) != ERR_OK) {
@@ -1086,13 +1026,10 @@ static int so_carrega_programa_na_memoria_fisica(so_t *self, programa_t *program
   return end_ini;
 }
 
-
-// na verdade só carrega o programa na memória secundária
 static int so_carrega_programa_na_memoria_virtual(so_t *self,
                                                   programa_t *programa,
                                                   processo_t processo)
 {
-  console_printf("CARGA DE PROGRAMA NA MEM VIRTUAL");
   // t3: isto tá furado...
   // está simplesmente lendo para o próximo quadro que nunca foi ocupado,
   //   nem testa se tem memória disponível
@@ -1101,55 +1038,32 @@ static int so_carrega_programa_na_memoria_virtual(so_t *self,
   //   da tabela de páginas do processo como inválidas. Assim, as páginas serão
   //   colocadas na memória principal por demanda. Para simplificar ainda mais, a
   //   memória secundária pode ser alocada da forma como a principal está sendo
-  //   alocada aqui (sem reuso) 
-  
-  /* 0-0: "Uma forma simples implementar a alocação de quadros a um processo é com paginação sob demanda. 
-  Em vez de escolher onde colocar as páginas de um processo novo, carrega-se o processo completamente em 
-  memória secundária quando ele é criado, sem alocar nenhum quadro da memória principal para ele. Dessa 
-  forma nenhuma página está mapeada, e a tabela de páginas pode ficar vazia. Quando o processo executar, 
-  causará faltas de página, e caberá ao algoritmo de substituição de páginas decidir onde colocar as 
-  páginas do processo." */
-  
-  // calcula quantas páginas e quadros serão alocadas para o programa
-  /*
+  //   alocada aqui (sem reuso)
+  int end_virt_ini = prog_end_carga(programa);
+  // o código abaixo só funciona se o programa iniciar no início de uma página
+  if ((end_virt_ini % TAM_PAGINA) != 0) return -1;
+  int end_virt_fim = end_virt_ini + prog_tamanho(programa) - 1;
   int pagina_ini = end_virt_ini / TAM_PAGINA;
   int pagina_fim = end_virt_fim / TAM_PAGINA;
   int n_paginas = pagina_fim - pagina_ini + 1;
-  int quadro_ini = self->quadro_livre;
-  int quadro_fim = quadro_ini + n_paginas - 1;  // 0-0: páginas e quadros tem o mesmo tamanho
-  */
+  int quadro_ini = self->quadro_livre_mem;
+  //int quadro_fim = quadro_ini + n_paginas - 1;
+  // mapeia as páginas nos quadros
 
-  int end_virtual_ini = 0;
-  int end_virtual_fim = prog_tamanho(programa) - 1;
-  int pagina_ini = end_virtual_ini / TAM_PAGINA;
-  int pagina_fim = end_virtual_fim / TAM_PAGINA;
-  int n_paginas = pagina_fim - pagina_ini + 1;
-  int quadro_ini = self->quadro_livre;
-  int quadro_fim = quadro_ini + n_paginas - 1;
-
-  // mapeia as páginas na mem virtual aos quadros da mem secundaria
-  for (int i = 0; i < n_paginas; i++)
-  {
-    tabpag_define_quadro(processo.tabpag, pagina_ini + i, quadro_ini + i);
-  }
-  // atualiza o primeiro quadro disponível
-  self->quadro_livre = quadro_fim + 1;
-
-  // carrega o programa na memória secundária
-  int end_secund_ini = self->quadro_livre * TAM_PAGINA;
-  int end_secund = end_secund_ini;
-
-  for (int end_virtual = end_virtual_ini; end_virtual <= end_virtual_fim; end_virtual++)
-  {
-    if (mem_escreve(self->mem_secundaria, end_secund, prog_dado(programa, end_virtual)) != ERR_OK) {
-      console_printf("Erro na carga da memória, end secundaria %d\n", end_secund);
+  // carrega o programa na memória principal
+  int end_fis_ini = quadro_ini * TAM_PAGINA;
+  int end_fis = end_fis_ini;
+  for (int end_virt = end_virt_ini; end_virt <= end_virt_fim; end_virt++) {
+    if (mem_escreve(self->mem, end_fis, prog_dado(programa, end_virt)) != ERR_OK) {
+      console_printf("Erro na carga da memória, end virt %d fís %d\n", end_virt,
+                     end_fis);
       return -1;
     }
-    end_secund++;
+    end_fis++;
   }
-
-  console_printf("SO: carga na memória secundária %d - %d, npag=%d, quadro livre: %d", end_secund_ini, end_secund, n_paginas, self->quadro_livre);
-  return end_secund_ini;
+  console_printf("SO: carga na memória virtual V%d-%d F%d-%d npag=%d",
+                 end_virt_ini, end_virt_fim, end_fis_ini, end_fis - 1, n_paginas);
+  return end_virt_ini;
 }
 
 

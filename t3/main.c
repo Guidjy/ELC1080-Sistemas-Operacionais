@@ -24,7 +24,7 @@
 // estrutura com os componentes do computador simulado
 typedef struct {
   mem_t *mem;
-  mem_t *mem_secundaria;
+  mem_t *mem2;
   mmu_t *mmu;
   cpu_t *cpu;
   relogio_t *relogio;
@@ -87,7 +87,7 @@ static void cria_hardware(hardware_t *hw)
   hw->mem = mem_cria(MEM_TAM);
   inicializa_rom(hw->mem);
   // cria a memória secundária
-  hw->mem_secundaria = mem_cria(MEM_TAM);
+  hw->mem2 = mem_cria(MEM_TAM);
   // cria a MMU
   hw->mmu = mmu_cria(hw->mem);
 
@@ -127,7 +127,7 @@ static void destroi_hardware(hardware_t *hw)
   console_destroi(hw->console);
   mmu_destroi(hw->mmu);
   mem_destroi(hw->mem);
-  mem_destroi(hw->mem_secundaria);
+  mem_destroi(hw->mem2);
 }
 
 int main()
@@ -138,7 +138,7 @@ int main()
   // cria o hardware
   cria_hardware(&hw);
   // cria o sistema operacional
-  so = so_cria(hw.cpu, hw.mem, hw.mem_secundaria, hw.mmu, hw.es, hw.console);
+  so = so_cria(hw.cpu, hw.mem, hw.mem2, hw.mmu, hw.es, hw.console);
 
   // executa o laço principal do controlador
   controle_laco(hw.controle);
