@@ -623,7 +623,6 @@ static void so_escalona(so_t *self)
   {
     console_printf("TODOS PROCESSOS ENCERRARAM - %d\n", metricas.n_processos_criados);
     metricas_imprime();
-    exit(0);
   }
 }
 
