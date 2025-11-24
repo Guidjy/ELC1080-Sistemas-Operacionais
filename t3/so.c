@@ -108,7 +108,7 @@ struct processo_t {
   int quantum;
   float prioridade;
 
-  tabpag_t *tabgpag;
+  tabpag_t *tabpag;
   int quadro_mem2;  // quadro a partir do qual o programa foi carregado em memória secundária
   int data_desbloqueio;  // data até desbloquear um processo
 };
@@ -193,7 +193,14 @@ static int acha_indice_por_pid(so_t *self, int pid)
 // retorna o índice do primeiro quadro livre que encontrar na memória principal (-1 se não achar)
 int acha_quadro_livre(so_t *self)
 {
-  for (int i = 0; i < MEM_TAM/TAM_PAGINA; i++) if (self->tabquadros[i].pid == SEM_PROCESSO) return i;
+  for (int i = 0; i < MEM_TAM/TAM_PAGINA; i++)
+  {
+    if (self->tabquadros[i].pid == SEM_PROCESSO)
+    {
+      //console_printf("QUADRO ENCONTRADO: %d", i);
+      return i;
+    }
+  }
   return -1;
 }
 
@@ -252,7 +259,7 @@ int processo_cria(so_t *so, char *nome_do_executavel, int *ender_carga)
       so->tabela_de_processos[i].pid_esperando = SEM_PROCESSO;
       so->tabela_de_processos[i].quantum = QUANTUM;
       so->tabela_de_processos[i].prioridade = 0.5;
-      so->tabela_de_processos[i].tabgpag = tabpag_cria();
+      so->tabela_de_processos[i].tabpag = tabpag_cria();  // cria tabpag importante
       so->tabela_de_processos[i].quadro_mem2 = 0;
       so->tabela_de_processos[i].data_desbloqueio = 0;
       break;
@@ -309,7 +316,7 @@ void processo_mata(so_t *so, int pid)
     so->processo_corrente->estado = FINALIZADO;
     so->processo_corrente->pid = SEM_PROCESSO;
     so->processo_corrente->terminal = -1;
-    tabpag_destroi(so->processo_corrente->tabgpag);
+    tabpag_destroi(so->processo_corrente->tabpag);
     for (int i = 0; i < N_TERMINAIS; i++)
     {
       if (so->terminais_usados[i] == so->processo_corrente->pid)
@@ -329,7 +336,7 @@ void processo_mata(so_t *so, int pid)
         so->tabela_de_processos[i].estado = FINALIZADO;
         so->tabela_de_processos[i].pid = SEM_PROCESSO;
         so->tabela_de_processos[i].terminal = -1;
-        tabpag_destroi(so->tabela_de_processos[i].tabgpag);
+        tabpag_destroi(so->tabela_de_processos[i].tabpag);
         for (int j = 0; j < N_TERMINAIS; j++)
         {
           if (so->terminais_usados[j] == so->tabela_de_processos[i].pid)
@@ -364,7 +371,7 @@ void processo_troca_corrente(so_t *self)
     {
       self->processo_corrente = &self->tabela_de_processos[i];
       self->processo_corrente->estado = EXECUCAO;
-      mmu_define_tabpag(self->mmu, self->processo_corrente->tabgpag);
+      mmu_define_tabpag(self->mmu, self->processo_corrente->tabpag);
       break;
     }
     i++;
@@ -624,7 +631,7 @@ static void so_escalona(so_t *self)
         {
           // torna-o o processo corrente
           self->processo_corrente = &self->tabela_de_processos[i];
-          mmu_define_tabpag(self->mmu, self->processo_corrente->tabgpag);
+          mmu_define_tabpag(self->mmu, self->processo_corrente->tabpag);
         }
       }
       break;
@@ -648,7 +655,7 @@ static void so_escalona(so_t *self)
       if (indice_maior_prioridade != SEM_PROCESSO)
       {
         self->processo_corrente = &self->tabela_de_processos[indice_maior_prioridade];
-        mmu_define_tabpag(self->mmu, self->processo_corrente->tabgpag);
+        mmu_define_tabpag(self->mmu, self->processo_corrente->tabpag);
       }
       else
       {
@@ -815,8 +822,13 @@ static void trata_falta_de_pagina(so_t *self, int quadro_livre)
     }
   }
 
+  console_printf("SUBSTITUIU QUADRO %d (mem) por %d (mem2)", quadro_livre, pagina);
   // altera a tabela de páginas do processo para indicar que a página está nesse quadro
-  tabpag_define_quadro(self->processo_corrente->tabgpag, pagina, quadro_livre);
+  tabpag_define_quadro(self->processo_corrente->tabpag, pagina, quadro_livre);
+  if (tabpag_bit_acesso(self->processo_corrente->tabpag, pagina))
+  {
+    console_printf("TRADUÇÃO REALIZADA");
+  }
 }
 
 
@@ -836,7 +848,7 @@ static void so_trata_irq_err_cpu(so_t *self)
   // verifica se o erro foi uma falta de página
   if (err == ERR_PAG_AUSENTE)
   {
-    console_printf("PAGE FAULT");
+    console_printf("FALTA DE PAGINA");
     // verifica se tem um quadro livre na memória principal
     int quadro_livre = acha_quadro_livre(self);
     if (quadro_livre != -1)

@@ -4,6 +4,7 @@
 // so25b
 
 #include "mmu.h"
+#include "console.h"
 #include <stdlib.h>
 #include <assert.h>
 
@@ -50,6 +51,7 @@ static err_t mmu__traduz(mmu_t *self, int endvirt, int *pendfis)
   if (err == ERR_OK) {
     *pendfis = quadro * TAM_PAGINA + deslocamento;
   }
+  console_printf("TRADUÇÃO: end_virt %d -> end_fis %d", endvirt, pendfis);
   return err;
 }
 
@@ -57,18 +59,23 @@ err_t mmu_le(mmu_t *self, int endvirt, int *pvalor, cpu_modo_t modo)
 {
   // em modo supervisor ou se não tiver tabela de páginas,
   //   não faz tradução de endereços, nem marca o acesso
-  if (modo == supervisor || self->tabpag == NULL) {
-    return mem_le(self->mem, endvirt, pvalor);
-  }
-  int endfis;
-  err_t err = mmu__traduz(self, endvirt, &endfis);
-  if (err == ERR_OK) {
-    err = mem_le(self->mem, endfis, pvalor);
-    if (err == ERR_OK) {
-      tabpag_marca_bit_acesso(self->tabpag, endvirt / TAM_PAGINA, false);
+  //console_printf("mmu_le endvirt=%d", endvirt);
+    if (modo == supervisor || self->tabpag == NULL) {
+  //console_printf("retornando sem traduzir");
+      return mem_le(self->mem, endvirt, pvalor);
     }
-  }
-  return err;
+    int endfis;
+    err_t err = mmu__traduz(self, endvirt, &endfis);
+    if (err == ERR_OK) {
+  console_printf("tradução ok, endfis=%d", endfis);
+      err = mem_le(self->mem, endfis, pvalor);
+      if (err == ERR_OK) {
+        tabpag_marca_bit_acesso(self->tabpag, endvirt / TAM_PAGINA, false);
+      }
+  console_printf("erro no acesso à mem");
+    }
+  if (err != ERR_OK) console_printf("erro %d", err);
+    return err;
 }
 
 err_t mmu_escreve(mmu_t *self, int endvirt, int valor, cpu_modo_t modo)
