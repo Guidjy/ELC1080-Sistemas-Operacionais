@@ -28,7 +28,7 @@
 // ---------------------------------------------------------------------
 
 // intervalo entre interrupções do relógio
-#define INTERVALO_INTERRUPCAO 50   // em instruções executadas
+#define INTERVALO_INTERRUPCAO 100   // em instruções executadas
 #define QUANTUM 10
 
 #define N_PROCESSOS 5   // número máximo de processos
@@ -37,7 +37,7 @@
 #define SEM_DISPOSITIVO -1;  // indica que não tem um dispositivo que causou bloqueio
 #define N_TERMINAIS 4
 
-#define ESCALONADOR 2
+#define ESCALONADOR 2 
 #define SEM_ESCALONADOR 0
 #define ROUND_ROBIN 1
 #define PRIORIDADE 2
@@ -541,6 +541,7 @@ static void so_escalona(so_t *self)
   switch (ESCALONADOR)
   {
     case ROUND_ROBIN:
+      console_printf("ROUND ROBIN");
       // pega o primeiro processo da fila de processos prontos
       int pid_escalonado = fila_get(self->processos_prontos, 0);
       for (int i = 0; i < N_PROCESSOS; i++)
@@ -558,6 +559,7 @@ static void so_escalona(so_t *self)
       break;
 
     case PRIORIDADE:
+    console_printf("PRIORIDADE");
       // pega o indice do processo com a maior prioridade na tabela de processos (menor valor do campo ->prioridade)
       int indice_maior_prioridade = SEM_PROCESSO;
       float maior_prioridade = QUANTUM;
@@ -613,7 +615,7 @@ static void so_escalona(so_t *self)
   metricas.n_preempcoes++;
 
   // imprime tabela para debugar
-  console_printf("Processo escalonado\n");
+  console_printf("Processo escalonado %d", ESCALONADOR);
   // tablea_proc_imprime(self);
 
   // verifica se todos os processos encerraram
@@ -621,6 +623,7 @@ static void so_escalona(so_t *self)
   {
     console_printf("TODOS PROCESSOS ENCERRARAM - %d\n", metricas.n_processos_criados);
     metricas_imprime();
+    exit(0);
   }
 }
 
